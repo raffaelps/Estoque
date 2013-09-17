@@ -22,6 +22,9 @@
 		4D0C5C1F17E7FE5E0008F243 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C5C1E17E7FE5E0008F243 /* DetailViewController.m */; };
 		4D0C5C2217E7FE5E0008F243 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C5C2017E7FE5E0008F243 /* MasterViewController.xib */; };
 		4D0C5C2517E7FE5E0008F243 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C5C2317E7FE5E0008F243 /* DetailViewController.xib */; };
+		A9CE371F17E90E9400F30689 /* Movimento.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CE371E17E90E9400F30689 /* Movimento.m */; };
+		A9CE372217E90E9400F30689 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CE372117E90E9400F30689 /* Categoria.m */; };
+		A9CE372517E90E9400F30689 /* Produto.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CE372417E90E9400F30689 /* Produto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,12 @@
 		4D0C5C1E17E7FE5E0008F243 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		4D0C5C2117E7FE5E0008F243 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		4D0C5C2417E7FE5E0008F243 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		A9CE371D17E90E9400F30689 /* Movimento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movimento.h; sourceTree = "<group>"; };
+		A9CE371E17E90E9400F30689 /* Movimento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movimento.m; sourceTree = "<group>"; };
+		A9CE372017E90E9400F30689 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
+		A9CE372117E90E9400F30689 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
+		A9CE372317E90E9400F30689 /* Produto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produto.h; sourceTree = "<group>"; };
+		A9CE372417E90E9400F30689 /* Produto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +103,12 @@
 		4D0C5C0517E7FE5E0008F243 /* ControleEstoque */ = {
 			isa = PBXGroup;
 			children = (
+				A9CE372317E90E9400F30689 /* Produto.h */,
+				A9CE372417E90E9400F30689 /* Produto.m */,
+				A9CE372017E90E9400F30689 /* Categoria.h */,
+				A9CE372117E90E9400F30689 /* Categoria.m */,
+				A9CE371D17E90E9400F30689 /* Movimento.h */,
+				A9CE371E17E90E9400F30689 /* Movimento.m */,
 				4D0C5C0E17E7FE5E0008F243 /* AppDelegate.h */,
 				4D0C5C0F17E7FE5E0008F243 /* AppDelegate.m */,
 				4D0C5C1A17E7FE5E0008F243 /* MasterViewController.h */,
@@ -194,6 +209,9 @@
 				4D0C5C1917E7FE5E0008F243 /* ControleEstoque.xcdatamodeld in Sources */,
 				4D0C5C1C17E7FE5E0008F243 /* MasterViewController.m in Sources */,
 				4D0C5C1F17E7FE5E0008F243 /* DetailViewController.m in Sources */,
+				A9CE371F17E90E9400F30689 /* Movimento.m in Sources */,
+				A9CE372217E90E9400F30689 /* Categoria.m in Sources */,
+				A9CE372517E90E9400F30689 /* Produto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +344,7 @@
 				4D0C5C2A17E7FE5E0008F243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
