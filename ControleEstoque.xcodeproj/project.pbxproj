@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D0C5BFE17E7FE5E0008F243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0C5BFD17E7FE5E0008F243 /* UIKit.framework */; };
+		4D0C5C0017E7FE5E0008F243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0C5BFF17E7FE5E0008F243 /* Foundation.framework */; };
+		4D0C5C0217E7FE5E0008F243 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0C5C0117E7FE5E0008F243 /* CoreGraphics.framework */; };
+		4D0C5C0417E7FE5E0008F243 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0C5C0317E7FE5E0008F243 /* CoreData.framework */; };
+		4D0C5C0A17E7FE5E0008F243 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C5C0817E7FE5E0008F243 /* InfoPlist.strings */; };
+		4D0C5C0C17E7FE5E0008F243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C5C0B17E7FE5E0008F243 /* main.m */; };
+		4D0C5C1017E7FE5E0008F243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C5C0F17E7FE5E0008F243 /* AppDelegate.m */; };
+		4D0C5C1217E7FE5E0008F243 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C5C1117E7FE5E0008F243 /* Default.png */; };
+		4D0C5C1417E7FE5E0008F243 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C5C1317E7FE5E0008F243 /* Default@2x.png */; };
+		4D0C5C1617E7FE5E0008F243 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C5C1517E7FE5E0008F243 /* Default-568h@2x.png */; };
+		4D0C5C1917E7FE5E0008F243 /* ControleEstoque.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C5C1717E7FE5E0008F243 /* ControleEstoque.xcdatamodeld */; };
+		4D0C5C1C17E7FE5E0008F243 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C5C1B17E7FE5E0008F243 /* MasterViewController.m */; };
+		4D0C5C1F17E7FE5E0008F243 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C5C1E17E7FE5E0008F243 /* DetailViewController.m */; };
+		4D0C5C2217E7FE5E0008F243 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C5C2017E7FE5E0008F243 /* MasterViewController.xib */; };
+		4D0C5C2517E7FE5E0008F243 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C5C2317E7FE5E0008F243 /* DetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4D0C5BFA17E7FE5E0008F243 /* ControleEstoque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControleEstoque.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0C5BFD17E7FE5E0008F243 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4D0C5BFF17E7FE5E0008F243 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4D0C5C0117E7FE5E0008F243 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4D0C5C0317E7FE5E0008F243 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4D0C5C0717E7FE5E0008F243 /* ControleEstoque-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ControleEstoque-Info.plist"; sourceTree = "<group>"; };
+		4D0C5C0917E7FE5E0008F243 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4D0C5C0B17E7FE5E0008F243 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D0C5C0D17E7FE5E0008F243 /* ControleEstoque-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ControleEstoque-Prefix.pch"; sourceTree = "<group>"; };
+		4D0C5C0E17E7FE5E0008F243 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4D0C5C0F17E7FE5E0008F243 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4D0C5C1117E7FE5E0008F243 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4D0C5C1317E7FE5E0008F243 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4D0C5C1517E7FE5E0008F243 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4D0C5C1817E7FE5E0008F243 /* ControleEstoque.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ControleEstoque.xcdatamodel; sourceTree = "<group>"; };
+		4D0C5C1A17E7FE5E0008F243 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		4D0C5C1B17E7FE5E0008F243 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		4D0C5C1D17E7FE5E0008F243 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4D0C5C1E17E7FE5E0008F243 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		4D0C5C2117E7FE5E0008F243 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		4D0C5C2417E7FE5E0008F243 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D0C5BF717E7FE5E0008F243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0C5BFE17E7FE5E0008F243 /* UIKit.framework in Frameworks */,
+				4D0C5C0017E7FE5E0008F243 /* Foundation.framework in Frameworks */,
+				4D0C5C0217E7FE5E0008F243 /* CoreGraphics.framework in Frameworks */,
+				4D0C5C0417E7FE5E0008F243 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D0C5BF117E7FE5E0008F243 = {
+			isa = PBXGroup;
+			children = (
+				4D0C5C0517E7FE5E0008F243 /* ControleEstoque */,
+				4D0C5BFC17E7FE5E0008F243 /* Frameworks */,
+				4D0C5BFB17E7FE5E0008F243 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D0C5BFB17E7FE5E0008F243 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D0C5BFA17E7FE5E0008F243 /* ControleEstoque.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D0C5BFC17E7FE5E0008F243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D0C5BFD17E7FE5E0008F243 /* UIKit.framework */,
+				4D0C5BFF17E7FE5E0008F243 /* Foundation.framework */,
+				4D0C5C0117E7FE5E0008F243 /* CoreGraphics.framework */,
+				4D0C5C0317E7FE5E0008F243 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D0C5C0517E7FE5E0008F243 /* ControleEstoque */ = {
+			isa = PBXGroup;
+			children = (
+				4D0C5C0E17E7FE5E0008F243 /* AppDelegate.h */,
+				4D0C5C0F17E7FE5E0008F243 /* AppDelegate.m */,
+				4D0C5C1A17E7FE5E0008F243 /* MasterViewController.h */,
+				4D0C5C1B17E7FE5E0008F243 /* MasterViewController.m */,
+				4D0C5C1D17E7FE5E0008F243 /* DetailViewController.h */,
+				4D0C5C1E17E7FE5E0008F243 /* DetailViewController.m */,
+				4D0C5C2017E7FE5E0008F243 /* MasterViewController.xib */,
+				4D0C5C2317E7FE5E0008F243 /* DetailViewController.xib */,
+				4D0C5C1717E7FE5E0008F243 /* ControleEstoque.xcdatamodeld */,
+				4D0C5C0617E7FE5E0008F243 /* Supporting Files */,
+			);
+			path = ControleEstoque;
+			sourceTree = "<group>";
+		};
+		4D0C5C0617E7FE5E0008F243 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D0C5C0717E7FE5E0008F243 /* ControleEstoque-Info.plist */,
+				4D0C5C0817E7FE5E0008F243 /* InfoPlist.strings */,
+				4D0C5C0B17E7FE5E0008F243 /* main.m */,
+				4D0C5C0D17E7FE5E0008F243 /* ControleEstoque-Prefix.pch */,
+				4D0C5C1117E7FE5E0008F243 /* Default.png */,
+				4D0C5C1317E7FE5E0008F243 /* Default@2x.png */,
+				4D0C5C1517E7FE5E0008F243 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D0C5BF917E7FE5E0008F243 /* ControleEstoque */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D0C5C2817E7FE5E0008F243 /* Build configuration list for PBXNativeTarget "ControleEstoque" */;
+			buildPhases = (
+				4D0C5BF617E7FE5E0008F243 /* Sources */,
+				4D0C5BF717E7FE5E0008F243 /* Frameworks */,
+				4D0C5BF817E7FE5E0008F243 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ControleEstoque;
+			productName = ControleEstoque;
+			productReference = 4D0C5BFA17E7FE5E0008F243 /* ControleEstoque.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D0C5BF217E7FE5E0008F243 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = raffaelps;
+			};
+			buildConfigurationList = 4D0C5BF517E7FE5E0008F243 /* Build configuration list for PBXProject "ControleEstoque" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4D0C5BF117E7FE5E0008F243;
+			productRefGroup = 4D0C5BFB17E7FE5E0008F243 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D0C5BF917E7FE5E0008F243 /* ControleEstoque */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D0C5BF817E7FE5E0008F243 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0C5C0A17E7FE5E0008F243 /* InfoPlist.strings in Resources */,
+				4D0C5C1217E7FE5E0008F243 /* Default.png in Resources */,
+				4D0C5C1417E7FE5E0008F243 /* Default@2x.png in Resources */,
+				4D0C5C1617E7FE5E0008F243 /* Default-568h@2x.png in Resources */,
+				4D0C5C2217E7FE5E0008F243 /* MasterViewController.xib in Resources */,
+				4D0C5C2517E7FE5E0008F243 /* DetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D0C5BF617E7FE5E0008F243 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0C5C0C17E7FE5E0008F243 /* main.m in Sources */,
+				4D0C5C1017E7FE5E0008F243 /* AppDelegate.m in Sources */,
+				4D0C5C1917E7FE5E0008F243 /* ControleEstoque.xcdatamodeld in Sources */,
+				4D0C5C1C17E7FE5E0008F243 /* MasterViewController.m in Sources */,
+				4D0C5C1F17E7FE5E0008F243 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D0C5C0817E7FE5E0008F243 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D0C5C0917E7FE5E0008F243 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4D0C5C2017E7FE5E0008F243 /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D0C5C2117E7FE5E0008F243 /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		4D0C5C2317E7FE5E0008F243 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D0C5C2417E7FE5E0008F243 /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D0C5C2617E7FE5E0008F243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4D0C5C2717E7FE5E0008F243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D0C5C2917E7FE5E0008F243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ControleEstoque/ControleEstoque-Prefix.pch";
+				INFOPLIST_FILE = "ControleEstoque/ControleEstoque-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4D0C5C2A17E7FE5E0008F243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ControleEstoque/ControleEstoque-Prefix.pch";
+				INFOPLIST_FILE = "ControleEstoque/ControleEstoque-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D0C5BF517E7FE5E0008F243 /* Build configuration list for PBXProject "ControleEstoque" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D0C5C2617E7FE5E0008F243 /* Debug */,
+				4D0C5C2717E7FE5E0008F243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D0C5C2817E7FE5E0008F243 /* Build configuration list for PBXNativeTarget "ControleEstoque" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D0C5C2917E7FE5E0008F243 /* Debug */,
+				4D0C5C2A17E7FE5E0008F243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D0C5C1717E7FE5E0008F243 /* ControleEstoque.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D0C5C1817E7FE5E0008F243 /* ControleEstoque.xcdatamodel */,
+			);
+			currentVersion = 4D0C5C1817E7FE5E0008F243 /* ControleEstoque.xcdatamodel */;
+			path = ControleEstoque.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4D0C5BF217E7FE5E0008F243 /* Project object */;
+}
