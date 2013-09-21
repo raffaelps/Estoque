@@ -33,6 +33,7 @@
 		A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */; };
 		A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */; };
 		A920105E17EDE37C004F1502 /* Sistoque.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */; };
+		C76611C217EDE9AB0026510F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76611C117EDE9AB0026510F /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaRelatorioViewController.m; sourceTree = "<group>"; };
 		A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaRelatorioViewController.xib; sourceTree = "<group>"; };
 		A920105D17EDE37C004F1502 /* Sistoque.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sistoque.xcdatamodel; sourceTree = "<group>"; };
+		C76611C117EDE9AB0026510F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C76611C217EDE9AB0026510F /* CoreData.framework in Frameworks */,
 				A7B0502517EDDD9900A458C0 /* UIKit.framework in Frameworks */,
 				A7B0502717EDDD9900A458C0 /* Foundation.framework in Frameworks */,
 				A7B0502917EDDD9900A458C0 /* CoreGraphics.framework in Frameworks */,
@@ -110,6 +113,7 @@
 		A7B0502317EDDD9800A458C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C76611C117EDE9AB0026510F /* CoreData.framework */,
 				A7B0502417EDDD9900A458C0 /* UIKit.framework */,
 				A7B0502617EDDD9900A458C0 /* Foundation.framework */,
 				A7B0502817EDDD9900A458C0 /* CoreGraphics.framework */,
