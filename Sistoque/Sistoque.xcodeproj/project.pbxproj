@@ -34,6 +34,8 @@
 		A7B0506417EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0506217EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib */; };
 		A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */; };
 		A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */; };
+		A920105E17EDE37C004F1502 /* Sistoque.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */; };
+		C76611C217EDE9AB0026510F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76611C117EDE9AB0026510F /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		A7B0506517EDDE0C00A458C0 /* ListaRelatorioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaRelatorioViewController.h; sourceTree = "<group>"; };
 		A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaRelatorioViewController.m; sourceTree = "<group>"; };
 		A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaRelatorioViewController.xib; sourceTree = "<group>"; };
+		A920105D17EDE37C004F1502 /* Sistoque.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sistoque.xcdatamodel; sourceTree = "<group>"; };
+		C76611C117EDE9AB0026510F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C76611C217EDE9AB0026510F /* CoreData.framework in Frameworks */,
 				A7B0502517EDDD9900A458C0 /* UIKit.framework in Frameworks */,
 				A7B0502717EDDD9900A458C0 /* Foundation.framework in Frameworks */,
 				A7B0502917EDDD9900A458C0 /* CoreGraphics.framework in Frameworks */,
@@ -123,6 +128,7 @@
 		A7B0502317EDDD9800A458C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C76611C117EDE9AB0026510F /* CoreData.framework */,
 				A7B0502417EDDD9900A458C0 /* UIKit.framework */,
 				A7B0502617EDDD9900A458C0 /* Foundation.framework */,
 				A7B0502817EDDD9900A458C0 /* CoreGraphics.framework */,
@@ -138,8 +144,8 @@
 				A7B0503417EDDD9900A458C0 /* AppDelegate.m */,
 				A7B0503C17EDDD9900A458C0 /* ViewController.h */,
 				A7B0503D17EDDD9900A458C0 /* ViewController.m */,
+				A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */,
 				A7B0503F17EDDD9900A458C0 /* ViewController.xib */,
-				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
 				A7B0504717EDDDBC00A458C0 /* ListaProdutosViewController.h */,
 				A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */,
 				A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */,
@@ -161,6 +167,7 @@
 				A7B0506517EDDE0C00A458C0 /* ListaRelatorioViewController.h */,
 				A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */,
 				A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */,
+				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
 			);
 			path = Sistoque;
 			sourceTree = "<group>";
@@ -257,6 +264,7 @@
 				A7B0503517EDDD9900A458C0 /* AppDelegate.m in Sources */,
 				A7B0503E17EDDD9900A458C0 /* ViewController.m in Sources */,
 				A7B0504A17EDDDBC00A458C0 /* ListaProdutosViewController.m in Sources */,
+				A920105E17EDE37C004F1502 /* Sistoque.xcdatamodeld in Sources */,
 				A7B0504F17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m in Sources */,
 				A7B0505417EDDDDC00A458C0 /* ListaMovimentoViewController.m in Sources */,
 				A7B0505917EDDDED00A458C0 /* FormCadastroMovimentoViewController.m in Sources */,
@@ -389,6 +397,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A920105D17EDE37C004F1502 /* Sistoque.xcdatamodel */,
+			);
+			currentVersion = A920105D17EDE37C004F1502 /* Sistoque.xcdatamodel */;
+			path = Sistoque.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A7B0501917EDDD9800A458C0 /* Project object */;
 }

@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "ListaProdutosViewController.h"
+#import "ListaCategoriaViewController.h"
+#import "ListaRelatorioViewController.h"
 
 @interface ViewController ()
 
@@ -26,4 +29,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)abrirJanela:(UIViewController *)tela {
+    tela.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentModalViewController:tela animated:YES];
+    
+}
+
+- (IBAction)btnProduto:(id)sender {
+    ListaProdutosViewController  *tela = [[ListaProdutosViewController alloc] init];
+    [self abrirJanela:tela];
+}
+
+- (IBAction)btnCategoria:(id)sender {
+    ListaCategoriaViewController  *tela = [[ListaCategoriaViewController alloc] init];
+    [self abrirJanela:tela];
+}
+
+- (IBAction)btnRelatorio:(id)sender {
+    ListaRelatorioViewController  *tela = [[ListaRelatorioViewController alloc] init];
+    [self abrirJanela:tela];
+}
 @end

@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)btnProduto:(id)sender;
+- (IBAction)btnCategoria:(id)sender;
+- (IBAction)btnRelatorio:(id)sender;
+- (void)abrirJanela:(UIViewController *)tela;
+
 
 @end
