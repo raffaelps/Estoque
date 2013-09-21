@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListaProdutosViewController : UIViewController
+@interface ListaProdutosViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+
+
+@property (nonatomic,retain)IBOutlet UITableView *tabela;
 
 @end

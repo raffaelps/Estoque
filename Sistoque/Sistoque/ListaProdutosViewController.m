@@ -7,6 +7,7 @@
 //
 
 #import "ListaProdutosViewController.h"
+#import "CellProdutos.h"
 
 @interface ListaProdutosViewController ()
 
@@ -33,6 +34,55 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)novoProduto:(id)sender
+{
+    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"CellProdutos";
+    
+    CellProdutos *cellTopo = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cellTopo == nil) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellTopo" owner:nil options:nil];
+        
+        for (id currenctObject in topLevelObjects)
+        {
+            if ([currenctObject isKindOfClass:[UITableViewCell class]])
+            {
+                cellTopo = (CellProdutos *) currenctObject;
+            }
+        }
+    }
+    
+    cellTopo.nomeProduto.text = @"Nome do produto de teste";
+    
+    return cellTopo;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
 
 @end

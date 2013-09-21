@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DD3B54F17EDE21D00FCD4A5 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DD3B54E17EDE21D00FCD4A5 /* CellProdutos.xib */; };
+		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
 		A7B0502517EDDD9900A458C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502417EDDD9900A458C0 /* UIKit.framework */; };
 		A7B0502717EDDD9900A458C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502617EDDD9900A458C0 /* Foundation.framework */; };
 		A7B0502917EDDD9900A458C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502817EDDD9900A458C0 /* CoreGraphics.framework */; };
@@ -35,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DD3B54E17EDE21D00FCD4A5 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
+		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
+		4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellProdutos.m; sourceTree = "<group>"; };
 		A7B0502117EDDD9800A458C0 /* Sistoque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sistoque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B0502417EDDD9900A458C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7B0502617EDDD9900A458C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +93,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DD3B54D17EDE20600FCD4A5 /* Celulas */ = {
+			isa = PBXGroup;
+			children = (
+				4DD3B54E17EDE21D00FCD4A5 /* CellProdutos.xib */,
+				4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */,
+				4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */,
+			);
+			name = Celulas;
+			sourceTree = "<group>";
+		};
 		A7B0501817EDDD9800A458C0 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +133,7 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
+				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
 				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
 				A7B0503417EDDD9900A458C0 /* AppDelegate.m */,
 				A7B0503C17EDDD9900A458C0 /* ViewController.h */,
@@ -214,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD3B54F17EDE21D00FCD4A5 /* CellProdutos.xib in Resources */,
 				A7B0502F17EDDD9900A458C0 /* InfoPlist.strings in Resources */,
 				A7B0503717EDDD9900A458C0 /* Default.png in Resources */,
 				A7B0503917EDDD9900A458C0 /* Default@2x.png in Resources */,
@@ -243,6 +260,7 @@
 				A7B0504F17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m in Sources */,
 				A7B0505417EDDDDC00A458C0 /* ListaMovimentoViewController.m in Sources */,
 				A7B0505917EDDDED00A458C0 /* FormCadastroMovimentoViewController.m in Sources */,
+				4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */,
 				A7B0505E17EDDDF800A458C0 /* ListaCategoriaViewController.m in Sources */,
 				A7B0506317EDDE0300A458C0 /* FormCadastroCategoriaViewController.m in Sources */,
 				A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */,
@@ -368,6 +386,7 @@
 				A7B0504617EDDD9900A458C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
