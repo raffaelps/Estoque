@@ -5,19 +5,31 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>56D0C56A-A5C4-4AC0-BE2B-91A1237AA37E</string>
+=======
+	<string>0B1DD6B2-2D4F-4C02-8DED-BA12A086CEFD</string>
+>>>>>>> b0dc7e8b1ded38237f42dc19247d5fc5036c6f80
 	<key>IDESourceControlProjectName</key>
 	<string>Sistoque</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>0C21FC3D-2793-4372-8F42-E459EEA7A713</key>
+=======
+		<key>094AE71C-CBF9-479A-966A-B3FA590AE015</key>
+>>>>>>> b0dc7e8b1ded38237f42dc19247d5fc5036c6f80
 		<string>https://github.com/raffaelps/Estoque.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Sistoque/Sistoque.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>0C21FC3D-2793-4372-8F42-E459EEA7A713</key>
+=======
+		<key>094AE71C-CBF9-479A-966A-B3FA590AE015</key>
+>>>>>>> b0dc7e8b1ded38237f42dc19247d5fc5036c6f80
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +37,22 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
+<<<<<<< HEAD
 	<string>0C21FC3D-2793-4372-8F42-E459EEA7A713</string>
+=======
+	<string>094AE71C-CBF9-479A-966A-B3FA590AE015</string>
+>>>>>>> b0dc7e8b1ded38237f42dc19247d5fc5036c6f80
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>0C21FC3D-2793-4372-8F42-E459EEA7A713</string>
+=======
+			<string>094AE71C-CBF9-479A-966A-B3FA590AE015</string>
+>>>>>>> b0dc7e8b1ded38237f42dc19247d5fc5036c6f80
 			<key>IDESourceControlWCCName</key>
 			<string>Estoque</string>
 		</dict>
