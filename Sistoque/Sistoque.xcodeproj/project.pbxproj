@@ -126,7 +126,6 @@
 				A7B0503D17EDDD9900A458C0 /* ViewController.m */,
 				A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */,
 				A7B0503F17EDDD9900A458C0 /* ViewController.xib */,
-				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
 				A7B0504717EDDDBC00A458C0 /* ListaProdutosViewController.h */,
 				A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */,
 				A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */,
@@ -148,6 +147,7 @@
 				A7B0506517EDDE0C00A458C0 /* ListaRelatorioViewController.h */,
 				A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */,
 				A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */,
+				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
 			);
 			path = Sistoque;
 			sourceTree = "<group>";
