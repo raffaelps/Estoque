@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4DD3B54F17EDE21D00FCD4A5 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DD3B54E17EDE21D00FCD4A5 /* CellProdutos.xib */; };
+		4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F3E217F65FC6007DC4A9 /* ViewController.m */; };
+		4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F3E317F65FC6007DC4A9 /* ViewController.xib */; };
+		4D63C3E217F6594400594E71 /* CellProduto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProduto.xib */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
 		A7B0502517EDDD9900A458C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502417EDDD9900A458C0 /* UIKit.framework */; };
 		A7B0502717EDDD9900A458C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502617EDDD9900A458C0 /* Foundation.framework */; };
@@ -18,8 +20,6 @@
 		A7B0503717EDDD9900A458C0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B0503617EDDD9900A458C0 /* Default.png */; };
 		A7B0503917EDDD9900A458C0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B0503817EDDD9900A458C0 /* Default@2x.png */; };
 		A7B0503B17EDDD9900A458C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B0503A17EDDD9900A458C0 /* Default-568h@2x.png */; };
-		A7B0503E17EDDD9900A458C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0503D17EDDD9900A458C0 /* ViewController.m */; };
-		A7B0504117EDDD9900A458C0 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0503F17EDDD9900A458C0 /* ViewController.xib */; };
 		A7B0504A17EDDDBC00A458C0 /* ListaProdutosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */; };
 		A7B0504B17EDDDBC00A458C0 /* ListaProdutosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */; };
 		A7B0504F17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0504D17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m */; };
@@ -39,7 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4DD3B54E17EDE21D00FCD4A5 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
+		4D37F3E117F65FC6007DC4A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4D37F3E217F65FC6007DC4A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4D37F3E317F65FC6007DC4A9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		4D63C3E117F6594400594E71 /* CellProduto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProduto.xib; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
 		4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellProdutos.m; sourceTree = "<group>"; };
 		A7B0502117EDDD9800A458C0 /* Sistoque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sistoque.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,9 +58,6 @@
 		A7B0503617EDDD9900A458C0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A7B0503817EDDD9900A458C0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A7B0503A17EDDD9900A458C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A7B0503C17EDDD9900A458C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A7B0503D17EDDD9900A458C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A7B0504017EDDD9900A458C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		A7B0504717EDDDBC00A458C0 /* ListaProdutosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaProdutosViewController.h; sourceTree = "<group>"; };
 		A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaProdutosViewController.m; sourceTree = "<group>"; };
 		A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaProdutosViewController.xib; sourceTree = "<group>"; };
@@ -101,9 +101,12 @@
 		4DD3B54D17EDE20600FCD4A5 /* Celulas */ = {
 			isa = PBXGroup;
 			children = (
-				4DD3B54E17EDE21D00FCD4A5 /* CellProdutos.xib */,
 				4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */,
 				4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */,
+				4D63C3E117F6594400594E71 /* CellProduto.xib */,
+				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
+				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
+				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
 			);
 			name = Celulas;
 			sourceTree = "<group>";
@@ -142,10 +145,7 @@
 				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
 				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
 				A7B0503417EDDD9900A458C0 /* AppDelegate.m */,
-				A7B0503C17EDDD9900A458C0 /* ViewController.h */,
-				A7B0503D17EDDD9900A458C0 /* ViewController.m */,
 				A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */,
-				A7B0503F17EDDD9900A458C0 /* ViewController.xib */,
 				A7B0504717EDDDBC00A458C0 /* ListaProdutosViewController.h */,
 				A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */,
 				A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */,
@@ -237,12 +237,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DD3B54F17EDE21D00FCD4A5 /* CellProdutos.xib in Resources */,
 				A7B0502F17EDDD9900A458C0 /* InfoPlist.strings in Resources */,
 				A7B0503717EDDD9900A458C0 /* Default.png in Resources */,
 				A7B0503917EDDD9900A458C0 /* Default@2x.png in Resources */,
 				A7B0503B17EDDD9900A458C0 /* Default-568h@2x.png in Resources */,
-				A7B0504117EDDD9900A458C0 /* ViewController.xib in Resources */,
 				A7B0504B17EDDDBC00A458C0 /* ListaProdutosViewController.xib in Resources */,
 				A7B0505017EDDDCA00A458C0 /* FormCadastroProdutoViewController.xib in Resources */,
 				A7B0505517EDDDDC00A458C0 /* ListaMovimentoViewController.xib in Resources */,
@@ -250,6 +248,8 @@
 				A7B0505F17EDDDF800A458C0 /* ListaCategoriaViewController.xib in Resources */,
 				A7B0506417EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib in Resources */,
 				A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */,
+				4D63C3E217F6594400594E71 /* CellProduto.xib in Resources */,
+				4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +262,6 @@
 			files = (
 				A7B0503117EDDD9900A458C0 /* main.m in Sources */,
 				A7B0503517EDDD9900A458C0 /* AppDelegate.m in Sources */,
-				A7B0503E17EDDD9900A458C0 /* ViewController.m in Sources */,
 				A7B0504A17EDDDBC00A458C0 /* ListaProdutosViewController.m in Sources */,
 				A920105E17EDE37C004F1502 /* Sistoque.xcdatamodeld in Sources */,
 				A7B0504F17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m in Sources */,
@@ -272,6 +271,7 @@
 				A7B0505E17EDDDF800A458C0 /* ListaCategoriaViewController.m in Sources */,
 				A7B0506317EDDE0300A458C0 /* FormCadastroCategoriaViewController.m in Sources */,
 				A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */,
+				4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,14 +286,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A7B0503F17EDDD9900A458C0 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7B0504017EDDD9900A458C0 /* en */,
-			);
-			name = ViewController.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -301,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_MALLOC = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -309,7 +302,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -332,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_MALLOC = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -340,7 +335,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -359,6 +355,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sistoque/Sistoque-Prefix.pch";
 				INFOPLIST_FILE = "Sistoque/Sistoque-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -370,6 +367,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sistoque/Sistoque-Prefix.pch";
 				INFOPLIST_FILE = "Sistoque/Sistoque-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

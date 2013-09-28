@@ -7,6 +7,7 @@
 //
 
 #import "ListaProdutosViewController.h"
+#import "FormCadastroProdutoViewController.h"
 #import "CellProdutos.h"
 
 @interface ListaProdutosViewController ()
@@ -19,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self setTitle:@"Produtos"];
     }
     return self;
 }
@@ -27,7 +28,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Novo"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:@selector(novoProduto)];
+    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,9 +43,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)novoProduto:(id)sender
+- (IBAction)novoProduto
 {
-    
+    FormCadastroProdutoViewController *cadastroProdutoViewController = [[FormCadastroProdutoViewController alloc] init];
+    [self.navigationController pushViewController:cadastroProdutoViewController animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -59,7 +67,7 @@
     CellProdutos *cellTopo = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cellTopo == nil) {
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellTopo" owner:nil options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellProdutos" owner:nil options:nil];
         
         for (id currenctObject in topLevelObjects)
         {
@@ -77,7 +85,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 0;
+    return 81;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
