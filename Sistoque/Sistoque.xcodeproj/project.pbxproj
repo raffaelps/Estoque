@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F3E217F65FC6007DC4A9 /* ViewController.m */; };
 		4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F3E317F65FC6007DC4A9 /* ViewController.xib */; };
+		4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */; };
 		4D63C3E217F6594400594E71 /* CellProduto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProduto.xib */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
 		A7B0502517EDDD9900A458C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502417EDDD9900A458C0 /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		A7B0504A17EDDDBC00A458C0 /* ListaProdutosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */; };
 		A7B0504B17EDDDBC00A458C0 /* ListaProdutosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */; };
 		A7B0504F17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0504D17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m */; };
-		A7B0505017EDDDCA00A458C0 /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0504E17EDDDCA00A458C0 /* FormCadastroProdutoViewController.xib */; };
 		A7B0505417EDDDDC00A458C0 /* ListaMovimentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0505217EDDDDC00A458C0 /* ListaMovimentoViewController.m */; };
 		A7B0505517EDDDDC00A458C0 /* ListaMovimentoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0505317EDDDDC00A458C0 /* ListaMovimentoViewController.xib */; };
 		A7B0505917EDDDED00A458C0 /* FormCadastroMovimentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0505717EDDDED00A458C0 /* FormCadastroMovimentoViewController.m */; };
@@ -42,6 +42,7 @@
 		4D37F3E117F65FC6007DC4A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4D37F3E217F65FC6007DC4A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4D37F3E317F65FC6007DC4A9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCadastroProdutoViewController.xib; sourceTree = "<group>"; };
 		4D63C3E117F6594400594E71 /* CellProduto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProduto.xib; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
 		4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellProdutos.m; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaProdutosViewController.xib; sourceTree = "<group>"; };
 		A7B0504C17EDDDCA00A458C0 /* FormCadastroProdutoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormCadastroProdutoViewController.h; sourceTree = "<group>"; };
 		A7B0504D17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormCadastroProdutoViewController.m; sourceTree = "<group>"; };
-		A7B0504E17EDDDCA00A458C0 /* FormCadastroProdutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCadastroProdutoViewController.xib; sourceTree = "<group>"; };
 		A7B0505117EDDDDC00A458C0 /* ListaMovimentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaMovimentoViewController.h; sourceTree = "<group>"; };
 		A7B0505217EDDDDC00A458C0 /* ListaMovimentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaMovimentoViewController.m; sourceTree = "<group>"; };
 		A7B0505317EDDDDC00A458C0 /* ListaMovimentoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaMovimentoViewController.xib; sourceTree = "<group>"; };
@@ -142,31 +142,31 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
-				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
 				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
 				A7B0503417EDDD9900A458C0 /* AppDelegate.m */,
-				A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */,
-				A7B0504717EDDDBC00A458C0 /* ListaProdutosViewController.h */,
-				A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */,
-				A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */,
-				A7B0504C17EDDDCA00A458C0 /* FormCadastroProdutoViewController.h */,
-				A7B0504D17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m */,
-				A7B0504E17EDDDCA00A458C0 /* FormCadastroProdutoViewController.xib */,
-				A7B0505117EDDDDC00A458C0 /* ListaMovimentoViewController.h */,
-				A7B0505217EDDDDC00A458C0 /* ListaMovimentoViewController.m */,
-				A7B0505317EDDDDC00A458C0 /* ListaMovimentoViewController.xib */,
-				A7B0505617EDDDED00A458C0 /* FormCadastroMovimentoViewController.h */,
-				A7B0505717EDDDED00A458C0 /* FormCadastroMovimentoViewController.m */,
-				A7B0505817EDDDED00A458C0 /* FormCadastroMovimentoViewController.xib */,
-				A7B0505B17EDDDF800A458C0 /* ListaCategoriaViewController.h */,
-				A7B0505C17EDDDF800A458C0 /* ListaCategoriaViewController.m */,
-				A7B0505D17EDDDF800A458C0 /* ListaCategoriaViewController.xib */,
+				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
 				A7B0506017EDDE0300A458C0 /* FormCadastroCategoriaViewController.h */,
 				A7B0506117EDDE0300A458C0 /* FormCadastroCategoriaViewController.m */,
 				A7B0506217EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib */,
+				A7B0505617EDDDED00A458C0 /* FormCadastroMovimentoViewController.h */,
+				A7B0505717EDDDED00A458C0 /* FormCadastroMovimentoViewController.m */,
+				A7B0505817EDDDED00A458C0 /* FormCadastroMovimentoViewController.xib */,
+				A7B0504C17EDDDCA00A458C0 /* FormCadastroProdutoViewController.h */,
+				A7B0504D17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m */,
+				4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */,
+				A7B0505B17EDDDF800A458C0 /* ListaCategoriaViewController.h */,
+				A7B0505C17EDDDF800A458C0 /* ListaCategoriaViewController.m */,
+				A7B0505D17EDDDF800A458C0 /* ListaCategoriaViewController.xib */,
+				A7B0505117EDDDDC00A458C0 /* ListaMovimentoViewController.h */,
+				A7B0505217EDDDDC00A458C0 /* ListaMovimentoViewController.m */,
+				A7B0505317EDDDDC00A458C0 /* ListaMovimentoViewController.xib */,
+				A7B0504717EDDDBC00A458C0 /* ListaProdutosViewController.h */,
+				A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */,
+				A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */,
 				A7B0506517EDDE0C00A458C0 /* ListaRelatorioViewController.h */,
 				A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */,
 				A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */,
+				A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */,
 				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
 			);
 			path = Sistoque;
@@ -242,7 +242,6 @@
 				A7B0503917EDDD9900A458C0 /* Default@2x.png in Resources */,
 				A7B0503B17EDDD9900A458C0 /* Default-568h@2x.png in Resources */,
 				A7B0504B17EDDDBC00A458C0 /* ListaProdutosViewController.xib in Resources */,
-				A7B0505017EDDDCA00A458C0 /* FormCadastroProdutoViewController.xib in Resources */,
 				A7B0505517EDDDDC00A458C0 /* ListaMovimentoViewController.xib in Resources */,
 				A7B0505A17EDDDED00A458C0 /* FormCadastroMovimentoViewController.xib in Resources */,
 				A7B0505F17EDDDF800A458C0 /* ListaCategoriaViewController.xib in Resources */,
@@ -250,6 +249,7 @@
 				A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */,
 				4D63C3E217F6594400594E71 /* CellProduto.xib in Resources */,
 				4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */,
+				4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
