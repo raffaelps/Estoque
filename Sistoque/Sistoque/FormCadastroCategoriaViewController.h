@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FormCadastroCategoriaViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *textfieldDescricaoCategoria;
+@property (weak, nonatomic) IBOutlet UISwitch *switchStatusCategoria;
 
+- (IBAction)buttonSalvarCategoria:(id)sender;
 @end

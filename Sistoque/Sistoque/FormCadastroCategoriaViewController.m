@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+         [self setTitle:@"Nova categoria"];
     }
     return self;
 }
@@ -35,4 +36,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonSalvarCategoria:(id)sender {
+}
 @end

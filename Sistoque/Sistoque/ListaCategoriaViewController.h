@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListaCategoriaViewController : UIViewController
+@interface ListaCategoriaViewController : UIViewController<UITableViewDelegate,
+UITableViewDataSource> {
+    NSMutableArray *categorias;
+}
+@property (retain, nonatomic) IBOutlet UITableView *tableviewCategorias;
 
 @end
