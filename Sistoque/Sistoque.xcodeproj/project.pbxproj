@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21E919E817F7127A00653A78 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E919E717F7127A00653A78 /* Categoria.m */; };
 		4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F3E217F65FC6007DC4A9 /* ViewController.m */; };
 		4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F3E317F65FC6007DC4A9 /* ViewController.xib */; };
+		4D58C8FC17F723160058A1D6 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D58C8FB17F723160058A1D6 /* Categoria.m */; };
 		4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */; };
 		4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProdutos.xib */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
@@ -40,11 +40,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		21E919E617F7127A00653A78 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
-		21E919E717F7127A00653A78 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		4D37F3E117F65FC6007DC4A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4D37F3E217F65FC6007DC4A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4D37F3E317F65FC6007DC4A9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		4D58C8FA17F723160058A1D6 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
+		4D58C8FB17F723160058A1D6 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCadastroProdutoViewController.xib; sourceTree = "<group>"; };
 		4D63C3E117F6594400594E71 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
@@ -107,12 +107,6 @@
 				4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */,
 				4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */,
 				4D63C3E117F6594400594E71 /* CellProdutos.xib */,
-<<<<<<< HEAD
-				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
-				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
-				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
-=======
->>>>>>> a0733b8d765610a1d5eda79887367b7cf78d9773
 			);
 			name = Celulas;
 			sourceTree = "<group>";
@@ -148,11 +142,11 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
+				4D58C8FA17F723160058A1D6 /* Categoria.h */,
+				4D58C8FB17F723160058A1D6 /* Categoria.m */,
 				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
 				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
 				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
-				21E919E717F7127A00653A78 /* Categoria.m */,
-				21E919E617F7127A00653A78 /* Categoria.h */,
 				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
 				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
 				A7B0503417EDDD9900A458C0 /* AppDelegate.m */,
@@ -283,7 +277,7 @@
 				A7B0506317EDDE0300A458C0 /* FormCadastroCategoriaViewController.m in Sources */,
 				A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */,
 				4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */,
-				21E919E817F7127A00653A78 /* Categoria.m in Sources */,
+				4D58C8FC17F723160058A1D6 /* Categoria.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
