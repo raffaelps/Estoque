@@ -13,6 +13,5 @@ UITableViewDataSource> {
     NSMutableArray *categorias;
 }
 @property (retain, nonatomic) IBOutlet UITableView *tableviewCategorias;
-- (IBAction)btnAddCategoria:(id)sender;
 
 @end

@@ -20,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self setTitle:@"Categorias"];
     }
     return self;
 }
@@ -29,6 +29,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
+                                  initWithTitle:@"Nova"
+                                  style:UIBarButtonItemStyleBordered
+                                  target:self
+                                  action:@selector(novaCategoria)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    
     [self carregaCategorias];
 }
 
@@ -45,14 +52,13 @@
     
 }
 
-- (IBAction)btnAddCategoria:(id)sender {
-    FormCadastroCategoriaViewController *formCadastroCategoriaViewController = [[FormCadastroCategoriaViewController alloc]init];
-    formCadastroCategoriaViewController.modalTransitionStyle =
-    UIModalTransitionStyleCrossDissolve;
-    
-    [self presentModalViewController: formCadastroCategoriaViewController animated:YES ];
 
+- (IBAction)novaCategoria
+{
+    FormCadastroCategoriaViewController *formCadastroCategoriaViewController = [[FormCadastroCategoriaViewController alloc] init];
+    [self.navigationController pushViewController:formCadastroCategoriaViewController animated:YES];
 }
+
 
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
