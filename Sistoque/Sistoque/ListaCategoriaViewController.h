@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListaCategoriaViewController : UIViewController
+@interface ListaCategoriaViewController : UIViewController<UITableViewDelegate,
+UITableViewDataSource> {
+    NSMutableArray *categorias;
+}
+@property (retain, nonatomic) IBOutlet UITableView *tableviewCategorias;
+- (IBAction)btnAddCategoria:(id)sender;
 
 @end
