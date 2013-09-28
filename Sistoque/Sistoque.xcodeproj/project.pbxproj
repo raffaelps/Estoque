@@ -10,7 +10,7 @@
 		4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F3E217F65FC6007DC4A9 /* ViewController.m */; };
 		4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F3E317F65FC6007DC4A9 /* ViewController.xib */; };
 		4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */; };
-		4D63C3E217F6594400594E71 /* CellProduto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProduto.xib */; };
+		4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProdutos.xib */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
 		A7B0502517EDDD9900A458C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502417EDDD9900A458C0 /* UIKit.framework */; };
 		A7B0502717EDDD9900A458C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502617EDDD9900A458C0 /* Foundation.framework */; };
@@ -43,7 +43,7 @@
 		4D37F3E217F65FC6007DC4A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4D37F3E317F65FC6007DC4A9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCadastroProdutoViewController.xib; sourceTree = "<group>"; };
-		4D63C3E117F6594400594E71 /* CellProduto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProduto.xib; sourceTree = "<group>"; };
+		4D63C3E117F6594400594E71 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
 		4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellProdutos.m; sourceTree = "<group>"; };
 		A7B0502117EDDD9800A458C0 /* Sistoque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sistoque.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +103,7 @@
 			children = (
 				4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */,
 				4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */,
-				4D63C3E117F6594400594E71 /* CellProduto.xib */,
+				4D63C3E117F6594400594E71 /* CellProdutos.xib */,
 				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
 				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
 				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
@@ -247,7 +247,7 @@
 				A7B0505F17EDDDF800A458C0 /* ListaCategoriaViewController.xib in Resources */,
 				A7B0506417EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib in Resources */,
 				A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */,
-				4D63C3E217F6594400594E71 /* CellProduto.xib in Resources */,
+				4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */,
 				4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */,
 				4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */,
 			);
