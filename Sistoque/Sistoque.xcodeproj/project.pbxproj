@@ -104,9 +104,6 @@
 				4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */,
 				4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */,
 				4D63C3E117F6594400594E71 /* CellProdutos.xib */,
-				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
-				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
-				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
 			);
 			name = Celulas;
 			sourceTree = "<group>";
@@ -142,9 +139,12 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
+				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
+				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
+				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
+				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
 				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
 				A7B0503417EDDD9900A458C0 /* AppDelegate.m */,
-				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
 				A7B0506017EDDE0300A458C0 /* FormCadastroCategoriaViewController.h */,
 				A7B0506117EDDE0300A458C0 /* FormCadastroCategoriaViewController.m */,
 				A7B0506217EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib */,
