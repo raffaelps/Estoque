@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F3E217F65FC6007DC4A9 /* ViewController.m */; };
 		4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F3E317F65FC6007DC4A9 /* ViewController.xib */; };
-		4D58C8FC17F723160058A1D6 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D58C8FB17F723160058A1D6 /* Categoria.m */; };
 		4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */; };
 		4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProdutos.xib */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
@@ -36,6 +35,10 @@
 		A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */; };
 		A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */; };
 		A920105E17EDE37C004F1502 /* Sistoque.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */; };
+		C75DD2D617F86687009A0E75 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2CF17F86687009A0E75 /* Categoria.m */; };
+		C75DD2D717F86687009A0E75 /* GerenciadorBD.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2D117F86687009A0E75 /* GerenciadorBD.m */; };
+		C75DD2D817F86687009A0E75 /* Movimento.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2D317F86687009A0E75 /* Movimento.m */; };
+		C75DD2D917F86687009A0E75 /* Produto.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2D517F86687009A0E75 /* Produto.m */; };
 		C76611C217EDE9AB0026510F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76611C117EDE9AB0026510F /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +46,6 @@
 		4D37F3E117F65FC6007DC4A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4D37F3E217F65FC6007DC4A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4D37F3E317F65FC6007DC4A9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		4D58C8FA17F723160058A1D6 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
-		4D58C8FB17F723160058A1D6 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCadastroProdutoViewController.xib; sourceTree = "<group>"; };
 		4D63C3E117F6594400594E71 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
@@ -83,6 +84,14 @@
 		A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaRelatorioViewController.m; sourceTree = "<group>"; };
 		A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaRelatorioViewController.xib; sourceTree = "<group>"; };
 		A920105D17EDE37C004F1502 /* Sistoque.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sistoque.xcdatamodel; sourceTree = "<group>"; };
+		C75DD2CE17F86687009A0E75 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
+		C75DD2CF17F86687009A0E75 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
+		C75DD2D017F86687009A0E75 /* GerenciadorBD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorBD.h; sourceTree = "<group>"; };
+		C75DD2D117F86687009A0E75 /* GerenciadorBD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorBD.m; sourceTree = "<group>"; };
+		C75DD2D217F86687009A0E75 /* Movimento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movimento.h; sourceTree = "<group>"; };
+		C75DD2D317F86687009A0E75 /* Movimento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movimento.m; sourceTree = "<group>"; };
+		C75DD2D417F86687009A0E75 /* Produto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produto.h; sourceTree = "<group>"; };
+		C75DD2D517F86687009A0E75 /* Produto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produto.m; sourceTree = "<group>"; };
 		C76611C117EDE9AB0026510F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -142,8 +151,7 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
-				4D58C8FA17F723160058A1D6 /* Categoria.h */,
-				4D58C8FB17F723160058A1D6 /* Categoria.m */,
+				C75DD2CD17F86615009A0E75 /* DB */,
 				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
 				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
 				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
@@ -171,7 +179,6 @@
 				A7B0506517EDDE0C00A458C0 /* ListaRelatorioViewController.h */,
 				A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */,
 				A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */,
-				A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */,
 				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
 			);
 			path = Sistoque;
@@ -189,6 +196,22 @@
 				A7B0503A17EDDD9900A458C0 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C75DD2CD17F86615009A0E75 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				C75DD2CE17F86687009A0E75 /* Categoria.h */,
+				C75DD2CF17F86687009A0E75 /* Categoria.m */,
+				C75DD2D017F86687009A0E75 /* GerenciadorBD.h */,
+				C75DD2D117F86687009A0E75 /* GerenciadorBD.m */,
+				C75DD2D217F86687009A0E75 /* Movimento.h */,
+				C75DD2D317F86687009A0E75 /* Movimento.m */,
+				C75DD2D417F86687009A0E75 /* Produto.h */,
+				C75DD2D517F86687009A0E75 /* Produto.m */,
+				A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */,
+			);
+			name = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,18 +289,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B0503117EDDD9900A458C0 /* main.m in Sources */,
+				C75DD2D917F86687009A0E75 /* Produto.m in Sources */,
 				A7B0503517EDDD9900A458C0 /* AppDelegate.m in Sources */,
 				A7B0504A17EDDDBC00A458C0 /* ListaProdutosViewController.m in Sources */,
 				A920105E17EDE37C004F1502 /* Sistoque.xcdatamodeld in Sources */,
 				A7B0504F17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m in Sources */,
 				A7B0505417EDDDDC00A458C0 /* ListaMovimentoViewController.m in Sources */,
 				A7B0505917EDDDED00A458C0 /* FormCadastroMovimentoViewController.m in Sources */,
+				C75DD2D717F86687009A0E75 /* GerenciadorBD.m in Sources */,
+				C75DD2D617F86687009A0E75 /* Categoria.m in Sources */,
 				4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */,
 				A7B0505E17EDDDF800A458C0 /* ListaCategoriaViewController.m in Sources */,
+				C75DD2D817F86687009A0E75 /* Movimento.m in Sources */,
 				A7B0506317EDDE0300A458C0 /* FormCadastroCategoriaViewController.m in Sources */,
 				A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */,
 				4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */,
-				4D58C8FC17F723160058A1D6 /* Categoria.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
