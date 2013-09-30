@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ListaProdutosViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
-
+{
+    NSArray *listaProdutos;
+}
 
 @property (nonatomic,retain)IBOutlet UITableView *tabela;
 

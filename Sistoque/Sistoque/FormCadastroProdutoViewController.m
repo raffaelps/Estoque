@@ -7,6 +7,7 @@
 //
 
 #import "FormCadastroProdutoViewController.h"
+#import "GerenciadorBD.h"
 
 @interface FormCadastroProdutoViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation FormCadastroProdutoViewController
 
-@synthesize cellAtivo,cellValores,cellQuantidades,cellDescricao,cellCategoria,cellNome,textCategoria,textDescricao,textNome,textQuantMaxima,textQuantMinima,textValorEntrada,textValorSaida,ativo,tableView;
+@synthesize cellAtivo,cellValores,cellQuantidades,cellDescricao,cellCategoria,textCategoria,textDescricao,textQuantMaxima,textQuantMinima,textValorEntrada,textValorSaida,ativo,tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +39,14 @@
     
 }
 
+- (void)carregarProduto
+{
+    if (self.produto)
+    {
+        
+    }
+}
+
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
@@ -51,6 +60,25 @@
 
 - (IBAction)novoProduto
 {
+    Produto *newProduto = [GerenciadorBD getNovaInstancia:[Produto class]];
+    
+    [newProduto setDescricao:self.textDescricao.text];
+    [newProduto setQtdeMaxima:[NSNumber numberWithInt:[self.textQuantMaxima.text intValue]]];
+    [newProduto setQtdeMinima:[NSNumber numberWithInt:[self.textQuantMinima.text intValue]]];
+    [newProduto setValorEntrada:[NSNumber numberWithInt:[self.textValorEntrada.text intValue]]];
+    [newProduto setValorSaida:[NSNumber numberWithInt:[self.textValorSaida.text intValue]]];
+    
+    if ([self.ativo isOn])
+    {
+        [newProduto setAtivo:[NSNumber numberWithInt:1]];
+    }
+    else
+    {
+        [newProduto setAtivo:[NSNumber numberWithInt:0]];
+    }
+    
+    [GerenciadorBD inserir:newProduto];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -62,24 +90,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        return cellNome;
+        return cellDescricao;
     }
     if (indexPath.row == 1) {
         return cellCategoria;
     }
     if (indexPath.row == 2) {
-        return cellDescricao;
-    }
-    if (indexPath.row == 3) {
         return cellQuantidades;
     }
-    if (indexPath.row == 4) {
+    if (indexPath.row == 3) {
         return cellValores;
     }
     
@@ -88,7 +113,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 3 || indexPath.row == 4) {
+    if (indexPath.row == 2 || indexPath.row == 3) {
         return 88;
     }
     

@@ -9,6 +9,7 @@
 #import "ListaCategoriaViewController.h"
 #import "FormCadastroCategoriaViewController.h"
 #import "Categoria.h"
+#import "GerenciadorBD.h"
 
 @interface ListaCategoriaViewController ()
 
@@ -45,11 +46,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) carregaCategorias{
+- (void) carregaCategorias
+{
     
-    categorias = [[NSMutableArray alloc] initWithObjects:@"Catalogus",@"Wishlist", nil];
-    
-    
+    categorias = [GerenciadorBD listarTodos:[Categoria class] ordenacao:@"descricao"];
+
 }
 
 
@@ -80,7 +81,7 @@
     
     Categoria *categoria = [categorias objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = categoria;
+    cell.textLabel.text = categoria.descricao;
     
     return cell;
     
@@ -98,7 +99,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 -(void) tableView:(UITableView *)tableView
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath {
-    [categorias removeObjectAtIndex:indexPath.row];
     [self.tableviewCategorias reloadData];
 }
 

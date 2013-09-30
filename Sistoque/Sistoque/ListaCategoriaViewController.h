@@ -10,7 +10,7 @@
 
 @interface ListaCategoriaViewController : UIViewController<UITableViewDelegate,
 UITableViewDataSource> {
-    NSMutableArray *categorias;
+    NSArray *categorias;
 }
 @property (retain, nonatomic) IBOutlet UITableView *tableviewCategorias;
 

@@ -8,7 +8,10 @@
 
 #import "ListaProdutosViewController.h"
 #import "FormCadastroProdutoViewController.h"
+#import "ListaMovimentoViewController.h"
 #import "CellProdutos.h"
+#import "Produto.h"
+#import "GerenciadorBD.h"
 
 @interface ListaProdutosViewController ()
 
@@ -37,6 +40,12 @@
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    listaProdutos = [GerenciadorBD listarTodos:[Produto class] ordenacao:@"descricao"];
+    [self.tabela reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -57,7 +66,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return listaProdutos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,7 +87,13 @@
         }
     }
     
-    cellTopo.nomeProduto.text = @"Nome do produto de teste";
+    Produto *p = [listaProdutos objectAtIndex:indexPath.row];
+    
+    cellTopo.nomeProduto.text = p.descricao;
+    //cellTopo.nomeCategoria.text = p.idCategoria;
+    cellTopo.quantMaxima.text = [NSString stringWithFormat:@"%@",p.qtdeMaxima];
+    cellTopo.quantMin.text = [NSString stringWithFormat:@"%@",p.qtdeMinima];
+    //cellTopo.quantEstoque.text = p.quantEstoque;
     
     return cellTopo;
 }
@@ -90,6 +105,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    ListaMovimentoViewController *movimentos = [[ListaMovimentoViewController alloc]init];
+    movimentos.produto = [listaProdutos objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:movimentos animated:YES];
+    
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
 
