@@ -46,9 +46,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self carregaCategorias];
+    [self.tableviewCategorias reloadData];
+}
+
+
 - (void) carregaCategorias
 {
-    
     categorias = [GerenciadorBD listarTodos:[Categoria class] ordenacao:@"descricao"];
 
 }
@@ -87,11 +93,13 @@
     
 }
 
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Categoria *categoria = [categorias objectAtIndex:indexPath.row];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    [self.tableviewCategorias deselectRowAtIndexPath:indexPath animated:YES];
+    
+    Categoria *categoria = [categorias objectAtIndex:indexPath.row];
+    
+    [GerenciadorBD remover:categoria];
+    [self.tableviewCategorias reloadData];
 }
 
 // implementando a exclusao no table view

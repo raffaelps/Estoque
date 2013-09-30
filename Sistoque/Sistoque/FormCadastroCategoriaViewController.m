@@ -7,6 +7,8 @@
 //
 
 #import "FormCadastroCategoriaViewController.h"
+#import "GerenciadorBD.h"
+#import "Categoria.h"
 
 @interface FormCadastroCategoriaViewController ()
 
@@ -28,6 +30,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UIBarButtonItem *addButtonSalvar = [[UIBarButtonItem alloc]
+                                  initWithTitle:@"OK"
+                                  style:UIBarButtonItemStyleBordered
+                                  target:self
+                                  action:@selector(salvaNovaCategoria)];
+    self.navigationItem.rightBarButtonItem = addButtonSalvar;
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +45,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonSalvarCategoria:(id)sender {
+- (IBAction)salvaNovaCategoria {
+    
+    Categoria *novaCategoria = [GerenciadorBD getNovaInstancia:[Categoria class]];
+    
+    [novaCategoria setDescricao:self.textfieldDescricaoCategoria.text];
+    
+    if ([self.switchStatusCategoria isOn])
+    {
+        [novaCategoria setAtivo:[NSNumber numberWithInt:1]];
+    }
+    else
+    {
+        [novaCategoria setAtivo:[NSNumber numberWithInt:0]];
+    }
+    
+    [GerenciadorBD inserir:novaCategoria];
+
+    [self.navigationController  popViewControllerAnimated:YES];
 }
 
 @end
