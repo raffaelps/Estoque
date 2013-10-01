@@ -17,8 +17,8 @@
 
 @implementation ListaCategoriaViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self setTitle:@"Categorias"];
@@ -26,8 +26,8 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
@@ -40,28 +40,24 @@
     [self carregaCategorias];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated{
     [self carregaCategorias];
+    //[self.tableviewCategorias reloadData];
+}
+
+
+- (void) carregaCategorias{
+    categorias = [GerenciadorBD listarTodos:[Categoria class] ordenacao:@"descricao"];
     [self.tableviewCategorias reloadData];
 }
 
 
-- (void) carregaCategorias
-{
-    categorias = [GerenciadorBD listarTodos:[Categoria class] ordenacao:@"descricao"];
-
-}
-
-
-- (IBAction)novaCategoria
-{
+- (IBAction)novaCategoria{
     FormCadastroCategoriaViewController *formCadastroCategoriaViewController = [[FormCadastroCategoriaViewController alloc] init];
     [self.navigationController pushViewController:formCadastroCategoriaViewController animated:YES];
 }
@@ -69,7 +65,7 @@
 
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"Itens de categorias %d",categorias.count);
+    NSLog(@"Itens da categoria %d",categorias.count);
     return categorias.count;
 }
 
@@ -95,19 +91,43 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    /* 
+    Carregando a tela de edicao
+    *
+     Categoria *categoria = [categorias objectAtIndex:indexPath.row];
     
-    Categoria *categoria = [categorias objectAtIndex:indexPath.row];
+    NSLog(@"remover %d da lista", categoria.id);
     
-    [GerenciadorBD remover:categoria];
-    [self.tableviewCategorias reloadData];
+    FormCadastroCategoriaViewController  *tela = [[FormCadastroCategoriaViewController alloc] init];
+    
+    [self.navigationController pushViewController:tela animated:YES];
+    tela.textfieldDescricaoCategoria.text = categoria.descricao;
+    NSNumber *number = [NSNumber numberWithInteger: 1];
+    if(categoria.ativo == number){
+        tela.switchStatusCategoria.on = TRUE;
+    }
+    else{
+        tela.switchStatusCategoria.on = FALSE;
+    }
+    */
 }
 
 // implementando a exclusao no table view
 
--(void) tableView:(UITableView *)tableView
-commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+-(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.tableviewCategorias reloadData];
+    
+
+    Categoria *categoria = [categorias objectAtIndex:indexPath.row];
+
+    [GerenciadorBD remover:categoria];
+    
+    NSLog(@"Item %@ removido da lista", categoria.descricao);
+    
+    [self carregaCategorias];
+    //[self.tableviewCategorias reloadData];
+    
+  
 }
 
 @end

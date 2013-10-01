@@ -37,6 +37,7 @@
                                   target:self
                                   action:@selector(salvaNovaCategoria)];
     self.navigationItem.rightBarButtonItem = addButtonSalvar;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,21 +49,20 @@
 - (IBAction)salvaNovaCategoria {
     
     Categoria *novaCategoria = [GerenciadorBD getNovaInstancia:[Categoria class]];
-    
+        
     [novaCategoria setDescricao:self.textfieldDescricaoCategoria.text];
-    
-    if ([self.switchStatusCategoria isOn])
-    {
+        
+    if ([self.switchStatusCategoria isOn]){
         [novaCategoria setAtivo:[NSNumber numberWithInt:1]];
     }
-    else
-    {
+    else{
         [novaCategoria setAtivo:[NSNumber numberWithInt:0]];
     }
-    
+        
     [GerenciadorBD inserir:novaCategoria];
-
-    [self.navigationController  popViewControllerAnimated:YES];
+        
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 @end
