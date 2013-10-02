@@ -62,6 +62,8 @@
 {
     Produto *newProduto = [GerenciadorBD getNovaInstancia:[Produto class]];
     
+    
+    [newProduto setId:[[NSNumber alloc]initWithInt:nextProduto]];
     [newProduto setDescricao:self.textDescricao.text];
     [newProduto setQtdeMaxima:[NSNumber numberWithInt:[self.textQuantMaxima.text intValue]]];
     [newProduto setQtdeMinima:[NSNumber numberWithInt:[self.textQuantMinima.text intValue]]];
@@ -145,4 +147,8 @@
     [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
+-(void)setNextProduto:(int)next
+{
+    nextProduto = next;
+}
 @end

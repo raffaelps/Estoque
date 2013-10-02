@@ -16,6 +16,7 @@
     Produto *produto;
 }
 
+@property (weak, nonatomic) IBOutlet UITableView *tableMovimentos;
 @property (nonatomic,retain) Produto *produto;
 -(void)setProduto:(Produto *)prod;
 

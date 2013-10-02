@@ -7,39 +7,13 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Sistoque/FormCadastroMovimentoViewController.m"
-         timestampString = "402174539.122263"
+         filePath = "Sistoque/ListaProdutosViewController.m"
+         timestampString = "402367646.286045"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "129"
-         endingLineNumber = "129"
-         landmarkName = "-btnAddMovimento:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Sistoque/FormCadastroMovimentoViewController.m"
-         timestampString = "402174582.361341"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "147"
-         endingLineNumber = "147"
-         landmarkName = "-btnAddMovimento:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Sistoque/FormCadastroMovimentoViewController.m"
-         timestampString = "402174617.82616"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "148"
-         endingLineNumber = "148"
-         landmarkName = "-btnAddMovimento:"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
+         landmarkName = "-novoProduto"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

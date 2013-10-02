@@ -26,6 +26,8 @@
     IBOutlet UISwitch *ativo;
     
     IBOutlet UITableView *tableView;
+    
+    int nextProduto;
 }
 
 @property(nonatomic,retain) IBOutlet UITableViewCell *cellCategoria;
@@ -45,5 +47,7 @@
 @property(nonatomic,retain) IBOutlet UITableView *tableView;
 
 @property(nonatomic,retain) Produto *produto;
+
+-(void)setNextProduto:(int)next;
 
 @end

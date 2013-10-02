@@ -56,6 +56,9 @@
 {
     FormCadastroProdutoViewController *cadastroProdutoViewController = [[FormCadastroProdutoViewController alloc] init];
     [self.navigationController pushViewController:cadastroProdutoViewController animated:YES];
+    
+    int next = listaProdutos.count + 1;
+    [cadastroProdutoViewController setNextProduto:next];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

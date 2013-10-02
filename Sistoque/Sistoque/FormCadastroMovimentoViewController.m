@@ -71,11 +71,20 @@
     
     if(movimento != nil)
     {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+        
         newMovimento = FALSE;
-        _txtDataMovimento.text = [NSString stringWithFormat:@"%@",movimento.data];
+        
+        [_labelNroMovimento setText:[NSString stringWithFormat:@"%@",movimento.id]];
+        _txtDataMovimento.text = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:movimento.data]];
         _txtQuantMovimento.text = [NSString stringWithFormat:@"%d",[movimento.qtde intValue]];
         _txtVlrMovimento.text = [NSString stringWithFormat:@"%d",[movimento.valor intValue]];
-        _switchStatus.selected = [movimento.ativo boolValue];
+        
+        if([movimento.ativo intValue] == 0)
+            [_switchStatus setOn:YES animated:YES];
+        else
+            [_switchStatus setOn:NO animated:YES];
         
         if([movimento.tipo isEqual:@"Entrada"])
             _segementedTipoMovimento.selectedSegmentIndex = 0;
@@ -128,8 +137,11 @@
     {
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+        
+        NSString *dataString = [NSString stringWithFormat:@"%@",_txtDataMovimento.text];
+        
         NSDate *dateFromString = [[NSDate alloc] init];
-        dateFromString = [dateFormatter dateFromString:_txtDataMovimento.text];
+        dateFromString = [dateFormatter dateFromString:dataString];
         
         
         [movimento setId:[[NSNumber alloc] initWithUnsignedInt:[_labelNroMovimento.text intValue]]];
@@ -137,17 +149,25 @@
         
         [movimento setTipo:[_segementedTipoMovimento titleForSegmentAtIndex:_segementedTipoMovimento.selectedSegmentIndex]];
         
-         [movimento setData:dateFromString];
+        [movimento setData:dateFromString];
         
         [movimento setQtde:[[NSNumber alloc] initWithUnsignedInt:[_txtQuantMovimento.text intValue]] ];
         [movimento setValor:[[NSNumber alloc] initWithUnsignedInt:[_txtVlrMovimento.text intValue]]];
-        [movimento setAtivo:[[NSNumber alloc] initWithBool:_switchStatus.selected]];
+        
+        int switchValue = 1;
+        
+        if (_switchStatus.isOn)
+            switchValue = 0;
+
+        [movimento setAtivo:[[NSNumber alloc] initWithInt:switchValue]];
         
         
         if (newMovimento)
             [GerenciadorBD inserir:movimento];
         else
             [GerenciadorBD salvar:movimento];
+        
+        [self.navigationController popViewControllerAnimated:YES];
     }
     else
     {
@@ -158,6 +178,7 @@
 }
 
 - (IBAction)btnCancelMovimento:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)setNextMovimento:(int)nextMovimento
@@ -168,11 +189,7 @@
 -(void)setProduto:(Produto *)prod
 {
     produto = prod;
-    _txtProduto.text = [NSString stringWithFormat:@"%d - %@",(int)produto.id,produto.descricao];
+    _txtProduto.text = [NSString stringWithFormat:@"%@ - %@",produto.id,produto.descricao];
 }
 
--(void)setMovimento:(Movimento *)mov
-{
-    movimento = mov;
-}
 @end

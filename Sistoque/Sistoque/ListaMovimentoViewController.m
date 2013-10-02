@@ -34,6 +34,12 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self gerarLista];
+    [self.tableMovimentos reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -64,14 +70,17 @@
 {
     static NSString *CellIdentifier = @"CellMovimentos";
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     if (listaMovimentosProduto.count > 0) {
-        Movimento *m = [[listaMovimentosProduto objectAtIndex:indexPath.row] objectAtIndex:indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"%d - %@",[m.id intValue],m.data];
+        Movimento *m = [listaMovimentosProduto objectAtIndex:indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@  %@ - %@",m.idProduto,produto.descricao,[dateFormatter stringFromDate:m.data]];
         
     }
     return cell;
@@ -84,19 +93,19 @@
     Movimento *movimento =  [listaMovimentosProduto objectAtIndex:indexPath.row];
     
     [formMovimento setMovimento:movimento];
-    [formMovimento setProduto:produto];
-    [formMovimento setNextMovimento:[movimento.id intValue]];
     
     [self.navigationController pushViewController:formMovimento animated:YES];
+    
+    [formMovimento setProduto:produto];
 }
 -(void)gerarLista
 {
     listaAllMovimentos = [GerenciadorBD listarTodos:[Movimento class] ordenacao:@"id"];
     
-    //[produto setId:[[NSNumber alloc]initWithInt:1]];
+    listaMovimentosProduto = [[NSMutableArray alloc]init];
     
     for (Movimento *mov in listaAllMovimentos) {
-        if(mov.idProduto == produto.id)
+        if([mov.idProduto isEqualToNumber:produto.id])
             [listaMovimentosProduto addObject:mov];
     }
 }
@@ -110,20 +119,11 @@
     
     FormCadastroMovimentoViewController *formMovimento = [FormCadastroMovimentoViewController alloc];
     
-    //Testar Produto
-//    //produto = [Produto alloc];
-//    produto = [GerenciadorBD getNovaInstancia:[Produto class]];
-//    
-//    [produto setId:[[NSNumber alloc]initWithInt:1]];
-//    [produto setDescricao:[NSString stringWithFormat:@"Computadores"]];
-//    
-//    //end teste produto
-    
     
     [self.navigationController pushViewController:formMovimento animated:YES];
     
     [formMovimento setProduto:produto];
-    [formMovimento setNextMovimento:listaAllMovimentos.count];
+    [formMovimento setNextMovimento:listaAllMovimentos.count + 1];
 }
 
 @end
