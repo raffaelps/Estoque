@@ -29,9 +29,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchStatus;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
-- (IBAction)btnAddMovimento:(id)sender;
-- (IBAction)btnCancelMovimento:(id)sender;
-
 -(void)setNextMovimento:(int)nextMovimento;
 -(void)setProduto:(Produto *)prod;
 -(void)setMovimento:(Movimento *)mov;

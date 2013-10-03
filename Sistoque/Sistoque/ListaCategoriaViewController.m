@@ -91,7 +91,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    /* 
+    Categoria *categoria = [categorias objectAtIndex:indexPath.row];
+    
+    NSLog(@"remover %@ da lista", categoria.id);
+    /*
     Carregando a tela de edicao
     *
      Categoria *categoria = [categorias objectAtIndex:indexPath.row];

@@ -30,6 +30,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    UIBarButtonItem *addButtonSalvar = [[UIBarButtonItem alloc]
+                                        initWithTitle:@"OK"
+                                        style:UIBarButtonItemStyleBordered
+                                        target:self
+                                        action:@selector(btnAddMovimento)];
+    self.navigationItem.rightBarButtonItem = addButtonSalvar;
     
     self.view.userInteractionEnabled = YES;
     
@@ -131,7 +138,7 @@
     [_txtVlrMovimento resignFirstResponder];
 }
 
-- (IBAction)btnAddMovimento:(id)sender {
+- (IBAction)btnAddMovimento {
     
     if([self validaFields])
     {

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FormCadastroCategoriaViewController : UIViewController
+@interface FormCadastroCategoriaViewController : UIViewController{
+    NSArray *conta_categorias;
+}
 @property (weak, nonatomic) IBOutlet UITextField *textfieldDescricaoCategoria;
 @property (weak, nonatomic) IBOutlet UISwitch *switchStatusCategoria;
 

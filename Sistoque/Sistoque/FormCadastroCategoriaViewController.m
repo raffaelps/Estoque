@@ -7,6 +7,7 @@
 //
 
 #import "FormCadastroCategoriaViewController.h"
+//#import "ListaCategoriaViewController.h"
 #import "GerenciadorBD.h"
 #import "Categoria.h"
 
@@ -58,8 +59,9 @@
     else{
         [novaCategoria setAtivo:[NSNumber numberWithInt:0]];
     }
-        
-    [GerenciadorBD inserir:novaCategoria];
+    conta_categorias = [GerenciadorBD listarTodos:[Categoria class] ordenacao:@"descricao"];
+    [novaCategoria setId: [NSNumber numberWithInt:conta_categorias.count+1]];
+    [GerenciadorBD inserir: novaCategoria];
         
     [self.navigationController popViewControllerAnimated:YES];
 }
