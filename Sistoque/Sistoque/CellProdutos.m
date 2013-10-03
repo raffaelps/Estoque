@@ -10,7 +10,7 @@
 
 @implementation CellProdutos
 
-@synthesize linha,nomeProduto,nomeCategoria,quantEstoque,quantMaxima,quantMin;
+@synthesize nomeProduto,nomeCategoria,quantEstoque,quantMaxima,quantMin;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

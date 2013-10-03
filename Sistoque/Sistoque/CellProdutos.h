@@ -10,7 +10,6 @@
 
 @interface CellProdutos : UITableViewCell
 
-@property(nonatomic,retain)IBOutlet UILabel *linha;
 @property(nonatomic,retain)IBOutlet UILabel *nomeProduto;
 @property(nonatomic,retain)IBOutlet UILabel *nomeCategoria;
 @property(nonatomic,retain)IBOutlet UILabel *quantMaxima;

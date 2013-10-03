@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self setTitle:@"Novo produto"];
     }
     return self;
 }
@@ -26,13 +26,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
+                                  initWithTitle:@"OK"
+                                  style:UIBarButtonItemStyleBordered
+                                  target:self
+                                  action:@selector(novoProduto)];
+    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)novoProduto
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
