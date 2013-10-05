@@ -1,1 +1,11 @@
 *.xcuserdatad
+.git
+build/
+.settings/
+.externalToolBuilders/
+.classpath
+.project
+.project/
+.DS_Store
+*~
+*.class
