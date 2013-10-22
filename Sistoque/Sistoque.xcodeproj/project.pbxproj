@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F3E217F65FC6007DC4A9 /* ViewController.m */; };
 		4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F3E317F65FC6007DC4A9 /* ViewController.xib */; };
+		4D4328BB1817454100FD079F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4328BA1817454100FD079F /* logo.png */; };
 		4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */; };
 		4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProdutos.xib */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
@@ -46,6 +47,7 @@
 		4D37F3E117F65FC6007DC4A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4D37F3E217F65FC6007DC4A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4D37F3E317F65FC6007DC4A9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		4D4328BA1817454100FD079F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCadastroProdutoViewController.xib; sourceTree = "<group>"; };
 		4D63C3E117F6594400594E71 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		A7B0502B17EDDD9900A458C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D4328BA1817454100FD079F /* logo.png */,
 				A7B0502C17EDDD9900A458C0 /* Sistoque-Info.plist */,
 				A7B0502D17EDDD9900A458C0 /* InfoPlist.strings */,
 				A7B0503017EDDD9900A458C0 /* main.m */,
@@ -269,6 +272,7 @@
 				A7B0503717EDDD9900A458C0 /* Default.png in Resources */,
 				A7B0503917EDDD9900A458C0 /* Default@2x.png in Resources */,
 				A7B0503B17EDDD9900A458C0 /* Default-568h@2x.png in Resources */,
+				4D4328BB1817454100FD079F /* logo.png in Resources */,
 				A7B0504B17EDDDBC00A458C0 /* ListaProdutosViewController.xib in Resources */,
 				A7B0505517EDDDDC00A458C0 /* ListaMovimentoViewController.xib in Resources */,
 				A7B0505A17EDDDED00A458C0 /* FormCadastroMovimentoViewController.xib in Resources */,
