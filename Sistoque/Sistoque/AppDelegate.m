@@ -25,7 +25,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [GerenciadorBD setManagedObjectContext:self.managedObjectContext];
-
     
     ViewController *masterViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
