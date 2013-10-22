@@ -50,19 +50,24 @@
 - (IBAction)salvaNovaCategoria {
     
     Categoria *novaCategoria = [GerenciadorBD getNovaInstancia:[Categoria class]];
-        
+    
     [novaCategoria setDescricao:self.textfieldDescricaoCategoria.text];
-        
+    
     if ([self.switchStatusCategoria isOn]){
         [novaCategoria setAtivo:[NSNumber numberWithInt:1]];
     }
     else{
         [novaCategoria setAtivo:[NSNumber numberWithInt:0]];
     }
-    conta_categorias = [GerenciadorBD listarTodos:[Categoria class] ordenacao:@"descricao"];
-    [novaCategoria setId: [NSNumber numberWithInt:conta_categorias.count+1]];
+
+    NSNumber *next = [GerenciadorBD getNextAutoIncrement:@"Categoria" fieldIdKey:@"id"];
+    
+    [novaCategoria setId: next];
+    
+    //NSLog(@"Novo autoincremento: %@", next);
+    
     [GerenciadorBD inserir: novaCategoria];
-        
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
