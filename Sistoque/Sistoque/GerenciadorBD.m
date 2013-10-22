@@ -50,6 +50,7 @@ static NSManagedObjectContext *managedObjectContext;
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     request.entity = [NSEntityDescription entityForName:nomeClasse inManagedObjectContext:self.managedObjectContext];
+    //request.predicate = [NSPredicate predicateWithFormat:@"ativo = 1"];
     request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:ordenacao ascending:YES]];
     
     NSError *error = nil;
@@ -73,5 +74,33 @@ static NSManagedObjectContext *managedObjectContext;
     
 }
 
+
++ (NSNumber *) getNextAutoIncrement:(NSString *) entityName fieldIdKey:(NSString *) idKey {
+    
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    request.entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:idKey ascending:YES]];
+    
+    NSError *error = nil;
+    NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
+    
+    NSManagedObject *maxIndexedObject = [results lastObject];
+    request = nil;
+    if (error) {
+        NSLog(@"%@",[error description]);
+        return nil;
+    }
+    
+    NSInteger myIndex = 1;
+    
+    if (maxIndexedObject) {
+        myIndex = [[maxIndexedObject valueForKey:idKey] integerValue] + 1;
+    }
+    
+    //NSLog(@"Proximo id: %d", myIndex);
+    return [NSNumber numberWithInteger:myIndex];
+}
 
 @end

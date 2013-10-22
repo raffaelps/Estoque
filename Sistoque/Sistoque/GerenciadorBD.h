@@ -33,7 +33,7 @@
 + (NSArray *) listarTodos:(Class) classe ordenacao: (NSString *) ordenacao;
 
 + (void) remover:(NSManagedObject *) entidade;
-
++ (NSNumber *) getNextAutoIncrement:(NSString *) entityName fieldIdKey:(NSString *) idKey;
 
 
 @end
