@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F3E217F65FC6007DC4A9 /* ViewController.m */; };
 		4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F3E317F65FC6007DC4A9 /* ViewController.xib */; };
-		4D4328BB1817454100FD079F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4328BA1817454100FD079F /* logo.png */; };
 		4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */; };
 		4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProdutos.xib */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
+		9F458071181ACB0A00D7AB30 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F45806F181ACB0A00D7AB30 /* Background.png */; };
+		9F458072181ACB0A00D7AB30 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F458070181ACB0A00D7AB30 /* Background@2x.png */; };
+		9F458074181ACB4700D7AB30 /* icon-iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F458073181ACB4700D7AB30 /* icon-iPhone@2x.png */; };
+		9F5518D4181992190031C9D9 /* principal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F5518D3181992190031C9D9 /* principal.plist */; };
+		9F5518D7181995990031C9D9 /* Principal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5518D6181995990031C9D9 /* Principal.m */; };
+		9F750F9318174EDD005940FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F750F9218174EDD005940FB /* Images.xcassets */; };
+		9F7AC89E1818A4D6006497C5 /* icon-iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7AC89D1818A4D6006497C5 /* icon-iPhone.png */; };
+		9F7AC8A21818A552006497C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7AC8A11818A552006497C5 /* Default-568h@2x.png */; };
+		9F7AC8A41818A638006497C5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7AC8A31818A638006497C5 /* Default.png */; };
+		9F7AC8A61818A819006497C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7AC8A51818A819006497C5 /* Default@2x.png */; };
 		A7B0502517EDDD9900A458C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502417EDDD9900A458C0 /* UIKit.framework */; };
 		A7B0502717EDDD9900A458C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502617EDDD9900A458C0 /* Foundation.framework */; };
 		A7B0502917EDDD9900A458C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B0502817EDDD9900A458C0 /* CoreGraphics.framework */; };
 		A7B0502F17EDDD9900A458C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7B0502D17EDDD9900A458C0 /* InfoPlist.strings */; };
 		A7B0503117EDDD9900A458C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0503017EDDD9900A458C0 /* main.m */; };
 		A7B0503517EDDD9900A458C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0503417EDDD9900A458C0 /* AppDelegate.m */; };
-		A7B0503717EDDD9900A458C0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B0503617EDDD9900A458C0 /* Default.png */; };
-		A7B0503917EDDD9900A458C0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B0503817EDDD9900A458C0 /* Default@2x.png */; };
-		A7B0503B17EDDD9900A458C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B0503A17EDDD9900A458C0 /* Default-568h@2x.png */; };
 		A7B0504A17EDDDBC00A458C0 /* ListaProdutosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */; };
 		A7B0504B17EDDDBC00A458C0 /* ListaProdutosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */; };
 		A7B0504F17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0504D17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m */; };
@@ -47,11 +53,21 @@
 		4D37F3E117F65FC6007DC4A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4D37F3E217F65FC6007DC4A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4D37F3E317F65FC6007DC4A9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		4D4328BA1817454100FD079F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCadastroProdutoViewController.xib; sourceTree = "<group>"; };
 		4D63C3E117F6594400594E71 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
 		4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellProdutos.m; sourceTree = "<group>"; };
+		9F45806F181ACB0A00D7AB30 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		9F458070181ACB0A00D7AB30 /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
+		9F458073181ACB4700D7AB30 /* icon-iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-iPhone@2x.png"; path = "../../../../../../../Desktop/Imagens SISTOQUE/icone inicial/icon-iPhone@2x.png"; sourceTree = "<group>"; };
+		9F5518D3181992190031C9D9 /* principal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = principal.plist; sourceTree = "<group>"; };
+		9F5518D5181995990031C9D9 /* Principal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Principal.h; sourceTree = "<group>"; };
+		9F5518D6181995990031C9D9 /* Principal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Principal.m; sourceTree = "<group>"; };
+		9F750F9218174EDD005940FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F7AC89D1818A4D6006497C5 /* icon-iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iPhone.png"; sourceTree = "<group>"; };
+		9F7AC8A11818A552006497C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9F7AC8A31818A638006497C5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9F7AC8A51818A819006497C5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A7B0502117EDDD9800A458C0 /* Sistoque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sistoque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B0502417EDDD9900A458C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7B0502617EDDD9900A458C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,9 +78,6 @@
 		A7B0503217EDDD9900A458C0 /* Sistoque-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sistoque-Prefix.pch"; sourceTree = "<group>"; };
 		A7B0503317EDDD9900A458C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7B0503417EDDD9900A458C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A7B0503617EDDD9900A458C0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A7B0503817EDDD9900A458C0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		A7B0503A17EDDD9900A458C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A7B0504717EDDDBC00A458C0 /* ListaProdutosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaProdutosViewController.h; sourceTree = "<group>"; };
 		A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaProdutosViewController.m; sourceTree = "<group>"; };
 		A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaProdutosViewController.xib; sourceTree = "<group>"; };
@@ -122,6 +135,28 @@
 			name = Celulas;
 			sourceTree = "<group>";
 		};
+		9F750F96181754D8005940FB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F750F97181754EB005940FB /* Imagens */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9F750F97181754EB005940FB /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				9F458073181ACB4700D7AB30 /* icon-iPhone@2x.png */,
+				9F45806F181ACB0A00D7AB30 /* Background.png */,
+				9F458070181ACB0A00D7AB30 /* Background@2x.png */,
+				9F7AC8A51818A819006497C5 /* Default@2x.png */,
+				9F7AC8A31818A638006497C5 /* Default.png */,
+				9F7AC8A11818A552006497C5 /* Default-568h@2x.png */,
+				9F7AC89D1818A4D6006497C5 /* icon-iPhone.png */,
+			);
+			name = Imagens;
+			sourceTree = "<group>";
+		};
 		A7B0501817EDDD9800A458C0 = {
 			isa = PBXGroup;
 			children = (
@@ -153,9 +188,13 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
+				9F750F96181754D8005940FB /* Resources */,
 				C75DD2CD17F86615009A0E75 /* DB */,
 				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
 				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
+				9F5518D3181992190031C9D9 /* principal.plist */,
+				9F5518D5181995990031C9D9 /* Principal.h */,
+				9F5518D6181995990031C9D9 /* Principal.m */,
 				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
 				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
 				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
@@ -181,6 +220,7 @@
 				A7B0506517EDDE0C00A458C0 /* ListaRelatorioViewController.h */,
 				A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */,
 				A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */,
+				9F750F9218174EDD005940FB /* Images.xcassets */,
 				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
 			);
 			path = Sistoque;
@@ -189,14 +229,10 @@
 		A7B0502B17EDDD9900A458C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4D4328BA1817454100FD079F /* logo.png */,
 				A7B0502C17EDDD9900A458C0 /* Sistoque-Info.plist */,
 				A7B0502D17EDDD9900A458C0 /* InfoPlist.strings */,
 				A7B0503017EDDD9900A458C0 /* main.m */,
 				A7B0503217EDDD9900A458C0 /* Sistoque-Prefix.pch */,
-				A7B0503617EDDD9900A458C0 /* Default.png */,
-				A7B0503817EDDD9900A458C0 /* Default@2x.png */,
-				A7B0503A17EDDD9900A458C0 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -245,6 +281,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Leonardo;
+				TargetAttributes = {
+					A7B0502017EDDD9800A458C0 = {
+						DevelopmentTeam = YQ65763A73;
+					};
+				};
 			};
 			buildConfigurationList = A7B0501C17EDDD9800A458C0 /* Build configuration list for PBXProject "Sistoque" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -269,19 +310,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B0502F17EDDD9900A458C0 /* InfoPlist.strings in Resources */,
-				A7B0503717EDDD9900A458C0 /* Default.png in Resources */,
-				A7B0503917EDDD9900A458C0 /* Default@2x.png in Resources */,
-				A7B0503B17EDDD9900A458C0 /* Default-568h@2x.png in Resources */,
-				4D4328BB1817454100FD079F /* logo.png in Resources */,
+				9F7AC8A21818A552006497C5 /* Default-568h@2x.png in Resources */,
+				9F7AC8A61818A819006497C5 /* Default@2x.png in Resources */,
+				9F7AC89E1818A4D6006497C5 /* icon-iPhone.png in Resources */,
 				A7B0504B17EDDDBC00A458C0 /* ListaProdutosViewController.xib in Resources */,
 				A7B0505517EDDDDC00A458C0 /* ListaMovimentoViewController.xib in Resources */,
 				A7B0505A17EDDDED00A458C0 /* FormCadastroMovimentoViewController.xib in Resources */,
 				A7B0505F17EDDDF800A458C0 /* ListaCategoriaViewController.xib in Resources */,
+				9F5518D4181992190031C9D9 /* principal.plist in Resources */,
 				A7B0506417EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib in Resources */,
+				9F750F9318174EDD005940FB /* Images.xcassets in Resources */,
 				A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */,
 				4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */,
 				4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */,
+				9F458072181ACB0A00D7AB30 /* Background@2x.png in Resources */,
+				9F458071181ACB0A00D7AB30 /* Background.png in Resources */,
 				4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */,
+				9F458074181ACB4700D7AB30 /* icon-iPhone@2x.png in Resources */,
+				9F7AC8A41818A638006497C5 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +348,7 @@
 				A7B0505917EDDDED00A458C0 /* FormCadastroMovimentoViewController.m in Sources */,
 				C75DD2D717F86687009A0E75 /* GerenciadorBD.m in Sources */,
 				C75DD2D617F86687009A0E75 /* Categoria.m in Sources */,
+				9F5518D7181995990031C9D9 /* Principal.m in Sources */,
 				4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */,
 				A7B0505E17EDDDF800A458C0 /* ListaCategoriaViewController.m in Sources */,
 				C75DD2D817F86687009A0E75 /* Movimento.m in Sources */,
@@ -388,6 +435,8 @@
 		A7B0504517EDDD9900A458C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sistoque/Sistoque-Prefix.pch";
 				INFOPLIST_FILE = "Sistoque/Sistoque-Info.plist";
@@ -400,6 +449,8 @@
 		A7B0504617EDDD9900A458C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sistoque/Sistoque-Prefix.pch";
 				INFOPLIST_FILE = "Sistoque/Sistoque-Info.plist";
