@@ -12,9 +12,9 @@
 		4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */; };
 		4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProdutos.xib */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
+		9F1C9B4E181AD079004C20A3 /* icon-iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C9B4D181AD079004C20A3 /* icon-iPhone@2x.png */; };
 		9F458071181ACB0A00D7AB30 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F45806F181ACB0A00D7AB30 /* Background.png */; };
 		9F458072181ACB0A00D7AB30 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F458070181ACB0A00D7AB30 /* Background@2x.png */; };
-		9F458074181ACB4700D7AB30 /* icon-iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F458073181ACB4700D7AB30 /* icon-iPhone@2x.png */; };
 		9F5518D4181992190031C9D9 /* principal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F5518D3181992190031C9D9 /* principal.plist */; };
 		9F5518D7181995990031C9D9 /* Principal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5518D6181995990031C9D9 /* Principal.m */; };
 		9F750F9318174EDD005940FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F750F9218174EDD005940FB /* Images.xcassets */; };
@@ -57,9 +57,9 @@
 		4D63C3E117F6594400594E71 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
 		4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellProdutos.m; sourceTree = "<group>"; };
+		9F1C9B4D181AD079004C20A3 /* icon-iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iPhone@2x.png"; sourceTree = "<group>"; };
 		9F45806F181ACB0A00D7AB30 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		9F458070181ACB0A00D7AB30 /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
-		9F458073181ACB4700D7AB30 /* icon-iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-iPhone@2x.png"; path = "../../../../../../../Desktop/Imagens SISTOQUE/icone inicial/icon-iPhone@2x.png"; sourceTree = "<group>"; };
 		9F5518D3181992190031C9D9 /* principal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = principal.plist; sourceTree = "<group>"; };
 		9F5518D5181995990031C9D9 /* Principal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Principal.h; sourceTree = "<group>"; };
 		9F5518D6181995990031C9D9 /* Principal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Principal.m; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		9F750F97181754EB005940FB /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
-				9F458073181ACB4700D7AB30 /* icon-iPhone@2x.png */,
+				9F1C9B4D181AD079004C20A3 /* icon-iPhone@2x.png */,
 				9F45806F181ACB0A00D7AB30 /* Background.png */,
 				9F458070181ACB0A00D7AB30 /* Background@2x.png */,
 				9F7AC8A51818A819006497C5 /* Default@2x.png */,
@@ -321,12 +321,12 @@
 				A7B0506417EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib in Resources */,
 				9F750F9318174EDD005940FB /* Images.xcassets in Resources */,
 				A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */,
+				9F1C9B4E181AD079004C20A3 /* icon-iPhone@2x.png in Resources */,
 				4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */,
 				4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */,
 				9F458072181ACB0A00D7AB30 /* Background@2x.png in Resources */,
 				9F458071181ACB0A00D7AB30 /* Background.png in Resources */,
 				4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */,
-				9F458074181ACB4700D7AB30 /* icon-iPhone@2x.png in Resources */,
 				9F7AC8A41818A638006497C5 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
