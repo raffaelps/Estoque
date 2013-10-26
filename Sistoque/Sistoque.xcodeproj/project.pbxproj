@@ -42,6 +42,7 @@
 		A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */; };
 		A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */; };
 		A920105E17EDE37C004F1502 /* Sistoque.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */; };
+		BA452D7C181B6920007A2001 /* UIDatePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */; };
 		C75DD2D617F86687009A0E75 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2CF17F86687009A0E75 /* Categoria.m */; };
 		C75DD2D717F86687009A0E75 /* GerenciadorBD.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2D117F86687009A0E75 /* GerenciadorBD.m */; };
 		C75DD2D817F86687009A0E75 /* Movimento.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2D317F86687009A0E75 /* Movimento.m */; };
@@ -99,6 +100,8 @@
 		A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaRelatorioViewController.m; sourceTree = "<group>"; };
 		A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaRelatorioViewController.xib; sourceTree = "<group>"; };
 		A920105D17EDE37C004F1502 /* Sistoque.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sistoque.xcdatamodel; sourceTree = "<group>"; };
+		BA452D7A181B6920007A2001 /* UIDatePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDatePickerHelper.h; path = Sistoque/UIDatePickerHelper.h; sourceTree = "<group>"; };
+		BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDatePickerHelper.m; path = Sistoque/UIDatePickerHelper.m; sourceTree = "<group>"; };
 		C75DD2CE17F86687009A0E75 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
 		C75DD2CF17F86687009A0E75 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		C75DD2D017F86687009A0E75 /* GerenciadorBD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorBD.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 		A7B0501817EDDD9800A458C0 = {
 			isa = PBXGroup;
 			children = (
+				BA452D7A181B6920007A2001 /* UIDatePickerHelper.h */,
+				BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */,
 				A7B0502317EDDD9800A458C0 /* Frameworks */,
 				A7B0502217EDDD9800A458C0 /* Products */,
 				A7B0502A17EDDD9900A458C0 /* Sistoque */,
@@ -222,7 +227,6 @@
 				A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */,
 				9F750F9218174EDD005940FB /* Images.xcassets */,
 				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
-				BAA70FB6181B4E1E006E4FCE /* UIDatePickerHelper.m */,
 			);
 			path = Sistoque;
 			sourceTree = "<group>";
@@ -356,6 +360,7 @@
 				A7B0506317EDDE0300A458C0 /* FormCadastroCategoriaViewController.m in Sources */,
 				A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */,
 				4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */,
+				BA452D7C181B6920007A2001 /* UIDatePickerHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
