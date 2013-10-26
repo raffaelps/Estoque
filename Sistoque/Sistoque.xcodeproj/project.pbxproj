@@ -160,9 +160,9 @@
 		A7B0501817EDDD9800A458C0 = {
 			isa = PBXGroup;
 			children = (
-				A7B0502A17EDDD9900A458C0 /* Sistoque */,
 				A7B0502317EDDD9800A458C0 /* Frameworks */,
 				A7B0502217EDDD9800A458C0 /* Products */,
+				A7B0502A17EDDD9900A458C0 /* Sistoque */,
 			);
 			sourceTree = "<group>";
 		};

@@ -15,6 +15,8 @@
     Movimento *movimento;
     Produto *produto;
     BOOL newMovimento;
+    
+    NSDate *data;
 }
 
 @property (retain,nonatomic) Movimento *movimento;
@@ -32,4 +34,5 @@
 -(void)setNextMovimento:(int)nextMovimento;
 -(void)setProduto:(Produto *)prod;
 -(void)setMovimento:(Movimento *)mov;
+- (IBAction)setData:(id)sender;
 @end
