@@ -50,7 +50,6 @@ static NSManagedObjectContext *managedObjectContext;
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     request.entity = [NSEntityDescription entityForName:nomeClasse inManagedObjectContext:self.managedObjectContext];
-    //request.predicate = [NSPredicate predicateWithFormat:@"ativo = 1"];
     request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:ordenacao ascending:YES]];
     
     NSError *error = nil;

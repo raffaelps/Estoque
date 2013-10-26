@@ -46,8 +46,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-
-    [self.tableviewCategorias reloadData];
+    [self carregaCategorias];
+    //[self.tableviewCategorias reloadData];
 }
 
 
