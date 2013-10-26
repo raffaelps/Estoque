@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Movimento.h"
 #import "Produto.h"
+#import "UIDatePickerHelper.h"
 
-@interface FormCadastroMovimentoViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate>
+@interface FormCadastroMovimentoViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate, UIDatePickerHelper>
 {
     Movimento *movimento;
     Produto *produto;
     BOOL newMovimento;
     
-    NSDate *data;
+    UIDatePickerHelper *datePickerHelper;
 }
 
 @property (retain,nonatomic) Movimento *movimento;

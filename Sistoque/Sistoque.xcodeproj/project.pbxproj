@@ -222,6 +222,7 @@
 				A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */,
 				9F750F9218174EDD005940FB /* Images.xcassets */,
 				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
+				BAA70FB6181B4E1E006E4FCE /* UIDatePickerHelper.m */,
 			);
 			path = Sistoque;
 			sourceTree = "<group>";
