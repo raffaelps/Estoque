@@ -22,21 +22,50 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-         [self setTitle:@"Nova categoria"];
+        // [self setTitle:@"Nova categoria"];
     }
     return self;
 }
+
+
+
+-(void)setCategoria:(Categoria *)categoria
+{
+    categoriaSelect = categoria;
+}
+
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    if(categoriaSelect.id > 0){
+        //NSLog(@"Object do tipo categoria encontrado");
+        [self setTitle:@"Edita categoria"];
+        novaCategoria = NO;
+        self.textfieldDescricaoCategoria.text = categoriaSelect.descricao;
+        NSNumber *number = [NSNumber numberWithInteger: 1];
+        if(categoriaSelect.ativo == number){
+            self.switchStatusCategoria.on = TRUE;
+        }
+        else{
+            self.switchStatusCategoria.on = FALSE;
+        }
+    }
+    else {
+        [self setTitle:@"Nova categoria"];
+        categoriaSelect = [GerenciadorBD getNovaInstancia:[Categoria class]];
+        novaCategoria = YES;
+        //NSLog(@"Sem objetos na memoria");
+    }
+    
     UIBarButtonItem *addButtonSalvar = [[UIBarButtonItem alloc]
-                                  initWithTitle:@"OK"
-                                  style:UIBarButtonItemStyleBordered
-                                  target:self
-                                  action:@selector(salvaNovaCategoria)];
+                                        initWithTitle:@"OK"
+                                        style:UIBarButtonItemStyleBordered
+                                        target:self
+                                        action:@selector(salvaCategoria)];
     self.navigationItem.rightBarButtonItem = addButtonSalvar;
     
 }
@@ -47,29 +76,40 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)salvaNovaCategoria {
+- (IBAction)salvaCategoria {
     
-    Categoria *novaCategoria = [GerenciadorBD getNovaInstancia:[Categoria class]];
+    NSString *desc = self.textfieldDescricaoCategoria.text;
     
-    [novaCategoria setDescricao:self.textfieldDescricaoCategoria.text];
+    desc = [desc stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
-    if ([self.switchStatusCategoria isOn]){
-        [novaCategoria setAtivo:[NSNumber numberWithInt:1]];
+    if(desc != nil && [desc length] > 0 && ![desc isEqualToString: @""] ){
+        
+        [categoriaSelect setDescricao: desc];
+        
+        if ([self.switchStatusCategoria isOn]){
+            [categoriaSelect setAtivo:[NSNumber numberWithInt:1]];
+        }
+        else{
+            [categoriaSelect setAtivo:[NSNumber numberWithInt:0]];
+        }
+        
+        if(novaCategoria){
+            NSNumber *next = [GerenciadorBD getNextAutoIncrement:@"Categoria" fieldIdKey:@"id"];
+            [categoriaSelect setId: next];
+            [GerenciadorBD inserir: categoriaSelect];
+        }
+        else{
+            [GerenciadorBD salvar: categoriaSelect];
+        }
+        
+        [self.navigationController popViewControllerAnimated:YES];
     }
-    else{
-        [novaCategoria setAtivo:[NSNumber numberWithInt:0]];
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sistoque" message:@"Campo descrição da categoria vazio " delegate:self  cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
     }
-
-    NSNumber *next = [GerenciadorBD getNextAutoIncrement:@"Categoria" fieldIdKey:@"id"];
-    
-    [novaCategoria setId: next];
-    
-    //NSLog(@"Novo autoincremento: %@", next);
-    
-    [GerenciadorBD inserir: novaCategoria];
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 
 @end

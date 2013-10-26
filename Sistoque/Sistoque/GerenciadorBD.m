@@ -63,6 +63,26 @@ static NSManagedObjectContext *managedObjectContext;
     }
 }
 
+
++ (NSArray *) listarTodosAtivo:(Class) classe ordenacao: (NSString *) ordenacao {
+    NSString *nomeClasse = NSStringFromClass(classe);
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    request.entity = [NSEntityDescription entityForName:nomeClasse inManagedObjectContext:self.managedObjectContext];
+    request.predicate = [NSPredicate predicateWithFormat:@"ativo = 1"];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:ordenacao ascending:YES]];
+    
+    NSError *error = nil;
+    NSArray *arr = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (!error) {
+        return arr ;
+    } else {
+        NSLog(@"%@",[error description]);
+        return nil;
+    }
+}
+
+
 + (NSManagedObject *) getNovaInstancia:(Class) classe{
     NSString *nomeClasse = NSStringFromClass(classe);
     NSEntityDescription *desc = [NSEntityDescription

@@ -46,18 +46,20 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [self carregaCategorias];
-    //[self.tableviewCategorias reloadData];
+
+    [self.tableviewCategorias reloadData];
 }
 
 
 - (void) carregaCategorias{
+    
     categorias = [GerenciadorBD listarTodos:[Categoria class] ordenacao:@"descricao"];
     [self.tableviewCategorias reloadData];
 }
 
 
-- (IBAction)novaCategoria{
+- (IBAction) novaCategoria{
+    
     FormCadastroCategoriaViewController *formCadastroCategoriaViewController = [[FormCadastroCategoriaViewController alloc] init];
     [self.navigationController pushViewController:formCadastroCategoriaViewController animated:YES];
 }
@@ -65,7 +67,7 @@
 
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"Itens da categoria %d",categorias.count);
+    //NSLog(@"Itens da categoria %d",categorias.count);
     return categorias.count;
 }
 
@@ -91,46 +93,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    Categoria *categoria = [categorias objectAtIndex:indexPath.row];
-    
-    NSLog(@"remover %@ da lista", categoria.id);
-    /*
-    Carregando a tela de edicao
-    *
-     Categoria *categoria = [categorias objectAtIndex:indexPath.row];
-    
-    NSLog(@"remover %d da lista", categoria.id);
-    
+    Categoria *categoriaSelecionada = [categorias objectAtIndex:indexPath.row];
     FormCadastroCategoriaViewController  *tela = [[FormCadastroCategoriaViewController alloc] init];
     
+    [tela setCategoria:categoriaSelecionada];
     [self.navigationController pushViewController:tela animated:YES];
-    tela.textfieldDescricaoCategoria.text = categoria.descricao;
-    NSNumber *number = [NSNumber numberWithInteger: 1];
-    if(categoria.ativo == number){
-        tela.switchStatusCategoria.on = TRUE;
-    }
-    else{
-        tela.switchStatusCategoria.on = FALSE;
-    }
-    */
+
 }
 
-// implementando a exclusao no table view
-
--(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-
-    Categoria *categoria = [categorias objectAtIndex:indexPath.row];
-
-    [GerenciadorBD remover:categoria];
-    
-    NSLog(@"Item %@ removido da lista", categoria.descricao);
-    
-    [self carregaCategorias];
-    //[self.tableviewCategorias reloadData];
-    
-  
-}
 
 @end

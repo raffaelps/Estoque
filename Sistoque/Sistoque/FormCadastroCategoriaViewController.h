@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Categoria.h"
 
 @interface FormCadastroCategoriaViewController : UIViewController{
     NSArray *conta_categorias;
+    Categoria *categoriaSelect;
+    BOOL *novaCategoria;
 }
 @property (weak, nonatomic) IBOutlet UITextField *textfieldDescricaoCategoria;
 @property (weak, nonatomic) IBOutlet UISwitch *switchStatusCategoria;
+
+@property (retain, nonatomic) Categoria *categoriaSelect;
+@property BOOL *novaCategoria;
+
+-(void)setCategoria:(Categoria *)categoria;
 
 @end
