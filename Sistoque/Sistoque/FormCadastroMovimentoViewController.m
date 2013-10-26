@@ -113,19 +113,10 @@
     }
     else
     {
-        if (textField == _txtDataMovimento)
-        {
-            //[_txtQuantMovimento becomeFirstResponder];
-            //textFieldShouldBeginEditing
-            return NO;
-        }
-        else
-        {
-            if (textField == _txtQuantMovimento) {
-                [_txtVlrMovimento becomeFirstResponder];
-                return YES;
-            }
-        }
+        if (textField == _txtQuantMovimento) {
+            [_txtVlrMovimento becomeFirstResponder];
+            return YES;
+        }     
     }
     
     return NO;
@@ -142,7 +133,6 @@
 -(void) hideKeyBoard:(id) sender
 {
     [_txtProduto resignFirstResponder];
-    [_txtDataMovimento resignFirstResponder];
     [_txtQuantMovimento resignFirstResponder];
     [_txtVlrMovimento resignFirstResponder];
 }
@@ -258,7 +248,7 @@
     darkView.alpha = 0;
     darkView.backgroundColor = [UIColor blackColor];
     darkView.tag = 9;
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addData:)];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissDatePicker:)];
     [darkView addGestureRecognizer:tapGesture];
     [self.view addSubview:darkView];
     
@@ -282,4 +272,5 @@
     [UIView commitAnimations];
     
 }
+
 @end
