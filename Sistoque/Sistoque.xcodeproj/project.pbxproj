@@ -43,6 +43,10 @@
 		A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */; };
 		A920105E17EDE37C004F1502 /* Sistoque.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */; };
 		BA452D7C181B6920007A2001 /* UIDatePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */; };
+		BAA7E27E181DBD3C00EDF50D /* SisUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E27B181DBD3C00EDF50D /* SisUtil.m */; };
+		BAA7E27F181DBD3C00EDF50D /* UIBarButtonItemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E27D181DBD3C00EDF50D /* UIBarButtonItemHelper.m */; };
+		BAA7E288181DC10900EDF50D /* CellMovimentos.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E286181DC10900EDF50D /* CellMovimentos.m */; };
+		BAA7E289181DC10900EDF50D /* CellMovimentos.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA7E287181DC10900EDF50D /* CellMovimentos.xib */; };
 		C75DD2D617F86687009A0E75 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2CF17F86687009A0E75 /* Categoria.m */; };
 		C75DD2D717F86687009A0E75 /* GerenciadorBD.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2D117F86687009A0E75 /* GerenciadorBD.m */; };
 		C75DD2D817F86687009A0E75 /* Movimento.m in Sources */ = {isa = PBXBuildFile; fileRef = C75DD2D317F86687009A0E75 /* Movimento.m */; };
@@ -100,8 +104,15 @@
 		A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaRelatorioViewController.m; sourceTree = "<group>"; };
 		A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaRelatorioViewController.xib; sourceTree = "<group>"; };
 		A920105D17EDE37C004F1502 /* Sistoque.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sistoque.xcdatamodel; sourceTree = "<group>"; };
-		BA452D7A181B6920007A2001 /* UIDatePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDatePickerHelper.h; path = Sistoque/UIDatePickerHelper.h; sourceTree = "<group>"; };
-		BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDatePickerHelper.m; path = Sistoque/UIDatePickerHelper.m; sourceTree = "<group>"; };
+		BA452D7A181B6920007A2001 /* UIDatePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDatePickerHelper.h; sourceTree = "<group>"; };
+		BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDatePickerHelper.m; sourceTree = "<group>"; };
+		BAA7E27A181DBD3C00EDF50D /* SisUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SisUtil.h; sourceTree = "<group>"; };
+		BAA7E27B181DBD3C00EDF50D /* SisUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SisUtil.m; sourceTree = "<group>"; };
+		BAA7E27C181DBD3C00EDF50D /* UIBarButtonItemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBarButtonItemHelper.h; sourceTree = "<group>"; };
+		BAA7E27D181DBD3C00EDF50D /* UIBarButtonItemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBarButtonItemHelper.m; sourceTree = "<group>"; };
+		BAA7E285181DC10900EDF50D /* CellMovimentos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellMovimentos.h; sourceTree = "<group>"; };
+		BAA7E286181DC10900EDF50D /* CellMovimentos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellMovimentos.m; sourceTree = "<group>"; };
+		BAA7E287181DC10900EDF50D /* CellMovimentos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellMovimentos.xib; sourceTree = "<group>"; };
 		C75DD2CE17F86687009A0E75 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
 		C75DD2CF17F86687009A0E75 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		C75DD2D017F86687009A0E75 /* GerenciadorBD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorBD.h; sourceTree = "<group>"; };
@@ -163,8 +174,6 @@
 		A7B0501817EDDD9800A458C0 = {
 			isa = PBXGroup;
 			children = (
-				BA452D7A181B6920007A2001 /* UIDatePickerHelper.h */,
-				BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */,
 				A7B0502317EDDD9800A458C0 /* Frameworks */,
 				A7B0502217EDDD9800A458C0 /* Products */,
 				A7B0502A17EDDD9900A458C0 /* Sistoque */,
@@ -193,6 +202,15 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
+				BAA7E285181DC10900EDF50D /* CellMovimentos.h */,
+				BAA7E286181DC10900EDF50D /* CellMovimentos.m */,
+				BAA7E287181DC10900EDF50D /* CellMovimentos.xib */,
+				BAA7E27A181DBD3C00EDF50D /* SisUtil.h */,
+				BAA7E27B181DBD3C00EDF50D /* SisUtil.m */,
+				BAA7E27C181DBD3C00EDF50D /* UIBarButtonItemHelper.h */,
+				BAA7E27D181DBD3C00EDF50D /* UIBarButtonItemHelper.m */,
+				BA452D7A181B6920007A2001 /* UIDatePickerHelper.h */,
+				BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */,
 				9F750F96181754D8005940FB /* Resources */,
 				C75DD2CD17F86615009A0E75 /* DB */,
 				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
@@ -333,6 +351,7 @@
 				9F458071181ACB0A00D7AB30 /* Background.png in Resources */,
 				4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */,
 				9F7AC8A41818A638006497C5 /* Default.png in Resources */,
+				BAA7E289181DC10900EDF50D /* CellMovimentos.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +380,9 @@
 				A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */,
 				4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */,
 				BA452D7C181B6920007A2001 /* UIDatePickerHelper.m in Sources */,
+				BAA7E27E181DBD3C00EDF50D /* SisUtil.m in Sources */,
+				BAA7E27F181DBD3C00EDF50D /* UIBarButtonItemHelper.m in Sources */,
+				BAA7E288181DC10900EDF50D /* CellMovimentos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

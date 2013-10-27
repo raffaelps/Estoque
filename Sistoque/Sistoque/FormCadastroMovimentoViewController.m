@@ -11,6 +11,8 @@
 #import "Produto.h"
 #import "GerenciadorBD.h"
 #import "UIDatePickerHelper.h"
+#import "SisUtil.h"
+#import "UIBarButtonItemHelper.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface FormCadastroMovimentoViewController ()
@@ -34,24 +36,25 @@ static NSMutableArray *listaCellMovimento;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    UIBarButtonItem *addButtonSalvar = [[UIBarButtonItem alloc]
-                                        initWithTitle:@"OK"
-                                        style:UIBarButtonItemStyleBordered
-                                        target:self
-                                        action:@selector(btnAddMovimento)];
-    self.navigationItem.rightBarButtonItem = addButtonSalvar;
+    
+    //TODO DELETE
+    /*UIBarButtonItem *addButtonSalvar = [[UIBarButtonItem alloc]
+     initWithTitle:@"OK"
+     style:UIBarButtonItemStyleBordered
+     target:self
+     action:@selector(btnAddMovimento)];
+     
+     self.navigationItem.rightBarButtonItem = addButtonSalvar;*/
     
     listaCellMovimento = [[NSMutableArray alloc]init];
     [self generateListaCells];
     
+    [self delegaCampos];
+    [self adicionaBotaoOk];
+    [self defineReconhecedorToque];
     
     self.view.userInteractionEnabled = YES;
-
     
-    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard:)];
-    gestureRecognizer.delegate = self;
-    [_scrollView addGestureRecognizer:gestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,18 +65,32 @@ static NSMutableArray *listaCellMovimento;
 
 -(BOOL)validaFields
 {
-    if(_txtNroMovimento.text == nil)
-        return FALSE;
-    if(_txtProduto.text == nil)
-        return FALSE;
-    if(_txtDataMovimento.text == nil)
-        return FALSE;
-    if(_txtQuantMovimento.text == nil)
-        return FALSE;
-    if(_txtVlrMovimento.text == nil)
-        return FALSE;
+    BOOL numeroMovimentoVazio = [SisUtil verificaTextoVazioOuNulo:_txtNroMovimento.text];
+    BOOL produtoVazio = [SisUtil verificaTextoVazioOuNulo:_txtProduto.text];
+    BOOL dataMovimentoVazio = [SisUtil verificaTextoVazioOuNulo:_txtDataMovimento.text];
+    BOOL quantidadeMovimentoVazio = [SisUtil verificaTextoVazioOuNulo:_txtQuantMovimento.text];
+    BOOL quantidadeValorVazio = [SisUtil verificaTextoVazioOuNulo:_txtVlrMovimento.text];
     
+    if(numeroMovimentoVazio||
+       produtoVazio||
+       dataMovimentoVazio||
+       quantidadeMovimentoVazio||
+       quantidadeValorVazio)
+        return FALSE;
     return TRUE;
+    
+    //TODO DELETE
+    /*if(_labelNroMovimento.text == nil)
+     if(_txtNroMovimento.text == nil)
+     return FALSE;
+     if(_txtProduto.text == nil)
+     return FALSE;
+     if(_txtDataMovimento.text == nil)
+     return FALSE;
+     if(_txtQuantMovimento.text == nil)
+     return FALSE;
+     if(_txtVlrMovimento.text == nil)
+     return FALSE;*/
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -82,25 +99,35 @@ static NSMutableArray *listaCellMovimento;
     
     if(movimento != nil)
     {
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+        //TODO DELETE
+        //NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        //[dateFormatter setDateFormat:@"dd-MM-yyyy"];
+        NSString *data = [SisUtil dateToString:movimento.data withMask:@"dd-MM-yyyy"];
         
         newMovimento = FALSE;
         
+        [_txtNroMovimento setText:[NSString stringWithFormat:@"%@",movimento.id]];
+        _txtDataMovimento.text = [NSString stringWithFormat:@"%@", data];
         _txtNroMovimento.text = [NSString stringWithFormat:@"%@",movimento.id];
-        _txtDataMovimento.text = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:movimento.data]];
         _txtQuantMovimento.text = [NSString stringWithFormat:@"%d",[movimento.qtde intValue]];
         _txtVlrMovimento.text = [NSString stringWithFormat:@"%d",[movimento.valor intValue]];
         
-        if([movimento.ativo intValue] == 0)
-            [_switchStatus setOn:YES animated:YES];
-        else
-            [_switchStatus setOn:NO animated:YES];
+        BOOL movimentoAtivo = ([movimento.ativo intValue]==0?YES:NO);
+        [_switchStatus setOn:movimentoAtivo animated:YES];
         
-        if([movimento.tipo isEqual:@"Entrada"])
-            _segementedTipoMovimento.selectedSegmentIndex = 0;
-        else
-            _segementedTipoMovimento.selectedSegmentIndex = 1;
+        int movimentoEntrada = ([movimento.tipo isEqual:@"Entrada"]?0:1);
+        _segementedTipoMovimento.selectedSegmentIndex = movimentoEntrada;
+        
+        //TODO DELETE
+        /*if([movimento.ativo intValue] == 0)
+         [_switchStatus setOn:YES animated:YES];
+         else
+         [_switchStatus setOn:NO animated:YES];
+         
+         if([movimento.tipo isEqual:@"Entrada"])
+         _segementedTipoMovimento.selectedSegmentIndex = 0;
+         else
+         _segementedTipoMovimento.selectedSegmentIndex = 1;*/
     }
     else
     {
@@ -120,7 +147,7 @@ static NSMutableArray *listaCellMovimento;
         if (textField == _txtQuantMovimento) {
             [_txtVlrMovimento becomeFirstResponder];
             return YES;
-        }     
+        }
     }
     
     return NO;
@@ -147,32 +174,33 @@ static NSMutableArray *listaCellMovimento;
     
     if([self validaFields])
     {
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+        //TODO DELETE
+        /*NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+         [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+         
+         NSString *dataString = [NSString stringWithFormat:@"%@",_txtDataMovimento.text];*/
         
-        NSString *dataString = [NSString stringWithFormat:@"%@",_txtDataMovimento.text];
+        //NSDate *dateFromString = [[NSDate alloc] init];
+        //dateFromString = [dateFormatter dateFromString:dataString];
+        /*if (_switchStatus.isOn)
+         switchValue = 0;*/
         
-        NSDate *dateFromString = [[NSDate alloc] init];
-        dateFromString = [dateFormatter dateFromString:dataString];
+        NSNumber *numeroMovimento = [SisUtil stringToInt:_txtNroMovimento.text];
+        NSString *tipoMovimento = [_segementedTipoMovimento titleForSegmentAtIndex:_segementedTipoMovimento.selectedSegmentIndex];
+        NSDate *data = [SisUtil stringToDate:_txtDataMovimento.text withMask:@"dd-MM-yyyy"];
+        NSNumber *quantidadeMovimento = [SisUtil stringToInt:_txtQuantMovimento.text];
+        NSNumber *valorMovimento = [SisUtil stringToInt: _txtVlrMovimento.text];
+        int switchValue = (_switchStatus.isOn?0:1);
+        NSNumber *ativo = [[NSNumber alloc] initWithInt:switchValue];
         
-        
+        [movimento setId:numeroMovimento];
         [movimento setId:[[NSNumber alloc] initWithUnsignedInt:[_txtNroMovimento.text intValue]]];
         [movimento setIdProduto:produto.id];
-        
-        [movimento setTipo:[_segementedTipoMovimento titleForSegmentAtIndex:_segementedTipoMovimento.selectedSegmentIndex]];
-        
-        [movimento setData:dateFromString];
-        
-        [movimento setQtde:[[NSNumber alloc] initWithUnsignedInt:[_txtQuantMovimento.text intValue]] ];
-        [movimento setValor:[[NSNumber alloc] initWithUnsignedInt:[_txtVlrMovimento.text intValue]]];
-        
-        int switchValue = 1;
-        
-        if (_switchStatus.isOn)
-            switchValue = 0;
-
-        [movimento setAtivo:[[NSNumber alloc] initWithInt:switchValue]];
-        
+        [movimento setTipo:tipoMovimento];
+        [movimento setData:data];
+        [movimento setQtde:quantidadeMovimento];
+        [movimento setValor:valorMovimento];
+        [movimento setAtivo:ativo];
         
         if (newMovimento)
             [GerenciadorBD inserir:movimento];
@@ -183,9 +211,7 @@ static NSMutableArray *listaCellMovimento;
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Campos Inválidos!" message:@"Favor preencher todos os campos" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        
-        [alert show];
+        [self exibeAlertaErro];
     }
 }
 
@@ -213,10 +239,43 @@ static NSMutableArray *listaCellMovimento;
 //Função de retorno do Delegate
 -(void) getDatePickerDate:(NSDate *)date{
     if(date != nil){
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"dd-MM-yyyy"];
-        _txtDataMovimento.text = [dateFormat stringFromDate:date];
-     }
+        //TODO DELETE
+        /*NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+         [dateFormat setDateFormat:@"dd-MM-yyyy"];
+         _txtDataMovimento.text = [dateFormat stringFromDate:date];*/
+        _txtDataMovimento.text = [SisUtil dateToString:date withMask:@"dd-MM-yyyy"];
+    }
+}
+
+-(void)exibeAlertaErro{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Campos Inválidos!" message:@"Favor preencher todos os campos" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [alert show];
+}
+
+-(void)delegaCampos{
+    _txtProduto.delegate = self;
+    _txtDataMovimento.delegate = self;
+    _txtQuantMovimento.delegate = self;
+    _txtVlrMovimento.delegate = self;
+}
+
+-(void)adicionaBotaoOk{
+    NSString *title = @"OK";
+    UIBarButtonItemStyle style = UIBarButtonItemStyleBordered;
+    id target = self;
+    SEL selector = @selector(btnAddMovimento);
+    
+    UIBarButtonItemHelper *btnHelper = [[UIBarButtonItemHelper alloc] initWithTitle:title andStyle:style andTarget:target andSelector:&selector];
+    
+    UIBarButtonItem *btnSalvar = [btnHelper createBarButtonItemHelper];
+    self.navigationItem.rightBarButtonItem = btnSalvar;
+}
+
+-(void)defineReconhecedorToque{
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard:)];
+    gestureRecognizer.delegate = self;
+    [_scrollView addGestureRecognizer:gestureRecognizer];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
