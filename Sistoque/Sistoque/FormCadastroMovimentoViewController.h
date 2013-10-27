@@ -20,10 +20,23 @@
     UIDatePickerHelper *datePickerHelper;
 }
 
+@property (weak, nonatomic) IBOutlet UITextField *txtNroProduto;
+
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellMovimento;
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellProduto;
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellDataMovimento;
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellQuantidadeMovimento;
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellValor;
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellStatus;
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellNil;
+@property (weak, nonatomic) IBOutlet UITableView *tableDadosMovimentos;
+@property (weak, nonatomic) IBOutlet UITextField *txtNroMovimento;
+
+
+
 @property (retain,nonatomic) Movimento *movimento;
 @property (retain,nonatomic) Produto *produto;
 @property  BOOL newMovimento;
-@property (weak, nonatomic) IBOutlet UILabel *labelNroMovimento;
 @property (weak, nonatomic) IBOutlet UITextField *txtProduto;
 @property (weak, nonatomic) IBOutlet UITextField *txtDataMovimento;
 @property (weak, nonatomic) IBOutlet UITextField *txtQuantMovimento;

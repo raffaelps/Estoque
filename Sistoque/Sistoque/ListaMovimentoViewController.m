@@ -9,6 +9,8 @@
 #import "ListaMovimentoViewController.h"
 #import "FormCadastroMovimentoViewController.h"
 #import "GerenciadorBD.h"
+#import "CellMovimentos.h"
+#import "Movimento.h"
 #import "Produto.h"
 
 @interface ListaMovimentoViewController ()
@@ -62,28 +64,50 @@
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [listaMovimentosProduto count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 87;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CellMovimentos";
-    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd-MM-yyyy"];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"CellMovimentos";
+    
+     CellMovimentos *cellTopo = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cellTopo == nil) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellMovimentos" owner:nil options:nil];
+        
+        for (id currenctObject in topLevelObjects)
+        {
+            if ([currenctObject isKindOfClass:[UITableViewCell class]])
+            {
+                cellTopo = (CellMovimentos *) currenctObject;
+            }
+        }
     }
     
-    if (listaMovimentosProduto.count > 0) {
-        Movimento *m = [listaMovimentosProduto objectAtIndex:indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@  %@ - %@",m.idProduto,produto.descricao,[dateFormatter stringFromDate:m.data]];
-        
-    }
-    return cell;
+    Movimento *m = [listaMovimentosProduto objectAtIndex:indexPath.row];
+    
+    cellTopo.movimento.text = [NSString stringWithFormat:@"%@",m.id];;
+    cellTopo.produto.text = produto.descricao;
+    cellTopo.data.text = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:m.data]];
+    
+    return cellTopo;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

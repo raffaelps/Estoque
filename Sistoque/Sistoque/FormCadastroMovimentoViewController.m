@@ -11,6 +11,7 @@
 #import "Produto.h"
 #import "GerenciadorBD.h"
 #import "UIDatePickerHelper.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface FormCadastroMovimentoViewController ()
 
@@ -18,6 +19,8 @@
 
 @implementation FormCadastroMovimentoViewController
 @synthesize movimento,produto,newMovimento;
+
+static NSMutableArray *listaCellMovimento;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,12 +42,12 @@
                                         action:@selector(btnAddMovimento)];
     self.navigationItem.rightBarButtonItem = addButtonSalvar;
     
-    self.view.userInteractionEnabled = YES;
+    listaCellMovimento = [[NSMutableArray alloc]init];
+    [self generateListaCells];
     
-    _txtProduto.delegate = self;
-    _txtDataMovimento.delegate = self;
-    _txtQuantMovimento.delegate = self;
-    _txtVlrMovimento.delegate = self;
+    
+    self.view.userInteractionEnabled = YES;
+
     
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard:)];
     gestureRecognizer.delegate = self;
@@ -59,7 +62,7 @@
 
 -(BOOL)validaFields
 {
-    if(_labelNroMovimento.text == nil)
+    if(_txtNroMovimento.text == nil)
         return FALSE;
     if(_txtProduto.text == nil)
         return FALSE;
@@ -84,7 +87,7 @@
         
         newMovimento = FALSE;
         
-        [_labelNroMovimento setText:[NSString stringWithFormat:@"%@",movimento.id]];
+        _txtNroMovimento.text = [NSString stringWithFormat:@"%@",movimento.id];
         _txtDataMovimento.text = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:movimento.data]];
         _txtQuantMovimento.text = [NSString stringWithFormat:@"%d",[movimento.qtde intValue]];
         _txtVlrMovimento.text = [NSString stringWithFormat:@"%d",[movimento.valor intValue]];
@@ -135,6 +138,7 @@
 -(void) hideKeyBoard:(id) sender
 {
     [_txtProduto resignFirstResponder];
+    [_txtDataMovimento resignFirstResponder];
     [_txtQuantMovimento resignFirstResponder];
     [_txtVlrMovimento resignFirstResponder];
 }
@@ -152,7 +156,7 @@
         dateFromString = [dateFormatter dateFromString:dataString];
         
         
-        [movimento setId:[[NSNumber alloc] initWithUnsignedInt:[_labelNroMovimento.text intValue]]];
+        [movimento setId:[[NSNumber alloc] initWithUnsignedInt:[_txtNroMovimento.text intValue]]];
         [movimento setIdProduto:produto.id];
         
         [movimento setTipo:[_segementedTipoMovimento titleForSegmentAtIndex:_segementedTipoMovimento.selectedSegmentIndex]];
@@ -185,19 +189,16 @@
     }
 }
 
-- (IBAction)btnCancelMovimento:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 -(void)setNextMovimento:(int)nextMovimento
 {
-    [_labelNroMovimento setText:[NSString stringWithFormat:@"%d",nextMovimento]];
+    _txtNroMovimento.text = [NSString stringWithFormat:@"%d",nextMovimento];
 }
 
 -(void)setProduto:(Produto *)prod
 {
     produto = prod;
-    _txtProduto.text = [NSString stringWithFormat:@"%@ - %@",produto.id,produto.descricao];
+    _txtNroProduto.text = [NSString stringWithFormat:@"%@",produto.id];
+    _txtProduto.text = produto.descricao;
 }
 
 - (IBAction)setData:(id)sender {
@@ -207,7 +208,6 @@
     datePickerHelper.delegate = self;
     
     [datePickerHelper showDatePicker];
-    
 }
 
 //Função de retorno do Delegate
@@ -217,6 +217,46 @@
         [dateFormat setDateFormat:@"dd-MM-yyyy"];
         _txtDataMovimento.text = [dateFormat stringFromDate:date];
      }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return listaCellMovimento.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [listaCellMovimento objectAtIndex:indexPath.row];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([[listaCellMovimento objectAtIndex:indexPath.row] isEqual:_cellProduto])
+    {
+        return 88;
+    }
+    return 44;
+}
+
+-(void)generateListaCells
+{
+    CALayer *layer = _cellNil.layer;
+    layer.borderWidth = 0;
+    
+    [listaCellMovimento addObject:_cellMovimento];
+    [listaCellMovimento addObject:_cellProduto];
+    [listaCellMovimento addObject:_cellDataMovimento];
+    [listaCellMovimento addObject:_cellQuantidadeMovimento];
+    [listaCellMovimento addObject:_cellValor];
+    [listaCellMovimento addObject:_cellStatus];
+    [listaCellMovimento addObject:_cellNil];
+    [listaCellMovimento addObject:_cellNil];
+    [listaCellMovimento addObject:_cellNil];
 }
 
 @end
