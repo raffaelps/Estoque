@@ -8,6 +8,7 @@
 
 #import "FormCadastroProdutoViewController.h"
 #import "GerenciadorBD.h"
+#import "UIBarButtonItemHelper.h"
 
 @interface FormCadastroProdutoViewController ()
 
@@ -29,13 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
-                                  initWithTitle:@"OK"
-                                  style:UIBarButtonItemStyleBordered
-                                  target:self
-                                  action:@selector(novoProduto)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    [self adicionaBotaoOk];
     
 }
 
@@ -150,5 +145,18 @@
 -(void)setNextProduto:(int)next
 {
     nextProduto = next;
+}
+
+-(void)adicionaBotaoOk{
+    
+    NSString *title = @"OK";
+    UIBarButtonItemStyle style = UIBarButtonItemStyleBordered;
+    id target = self;
+    SEL selector = @selector(novoProduto);
+    
+    UIBarButtonItemHelper *btnHelper = [[UIBarButtonItemHelper alloc] initWithTitle:title andStyle:style andTarget:target andSelector:&selector];
+    
+    UIBarButtonItem *btnSalvar = [btnHelper createBarButtonItemHelper];
+    self.navigationItem.rightBarButtonItem = btnSalvar;
 }
 @end

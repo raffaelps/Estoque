@@ -202,26 +202,14 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
+				BAA7E28B181DDF6700EDF50D /* Libs */,
+				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
+				A7B0503417EDDD9900A458C0 /* AppDelegate.m */,
 				BAA7E285181DC10900EDF50D /* CellMovimentos.h */,
 				BAA7E286181DC10900EDF50D /* CellMovimentos.m */,
 				BAA7E287181DC10900EDF50D /* CellMovimentos.xib */,
-				BAA7E27A181DBD3C00EDF50D /* SisUtil.h */,
-				BAA7E27B181DBD3C00EDF50D /* SisUtil.m */,
-				BAA7E27C181DBD3C00EDF50D /* UIBarButtonItemHelper.h */,
-				BAA7E27D181DBD3C00EDF50D /* UIBarButtonItemHelper.m */,
-				BA452D7A181B6920007A2001 /* UIDatePickerHelper.h */,
-				BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */,
-				9F750F96181754D8005940FB /* Resources */,
-				C75DD2CD17F86615009A0E75 /* DB */,
 				4DD3B54D17EDE20600FCD4A5 /* Celulas */,
-				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
-				9F5518D3181992190031C9D9 /* principal.plist */,
-				9F5518D5181995990031C9D9 /* Principal.h */,
-				9F5518D6181995990031C9D9 /* Principal.m */,
-				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
-				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
-				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
-				A7B0503417EDDD9900A458C0 /* AppDelegate.m */,
+				C75DD2CD17F86615009A0E75 /* DB */,
 				A7B0506017EDDE0300A458C0 /* FormCadastroCategoriaViewController.h */,
 				A7B0506117EDDE0300A458C0 /* FormCadastroCategoriaViewController.m */,
 				A7B0506217EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib */,
@@ -231,20 +219,27 @@
 				A7B0504C17EDDDCA00A458C0 /* FormCadastroProdutoViewController.h */,
 				A7B0504D17EDDDCA00A458C0 /* FormCadastroProdutoViewController.m */,
 				4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */,
+				9F750F9218174EDD005940FB /* Images.xcassets */,
 				A7B0505B17EDDDF800A458C0 /* ListaCategoriaViewController.h */,
 				A7B0505C17EDDDF800A458C0 /* ListaCategoriaViewController.m */,
 				A7B0505D17EDDDF800A458C0 /* ListaCategoriaViewController.xib */,
-				A7B0505317EDDDDC00A458C0 /* ListaMovimentoViewController.xib */,
 				A7B0505117EDDDDC00A458C0 /* ListaMovimentoViewController.h */,
 				A7B0505217EDDDDC00A458C0 /* ListaMovimentoViewController.m */,
+				A7B0505317EDDDDC00A458C0 /* ListaMovimentoViewController.xib */,
 				A7B0504717EDDDBC00A458C0 /* ListaProdutosViewController.h */,
 				A7B0504817EDDDBC00A458C0 /* ListaProdutosViewController.m */,
 				A7B0504917EDDDBC00A458C0 /* ListaProdutosViewController.xib */,
 				A7B0506517EDDE0C00A458C0 /* ListaRelatorioViewController.h */,
 				A7B0506617EDDE0C00A458C0 /* ListaRelatorioViewController.m */,
 				A7B0506717EDDE0C00A458C0 /* ListaRelatorioViewController.xib */,
-				9F750F9218174EDD005940FB /* Images.xcassets */,
+				9F5518D5181995990031C9D9 /* Principal.h */,
+				9F5518D6181995990031C9D9 /* Principal.m */,
+				9F5518D3181992190031C9D9 /* principal.plist */,
+				9F750F96181754D8005940FB /* Resources */,
 				A7B0502B17EDDD9900A458C0 /* Supporting Files */,
+				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
+				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
+				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
 			);
 			path = Sistoque;
 			sourceTree = "<group>";
@@ -258,6 +253,19 @@
 				A7B0503217EDDD9900A458C0 /* Sistoque-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAA7E28B181DDF6700EDF50D /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E27A181DBD3C00EDF50D /* SisUtil.h */,
+				BAA7E27B181DBD3C00EDF50D /* SisUtil.m */,
+				BAA7E27C181DBD3C00EDF50D /* UIBarButtonItemHelper.h */,
+				BAA7E27D181DBD3C00EDF50D /* UIBarButtonItemHelper.m */,
+				BA452D7A181B6920007A2001 /* UIDatePickerHelper.h */,
+				BA452D7B181B6920007A2001 /* UIDatePickerHelper.m */,
+			);
+			name = Libs;
 			sourceTree = "<group>";
 		};
 		C75DD2CD17F86615009A0E75 /* DB */ = {
