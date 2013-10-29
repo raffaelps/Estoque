@@ -10,10 +10,13 @@
 
 @interface Principal : NSObject {
     NSString *itemMenu;
+    NSString *imagemItemMenu;
 }
 
--(id) initWithMenu:(NSString *) menuInicial;
+-(id) initWithMenu:(NSString *)menuInicial addImage:(NSString *) imageName;
 
 @property (nonatomic, retain) NSString *itemMenu;
+@property (nonatomic, retain) NSString *imagemItemMenu;
+
 
 @end

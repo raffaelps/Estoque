@@ -31,11 +31,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
-                                  initWithTitle:@"Nova"
+                                  initWithTitle:@"+"
                                   style:UIBarButtonItemStyleBordered
                                   target:self
                                   action:@selector(novaCategoria)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+    self.tableviewCategorias.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     
     [self carregaCategorias];
 }
@@ -87,7 +92,7 @@
     
     cell.textLabel.text = categoria.descricao;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.imageView.image = [UIImage imageNamed:@"icon-iPhone.png"];
+    cell.imageView.image = [UIImage imageNamed:@"icones-menu_2.png"];
     
     return cell;
     

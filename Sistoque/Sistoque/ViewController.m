@@ -33,25 +33,25 @@
 {
     [super viewDidLoad];
     [self loadMenu];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
-
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
     
-    self.tabelaPrincipal.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
-
-    /*headerLabel.text = NSLocalizedString(@"Header for the table", @"");
-    headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.shadowColor = [UIColor blackColor];
-    headerLabel.shadowOffset = CGSizeMake(0, 1);
-    headerLabel.font = [UIFont boldSystemFontOfSize:22];
-    headerLabel.backgroundColor = [UIColor clearColor];
-    [containerView addSubview:headerLabel];
-    self.tabelaPrincipal.tableHeaderView = containerView;
-    */
-    //self.tabelaPrincipal.layer.borderColor = [UIColor colorWithRed:0.0 green:0.0 blue:255.0 alpha:1].CGColor;
+    self.tabelaPrincipal.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.4];
     self.tabelaPrincipal.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.tabelaPrincipal.layer.borderWidth = 2;
+    self.tabelaPrincipal.layer.borderWidth = 1;
     self.tabelaPrincipal.layer.cornerRadius = 10;
     self.tabelaPrincipal.layer.masksToBounds = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
 }
 
 -(void) loadMenu {
@@ -65,7 +65,8 @@
     
     for (NSDictionary *item in dados) {
         NSString *nome = [item objectForKey:@"nome"];
-        Principal *c = [[Principal alloc] initWithMenu:nome];
+        NSString *img = [item objectForKey:@"imagem"];
+        Principal *c = [[Principal alloc] initWithMenu:nome addImage:img];
         [menu addObject:c];
     }
 }
@@ -93,8 +94,7 @@
 }
 
 
--(NSInteger)tableView:(UITableView *)tableView
-numberOfRowsInSection:(NSInteger)section {
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //NSLog(@"Menu count: %d", menu.count);
     return menu.count;
 }
@@ -114,6 +114,7 @@ numberOfRowsInSection:(NSInteger)section {
     cell.textLabel.textColor = [UIColor grayColor];
     cell.textLabel.text = principal.itemMenu;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.imageView.image = [UIImage imageNamed: principal.imagemItemMenu];
 	
 	return cell;
 }
@@ -132,12 +133,12 @@ numberOfRowsInSection:(NSInteger)section {
         case 1:
             tela = [[ListaCategoriaViewController alloc] init];
             [self.navigationController pushViewController:tela animated:YES];
-            NSLog(@"sou a categoria");
+            //NSLog(@"sou a categoria");
             break;
         default:
             tela = [[ListaRelatorioViewController alloc] init];
             [self.navigationController pushViewController:tela animated:YES];
-            NSLog(@"sou o relatório");
+            //NSLog(@"sou o relatório");
             break;
 
     }

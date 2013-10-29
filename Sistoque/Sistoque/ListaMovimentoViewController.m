@@ -32,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+    self.tableMovimentos.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     [self gerarLista];
     // Do any additional setup after loading the view from its nib.
 }
@@ -57,9 +59,6 @@
                                   style:UIBarButtonItemStyleBordered
                                   target:self
                                   action:@selector(btnAddMovimento:)];
-    
-    [addButton setTitleTextAttributes:
-     [NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"Helvetica-Bold" size:24.0f],UITextAttributeFont,nil] forState:UIControlStateNormal];
     
     self.navigationItem.rightBarButtonItem = addButton;
 }
@@ -105,6 +104,7 @@
     cellTopo.movimento.text = [NSString stringWithFormat:@"%@",m.id];;
     cellTopo.produto.text = produto.descricao;
     cellTopo.data.text = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:m.data]];
+    cellTopo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cellTopo;
     

@@ -10,11 +10,13 @@
 
 @implementation Principal
 @synthesize itemMenu;
+@synthesize imagemItemMenu;
 
--(id) initWithMenu:(NSString *)menuInicial{
+-(id) initWithMenu:(NSString *)menuInicial addImage:(NSString *) imageName{
     
     if ((self = [super init])) {
         self.itemMenu = menuInicial;
+        self.imagemItemMenu = imageName;
     }
     return self;
 }

@@ -32,8 +32,11 @@
 {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+    self.tabela.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Novo"
+                                   initWithTitle:@"+"
                                    style:UIBarButtonItemStyleBordered
                                    target:self
                                    action:@selector(novoProduto)];
@@ -97,6 +100,7 @@
     cellTopo.quantMaxima.text = [NSString stringWithFormat:@"%@",p.qtdeMaxima];
     cellTopo.quantMin.text = [NSString stringWithFormat:@"%@",p.qtdeMinima];
     //cellTopo.quantEstoque.text = p.quantEstoque;
+    cellTopo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cellTopo;
 }

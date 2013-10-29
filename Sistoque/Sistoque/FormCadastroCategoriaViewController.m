@@ -7,9 +7,9 @@
 //
 
 #import "FormCadastroCategoriaViewController.h"
-//#import "ListaCategoriaViewController.h"
 #import "GerenciadorBD.h"
 #import "Categoria.h"
+#import "UIBarButtonItemHelper.h"
 
 @interface FormCadastroCategoriaViewController ()
 
@@ -22,15 +22,13 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        // [self setTitle:@"Nova categoria"];
     }
     return self;
 }
 
 
 
--(void)setCategoria:(Categoria *)categoria
-{
+-(void)setCategoria:(Categoria *)categoria {
     categoriaSelect = categoria;
 }
 
@@ -58,7 +56,6 @@
         [self setTitle:@"Nova categoria"];
         categoriaSelect = [GerenciadorBD getNovaInstancia:[Categoria class]];
         novaCategoria = YES;
-        //NSLog(@"Sem objetos na memoria");
     }
     
     UIBarButtonItem *addButtonSalvar = [[UIBarButtonItem alloc]

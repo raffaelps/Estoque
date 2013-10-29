@@ -7,14 +7,20 @@
 		<dict>
 			<key>nome</key>
 			<string>Produto</string>
+			<key>imagem</key>
+			<string>icones-menu_1.png</string>
 		</dict>
 		<dict>
 			<key>nome</key>
 			<string>Categoria</string>
+			<key>imagem</key>
+			<string>icones-menu_2.png</string>
 		</dict>
 		<dict>
 			<key>nome</key>
 			<string>Relatório</string>
+			<key>imagem</key>
+			<string>icones-menu_3.png</string>
 		</dict>
 	</array>
 </dict>
