@@ -86,6 +86,8 @@
     Categoria *categoria = [categorias objectAtIndex:indexPath.row];
     
     cell.textLabel.text = categoria.descricao;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.imageView.image = [UIImage imageNamed:@"icon-iPhone.png"];
     
     return cell;
     

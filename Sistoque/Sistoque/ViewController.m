@@ -11,6 +11,7 @@
 #import "ListaCategoriaViewController.h"
 #import "ListaRelatorioViewController.h"
 #import "Principal.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface ViewController ()
@@ -33,6 +34,24 @@
     [super viewDidLoad];
     [self loadMenu];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+
+    
+    self.tabelaPrincipal.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+
+    /*headerLabel.text = NSLocalizedString(@"Header for the table", @"");
+    headerLabel.textColor = [UIColor whiteColor];
+    headerLabel.shadowColor = [UIColor blackColor];
+    headerLabel.shadowOffset = CGSizeMake(0, 1);
+    headerLabel.font = [UIFont boldSystemFontOfSize:22];
+    headerLabel.backgroundColor = [UIColor clearColor];
+    [containerView addSubview:headerLabel];
+    self.tabelaPrincipal.tableHeaderView = containerView;
+    */
+    //self.tabelaPrincipal.layer.borderColor = [UIColor colorWithRed:0.0 green:0.0 blue:255.0 alpha:1].CGColor;
+    self.tabelaPrincipal.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.tabelaPrincipal.layer.borderWidth = 2;
+    self.tabelaPrincipal.layer.cornerRadius = 10;
+    self.tabelaPrincipal.layer.masksToBounds = YES;
 }
 
 -(void) loadMenu {
@@ -76,6 +95,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView
 numberOfRowsInSection:(NSInteger)section {
+    //NSLog(@"Menu count: %d", menu.count);
     return menu.count;
 }
 
@@ -90,7 +110,10 @@ numberOfRowsInSection:(NSInteger)section {
 	}
 	
 	Principal *principal = [menu objectAtIndex:indexPath.row];
-	cell.textLabel.text = principal.itemMenu;
+    
+    cell.textLabel.textColor = [UIColor grayColor];
+    cell.textLabel.text = principal.itemMenu;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
 	return cell;
 }
