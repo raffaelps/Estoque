@@ -31,6 +31,8 @@
 {
     [super viewDidLoad];
     [self adicionaBotaoOk];
+    [self adicionaCategoriasArray];
+
     
 }
 
@@ -159,4 +161,87 @@
     UIBarButtonItem *btnSalvar = [btnHelper createBarButtonItemHelper];
     self.navigationItem.rightBarButtonItem = btnSalvar;
 }
+
+//Verifica se o Field pode começar a editar.
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if(textField == textCategoria){
+        [self hideKeyboard];
+        [self setCategoria:textField];
+        return NO;
+    }
+    return YES;
+}
+
+- (IBAction)setCategoria:(id)sender {
+    
+    //0, _view.bounds.size.height+44, 320, 216
+    
+    UIPickerView *pickerCategorias = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 200, 320, 216)];
+    pickerCategorias.delegate = self;
+    pickerCategorias.showsSelectionIndicator = YES;
+    [self.view addSubview:pickerCategorias];
+    
+}
+
+-(void)hideKeyboard{
+    /*for (UIView *textField in [self.view subviews]) {
+        if ([textField isKindOfClass:[UITextField class]]) {
+            [textField resignFirstResponder];
+        }
+    }*/
+    [textCategoria resignFirstResponder];
+    [textDescricao resignFirstResponder];
+    [textValorEntrada resignFirstResponder];
+    [textValorSaida resignFirstResponder];
+    [textQuantMinima resignFirstResponder];
+    [textQuantMaxima resignFirstResponder];
+}
+
+//PickerView
+
+//Função de retorno do Delegate
+/*-(void) getDatePickerDate:(NSDate *)date{
+    if(date != nil){
+        textCategoria.text = [SisUtil dateToString:date withMask:@"dd-MM-yyyy"];
+    }
+}*/
+
+-(void)adicionaCategoriasArray{
+    categorias = [GerenciadorBD listarTodos:[Categoria class] ordenacao:@"descricao"];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
+    // Handle the selection
+}
+
+// tell the picker the title for a given component
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    //title = [@"" stringByAppendingFormat:@"%d",row];
+    Categoria *categoria = [categorias objectAtIndex:row];
+    
+    return categoria.descricao;
+}
+
+// tell the picker the width of each row for a given component
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    int sectionWidth = 300;
+    
+    return sectionWidth;
+}
+
+/*INIT PickerViewDataSouce*/
+// tell the picker how many rows are available for a given component
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    
+    return categorias.count;
+}
+
+// tell the picker how many components it will have
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+/*END PickerViewDataSouce*/
+
+//End PickerView
+
 @end

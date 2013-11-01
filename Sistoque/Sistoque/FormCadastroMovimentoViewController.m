@@ -13,6 +13,7 @@
 #import "UIDatePickerHelper.h"
 #import "SisUtil.h"
 #import "UIBarButtonItemHelper.h"
+#import "GerenciadorBD.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface FormCadastroMovimentoViewController ()
@@ -37,22 +38,12 @@ static NSMutableArray *listaCellMovimento;
 {
     [super viewDidLoad];
     
-    //TODO DELETE
-    /*UIBarButtonItem *addButtonSalvar = [[UIBarButtonItem alloc]
-     initWithTitle:@"OK"
-     style:UIBarButtonItemStyleBordered
-     target:self
-     action:@selector(btnAddMovimento)];
-     
-     self.navigationItem.rightBarButtonItem = addButtonSalvar;*/
-    
     listaCellMovimento = [[NSMutableArray alloc]init];
     [self generateListaCells];
     
     [self delegaCampos];
     [self adicionaBotaoOk];
-    [self defineReconhecedorToque];
-    
+    [self defineReconhecedorToque];    
     self.view.userInteractionEnabled = YES;
     
 }
@@ -78,19 +69,6 @@ static NSMutableArray *listaCellMovimento;
        quantidadeValorVazio)
         return FALSE;
     return TRUE;
-    
-    //TODO DELETE
-    /*if(_labelNroMovimento.text == nil)
-     if(_txtNroMovimento.text == nil)
-     return FALSE;
-     if(_txtProduto.text == nil)
-     return FALSE;
-     if(_txtDataMovimento.text == nil)
-     return FALSE;
-     if(_txtQuantMovimento.text == nil)
-     return FALSE;
-     if(_txtVlrMovimento.text == nil)
-     return FALSE;*/
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -99,9 +77,6 @@ static NSMutableArray *listaCellMovimento;
     
     if(movimento != nil)
     {
-        //TODO DELETE
-        //NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        //[dateFormatter setDateFormat:@"dd-MM-yyyy"];
         NSString *data = [SisUtil dateToString:movimento.data withMask:@"dd-MM-yyyy"];
         
         newMovimento = FALSE;
@@ -117,17 +92,6 @@ static NSMutableArray *listaCellMovimento;
         
         int movimentoEntrada = ([movimento.tipo isEqual:@"Entrada"]?0:1);
         _segementedTipoMovimento.selectedSegmentIndex = movimentoEntrada;
-        
-        //TODO DELETE
-        /*if([movimento.ativo intValue] == 0)
-         [_switchStatus setOn:YES animated:YES];
-         else
-         [_switchStatus setOn:NO animated:YES];
-         
-         if([movimento.tipo isEqual:@"Entrada"])
-         _segementedTipoMovimento.selectedSegmentIndex = 0;
-         else
-         _segementedTipoMovimento.selectedSegmentIndex = 1;*/
     }
     else
     {
@@ -174,17 +138,6 @@ static NSMutableArray *listaCellMovimento;
     
     if([self validaFields])
     {
-        //TODO DELETE
-        /*NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-         [dateFormatter setDateFormat:@"dd-MM-yyyy"];
-         
-         NSString *dataString = [NSString stringWithFormat:@"%@",_txtDataMovimento.text];*/
-        
-        //NSDate *dateFromString = [[NSDate alloc] init];
-        //dateFromString = [dateFormatter dateFromString:dataString];
-        /*if (_switchStatus.isOn)
-         switchValue = 0;*/
-        
         NSNumber *numeroMovimento = [SisUtil stringToInt:_txtNroMovimento.text];
         NSString *tipoMovimento = [_segementedTipoMovimento titleForSegmentAtIndex:_segementedTipoMovimento.selectedSegmentIndex];
         NSDate *data = [SisUtil stringToDate:_txtDataMovimento.text withMask:@"dd-MM-yyyy"];
@@ -234,17 +187,14 @@ static NSMutableArray *listaCellMovimento;
     datePickerHelper.delegate = self;
     
     [datePickerHelper showDatePicker];
+    
 }
 
 //Função de retorno do Delegate
--(void) getDatePickerDate:(NSDate *)date{
-    if(date != nil){
-        //TODO DELETE
-        /*NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-         [dateFormat setDateFormat:@"dd-MM-yyyy"];
-         _txtDataMovimento.text = [dateFormat stringFromDate:date];*/
-        _txtDataMovimento.text = [SisUtil dateToString:date withMask:@"dd-MM-yyyy"];
-    }
+-(void) getPickerValue:(NSDate *)date{
+    if(date == nil)
+        date = [NSDate date];
+    _txtDataMovimento.text = [SisUtil dateToString:date withMask:@"dd-MM-yyyy"];
 }
 
 -(void)exibeAlertaErro{

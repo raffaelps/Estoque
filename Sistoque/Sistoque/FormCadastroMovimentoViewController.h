@@ -11,12 +11,13 @@
 #import "Produto.h"
 #import "UIDatePickerHelper.h"
 
-@interface FormCadastroMovimentoViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate, UIDatePickerHelper>
+@interface FormCadastroMovimentoViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate, UIPickerHelper>
 {
     Movimento *movimento;
     Produto *produto;
     BOOL newMovimento;
     
+    NSArray *categorias;
     UIDatePickerHelper *datePickerHelper;
 }
 

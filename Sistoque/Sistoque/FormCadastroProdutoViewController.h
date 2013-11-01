@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Produto.h"
+#import "Categoria.h"
 
-@interface FormCadastroProdutoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
+@interface FormCadastroProdutoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 {
     IBOutlet UITableViewCell *cellCategoria;
     IBOutlet UITableViewCell *cellDescricao;
@@ -26,6 +27,8 @@
     IBOutlet UISwitch *ativo;
     
     IBOutlet UITableView *tableView;
+    
+    NSArray *categorias;
     
     int nextProduto;
 }
