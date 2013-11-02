@@ -147,7 +147,6 @@ static NSMutableArray *listaCellMovimento;
         NSNumber *ativo = [[NSNumber alloc] initWithInt:switchValue];
         
         [movimento setId:numeroMovimento];
-        [movimento setId:[[NSNumber alloc] initWithUnsignedInt:[_txtNroMovimento.text intValue]]];
         [movimento setIdProduto:produto.id];
         [movimento setTipo:tipoMovimento];
         [movimento setData:data];

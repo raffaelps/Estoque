@@ -218,6 +218,7 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
+				BA2C684C182595710045FABB /* Models */,
 				BAA7E28B181DDF6700EDF50D /* Libs */,
 				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
 				A7B0503417EDDD9900A458C0 /* AppDelegate.m */,
@@ -267,6 +268,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BA2C684C182595710045FABB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C75DD2D217F86687009A0E75 /* Movimento.h */,
+				C75DD2D317F86687009A0E75 /* Movimento.m */,
+				C75DD2D417F86687009A0E75 /* Produto.h */,
+				C75DD2D517F86687009A0E75 /* Produto.m */,
+				C75DD2CE17F86687009A0E75 /* Categoria.h */,
+				C75DD2CF17F86687009A0E75 /* Categoria.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		BAA7E28B181DDF6700EDF50D /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,14 +301,8 @@
 		C75DD2CD17F86615009A0E75 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				C75DD2CE17F86687009A0E75 /* Categoria.h */,
-				C75DD2CF17F86687009A0E75 /* Categoria.m */,
 				C75DD2D017F86687009A0E75 /* GerenciadorBD.h */,
 				C75DD2D117F86687009A0E75 /* GerenciadorBD.m */,
-				C75DD2D217F86687009A0E75 /* Movimento.h */,
-				C75DD2D317F86687009A0E75 /* Movimento.m */,
-				C75DD2D417F86687009A0E75 /* Produto.h */,
-				C75DD2D517F86687009A0E75 /* Produto.m */,
 				A920105C17EDE37C004F1502 /* Sistoque.xcdatamodeld */,
 			);
 			name = DB;

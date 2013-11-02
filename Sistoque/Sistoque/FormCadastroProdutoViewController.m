@@ -9,6 +9,8 @@
 #import "FormCadastroProdutoViewController.h"
 #import "GerenciadorBD.h"
 #import "UIBarButtonItemHelper.h"
+#import "UIPickerViewHelper.h"
+#import "SisUtil.h"
 
 @interface FormCadastroProdutoViewController ()
 
@@ -31,7 +33,7 @@
 {
     [super viewDidLoad];
     [self adicionaBotaoOk];
-    [self adicionaCategoriasArray];
+    [self carregaCategorias];
 
     
 }
@@ -59,22 +61,25 @@
 {
     Produto *newProduto = [GerenciadorBD getNovaInstancia:[Produto class]];
     
+    NSNumber *idProduto = [[NSNumber alloc]initWithInt:nextProduto];
+    NSString *descricao = self.textDescricao.text;
+    NSNumber *quantidadeMinima = [SisUtil stringToInt:self.textQuantMinima.text];
+    NSNumber *quantidadeMaxima = [SisUtil stringToInt:self.textQuantMaxima.text];
+    Categoria *categoria = [categorias objectAtIndex: rowCategoria];
+    NSNumber *idCategoria = categoria.id;
+    NSNumber *valorEntrada = [SisUtil stringToInt:self.textValorEntrada.text];
+    NSNumber *valorSaida = [SisUtil stringToInt:self.textValorEntrada.text];
+    int switchValue = (self.ativo.isOn?0:1);
+    NSNumber *produtoAtivo = [[NSNumber alloc] initWithInt:switchValue];
     
-    [newProduto setId:[[NSNumber alloc]initWithInt:nextProduto]];
-    [newProduto setDescricao:self.textDescricao.text];
-    [newProduto setQtdeMaxima:[NSNumber numberWithInt:[self.textQuantMaxima.text intValue]]];
-    [newProduto setQtdeMinima:[NSNumber numberWithInt:[self.textQuantMinima.text intValue]]];
-    [newProduto setValorEntrada:[NSNumber numberWithInt:[self.textValorEntrada.text intValue]]];
-    [newProduto setValorSaida:[NSNumber numberWithInt:[self.textValorSaida.text intValue]]];
-    
-    if ([self.ativo isOn])
-    {
-        [newProduto setAtivo:[NSNumber numberWithInt:1]];
-    }
-    else
-    {
-        [newProduto setAtivo:[NSNumber numberWithInt:0]];
-    }
+    [newProduto setId:idProduto];
+    [newProduto setDescricao:descricao];
+    [newProduto setQtdeMinima:quantidadeMinima];
+    [newProduto setQtdeMaxima:quantidadeMaxima];
+    [newProduto setIdCategoria:idCategoria];
+    [newProduto setValorEntrada:valorEntrada];
+    [newProduto setValorSaida:valorSaida];
+    [newProduto setAtivo:produtoAtivo];
     
     [GerenciadorBD inserir:newProduto];
     
@@ -166,20 +171,23 @@
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     if(textField == textCategoria){
         [self hideKeyboard];
-        [self setCategoria:textField];
+        [self showCategoria:textField];
         return NO;
     }
     return YES;
 }
 
-- (IBAction)setCategoria:(id)sender {
+- (void)showCategoria:(id)sender {
     
     //0, _view.bounds.size.height+44, 320, 216
-    
-    UIPickerView *pickerCategorias = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 200, 320, 216)];
+    //initWithFrame:CGRectMake(0, 200, 320, 216)
+    pickerCategorias = [[UIPickerViewHelper alloc] initWithView:self.view andArray:categoriasDescricao];
     pickerCategorias.delegate = self;
-    pickerCategorias.showsSelectionIndicator = YES;
-    [self.view addSubview:pickerCategorias];
+    
+    [pickerCategorias showPickerView];
+    //pickerCategorias.showsSelectionIndicator = YES;
+    //[self.view addSubview:pickerCategorias];
+    
     
 }
 
@@ -200,48 +208,21 @@
 //PickerView
 
 //Função de retorno do Delegate
-/*-(void) getDatePickerDate:(NSDate *)date{
-    if(date != nil){
-        textCategoria.text = [SisUtil dateToString:date withMask:@"dd-MM-yyyy"];
+-(void) getPickerValue:(NSNumber *)row{
+    if(row == nil)
+        row = 0;
+    rowCategoria = [row integerValue];
+    textCategoria.text = [categoriasDescricao objectAtIndex: rowCategoria];
+    
+}
+
+-(void)carregaCategorias{    
+    categoriasDescricao = [[NSMutableArray alloc]init];
+    
+    categorias = [GerenciadorBD listarTodosAtivo: [Categoria class] ordenacao:@"descricao"];
+    for(Categoria *categoria in categorias){
+        [categoriasDescricao addObject:categoria.descricao];
     }
-}*/
-
--(void)adicionaCategoriasArray{
-    categorias = [GerenciadorBD listarTodos:[Categoria class] ordenacao:@"descricao"];
 }
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
-    // Handle the selection
-}
-
-// tell the picker the title for a given component
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    //title = [@"" stringByAppendingFormat:@"%d",row];
-    Categoria *categoria = [categorias objectAtIndex:row];
-    
-    return categoria.descricao;
-}
-
-// tell the picker the width of each row for a given component
-- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
-    int sectionWidth = 300;
-    
-    return sectionWidth;
-}
-
-/*INIT PickerViewDataSouce*/
-// tell the picker how many rows are available for a given component
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    
-    return categorias.count;
-}
-
-// tell the picker how many components it will have
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
-/*END PickerViewDataSouce*/
-
-//End PickerView
 
 @end

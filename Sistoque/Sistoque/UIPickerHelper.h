@@ -21,9 +21,7 @@
 -(void)showPicker;
 
 @property UIView *view;
-@property UIView *pickerView;
+@property UIView *picker;
 @property id delegate;
 
-//-(UIToolbar*)createToolbar;
-//-(UIView*)createOverlay;
 @end

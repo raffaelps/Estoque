@@ -25,7 +25,7 @@
 - (void)showDatePicker{
     
     UIView *datePicker = [self createDatePicker];
-    super.pickerView = datePicker;
+    super.picker = datePicker;
     
     [super showPicker];
     

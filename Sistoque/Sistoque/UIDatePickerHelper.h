@@ -9,17 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "UIPickerHelper.h"
 
-/*@protocol UIDatePickerHelper <NSObject>
-    -(void)getDatePickerDate:(NSDate*)date;
-@end*/
-
 @interface UIDatePickerHelper : UIPickerHelper{
-    //id<UIDatePickerHelper> delegate;
 }
 
 -(id)initWithView:(UIView *)initView;
 - (void)showDatePicker;
-
-//@property id delegate;
 
 @end

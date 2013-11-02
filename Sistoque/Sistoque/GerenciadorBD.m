@@ -45,12 +45,16 @@ static NSManagedObjectContext *managedObjectContext;
     [self.managedObjectContext save:nil];
 }
 
-+ (NSArray *) listarTodos:(Class) classe ordenacao: (NSString *) ordenacao {
-    NSString *nomeClasse = NSStringFromClass(classe);
-    
++(NSArray *)listar:(NSString*) nomeClasse comPropriedades:(NSArray*) propriedades ePredicado:(NSPredicate*) predicado eOrdem: (NSString *) ordenacao{
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     request.entity = [NSEntityDescription entityForName:nomeClasse inManagedObjectContext:self.managedObjectContext];
     request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:ordenacao ascending:YES]];
+    
+    if(propriedades!=nil)
+        [request setPropertiesToFetch:propriedades];
+    
+    if(predicado!=nil)
+        request.predicate = predicado;
     
     NSError *error = nil;
     NSArray *arr = [self.managedObjectContext executeFetchRequest:request error:&error];
@@ -62,23 +66,23 @@ static NSManagedObjectContext *managedObjectContext;
     }
 }
 
++(NSArray *)listarPropriedades:(Class) classe comPropriedades:(NSArray*) propriedades eFiltro:(NSString*)filtro eOrdem: (NSString *) ordenacao{
+    NSString *nomeClasse = NSStringFromClass(classe);
+    NSPredicate *predicado = [NSPredicate predicateWithFormat:filtro];
+    return [self listar:nomeClasse comPropriedades:propriedades ePredicado:predicado eOrdem:ordenacao];
+}
+
++ (NSArray *) listarTodos:(Class) classe ordenacao: (NSString *) ordenacao {
+    NSString *nomeClasse = NSStringFromClass(classe);
+
+    return [self listar:nomeClasse comPropriedades:nil ePredicado:nil eOrdem:ordenacao];
+}
 
 + (NSArray *) listarTodosAtivo:(Class) classe ordenacao: (NSString *) ordenacao {
     NSString *nomeClasse = NSStringFromClass(classe);
+    NSPredicate *predicado = [NSPredicate predicateWithFormat:@"ativo = 1"];
     
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    request.entity = [NSEntityDescription entityForName:nomeClasse inManagedObjectContext:self.managedObjectContext];
-    request.predicate = [NSPredicate predicateWithFormat:@"ativo = 1"];
-    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:ordenacao ascending:YES]];
-    
-    NSError *error = nil;
-    NSArray *arr = [self.managedObjectContext executeFetchRequest:request error:&error];
-    if (!error) {
-        return arr ;
-    } else {
-        NSLog(@"%@",[error description]);
-        return nil;
-    }
+    return [self listar:nomeClasse comPropriedades:nil ePredicado:predicado eOrdem:ordenacao];
 }
 
 
@@ -89,14 +93,11 @@ static NSManagedObjectContext *managedObjectContext;
                                  inManagedObjectContext: [GerenciadorBD managedObjectContext] ];
     return [[NSManagedObject alloc]
             initWithEntity:desc
-            insertIntoManagedObjectContext:nil];
-    
+            insertIntoManagedObjectContext:nil];    
 }
 
 
 + (NSNumber *) getNextAutoIncrement:(NSString *) entityName fieldIdKey:(NSString *) idKey {
-    
-    
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     
     request.entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
@@ -118,7 +119,6 @@ static NSManagedObjectContext *managedObjectContext;
         myIndex = [[maxIndexedObject valueForKey:idKey] integerValue] + 1;
     }
     
-    //NSLog(@"Proximo id: %d", myIndex);
     return [NSNumber numberWithInteger:myIndex];
 }
 

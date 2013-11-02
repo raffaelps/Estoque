@@ -31,6 +31,8 @@
 //*** Exemplo de utilizacao ***:
 //NSArray *arr = [GerenciadorBD listarTodos:[Produto class] ordenacao:@"descricao"];
 + (NSArray *) listarTodos:(Class) classe ordenacao: (NSString *) ordenacao;
++ (NSArray *) listarTodosAtivo:(Class) classe ordenacao: (NSString *) ordenacao;
++ (NSArray *) listarPropriedades:(Class) classe comPropriedades:(NSArray*) propriedades eFiltro:(NSString*)filtro eOrdem: (NSString *) ordenacao;
 
 + (void) remover:(NSManagedObject *) entidade;
 + (NSNumber *) getNextAutoIncrement:(NSString *) entityName fieldIdKey:(NSString *) idKey;

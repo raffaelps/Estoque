@@ -73,16 +73,14 @@
     UIView *darkView = [self createOverlay];
     [_view addSubview:darkView];
     
-    //UIView *pickerView = [self createDatePicker];
-    [_view addSubview:_pickerView];
+    [_view addSubview:_picker];
     
     UIToolbar* toolBar = [self createToolbar];
     [_view addSubview:toolBar];
     
     [UIView beginAnimations:@"MoveIn" context:nil];
     toolBar.frame = toolbarTargetFrame;
-    //datePicker.frame = targetFrame;
-    _pickerView.frame = targetFrame;
+    _picker.frame = targetFrame;
     [UIView commitAnimations];
     
 }

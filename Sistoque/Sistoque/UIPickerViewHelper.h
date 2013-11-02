@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIPickerHelper.h"
 
-@interface UIPickerViewHelper : UIPickerView{
-    
+@interface UIPickerViewHelper : UIPickerHelper<UIPickerViewDelegate, UIPickerViewDataSource>{
+    NSArray* array;
 }
+
+//@property NSArray* array;
+//@property(strong, nonatomic) UIPickerView *pickerView;
+-(id)initWithView:(UIView *)initView andArray:(NSArray*)array;
+-(void)showPickerView;
 
 @end

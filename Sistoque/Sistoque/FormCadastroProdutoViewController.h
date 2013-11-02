@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Produto.h"
 #import "Categoria.h"
+#import "UIPickerViewHelper.h"
 
-@interface FormCadastroProdutoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface FormCadastroProdutoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerHelper>
 {
     IBOutlet UITableViewCell *cellCategoria;
     IBOutlet UITableViewCell *cellDescricao;
@@ -29,6 +30,9 @@
     IBOutlet UITableView *tableView;
     
     NSArray *categorias;
+    NSMutableArray *categoriasDescricao;
+    UIPickerViewHelper *pickerCategorias;
+    int rowCategoria;
     
     int nextProduto;
 }
