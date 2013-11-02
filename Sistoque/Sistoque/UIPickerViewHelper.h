@@ -13,8 +13,6 @@
     NSArray* array;
 }
 
-//@property NSArray* array;
-//@property(strong, nonatomic) UIPickerView *pickerView;
 -(id)initWithView:(UIView *)initView andArray:(NSArray*)array;
 -(void)showPickerView;
 

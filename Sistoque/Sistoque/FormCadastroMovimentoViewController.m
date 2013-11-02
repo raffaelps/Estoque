@@ -96,7 +96,7 @@ static NSMutableArray *listaCellMovimento;
     else
     {
         newMovimento = TRUE;
-        movimento = [GerenciadorBD getNovaInstancia:[Movimento class]];
+        movimento = (Movimento*)[GerenciadorBD getNovaInstancia:[Movimento class]];
     }
 }
 

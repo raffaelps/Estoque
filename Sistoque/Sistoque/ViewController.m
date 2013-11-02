@@ -123,25 +123,21 @@
     didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self.tabelaPrincipal deselectRowAtIndexPath:indexPath animated:YES];
-    ViewController *tela;
+    UIViewController *tela;
     
     switch (indexPath.row) {
         case 0:
             tela = [[ListaProdutosViewController alloc] init];
-            [self.navigationController pushViewController:tela animated:YES];
             break;
         case 1:
             tela = [[ListaCategoriaViewController alloc] init];
-            [self.navigationController pushViewController:tela animated:YES];
-            //NSLog(@"sou a categoria");
             break;
         default:
             tela = [[ListaRelatorioViewController alloc] init];
-            [self.navigationController pushViewController:tela animated:YES];
-            //NSLog(@"sou o relatório");
             break;
-
     }
+    
+    [self.navigationController pushViewController:tela animated:YES];
     
 }
 

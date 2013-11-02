@@ -10,6 +10,7 @@
 #import "GerenciadorBD.h"
 #import "Categoria.h"
 #import "UIBarButtonItemHelper.h"
+#import "SisUtil.h"
 
 @interface FormCadastroCategoriaViewController ()
 
@@ -54,7 +55,7 @@
     }
     else {
         [self setTitle:@"Nova categoria"];
-        categoriaSelect = [GerenciadorBD getNovaInstancia:[Categoria class]];
+        categoriaSelect = (Categoria*)[GerenciadorBD getNovaInstancia:[Categoria class]];
         novaCategoria = YES;
     }
     
@@ -79,8 +80,8 @@
     
     desc = [desc stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
-    if(desc != nil && [desc length] > 0 && ![desc isEqualToString: @""] ){
-        
+    //if(desc != nil && [desc length] > 0 && ![desc isEqualToString: @""] ){
+    if(![SisUtil verificaTextoVazioOuNulo:desc]){
         [categoriaSelect setDescricao: desc];
         
         if ([self.switchStatusCategoria isOn]){

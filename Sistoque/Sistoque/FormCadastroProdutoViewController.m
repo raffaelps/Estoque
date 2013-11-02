@@ -59,7 +59,7 @@
 
 - (IBAction)novoProduto
 {
-    Produto *newProduto = [GerenciadorBD getNovaInstancia:[Produto class]];
+    Produto *newProduto = (Produto *)[GerenciadorBD getNovaInstancia:[Produto class]];
     
     NSNumber *idProduto = [[NSNumber alloc]initWithInt:nextProduto];
     NSString *descricao = self.textDescricao.text;

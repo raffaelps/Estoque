@@ -12,13 +12,10 @@
 @interface FormCadastroCategoriaViewController : UIViewController{
     NSArray *conta_categorias;
     Categoria *categoriaSelect;
-    BOOL *novaCategoria;
+    BOOL novaCategoria;
 }
 @property (weak, nonatomic) IBOutlet UITextField *textfieldDescricaoCategoria;
 @property (weak, nonatomic) IBOutlet UISwitch *switchStatusCategoria;
-
-@property (retain, nonatomic) Categoria *categoriaSelect;
-@property BOOL *novaCategoria;
 
 -(void)setCategoria:(Categoria *)categoria;
 
