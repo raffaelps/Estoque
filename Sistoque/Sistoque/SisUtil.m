@@ -34,4 +34,9 @@
     return [[NSNumber alloc] initWithUnsignedInt:[value intValue]];
 }
 
++(BOOL)isGreaterThanZero:(NSNumber*)value{
+    int result = [value integerValue];
+    return (result > 0);
+}
+
 @end

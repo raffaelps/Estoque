@@ -27,9 +27,6 @@
 
 // tell the picker the title for a given component
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    //title = [@"" stringByAppendingFormat:@"%d",row];
-    //Categoria *categoria = [_array objectAtIndex:row];
-    NSLog(@"%@", [array objectAtIndex:row]);
     return [array objectAtIndex:row];
 }
 

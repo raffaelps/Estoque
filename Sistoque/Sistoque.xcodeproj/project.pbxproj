@@ -218,6 +218,7 @@
 		A7B0502A17EDDD9900A458C0 /* Sistoque */ = {
 			isa = PBXGroup;
 			children = (
+				BA2C684D1825B26C0045FABB /* Helpers */,
 				BA2C684C182595710045FABB /* Models */,
 				BAA7E28B181DDF6700EDF50D /* Libs */,
 				A7B0503317EDDD9900A458C0 /* AppDelegate.h */,
@@ -281,11 +282,9 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		BAA7E28B181DDF6700EDF50D /* Libs */ = {
+		BA2C684D1825B26C0045FABB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				BAA7E27A181DBD3C00EDF50D /* SisUtil.h */,
-				BAA7E27B181DBD3C00EDF50D /* SisUtil.m */,
 				BAA7E27C181DBD3C00EDF50D /* UIBarButtonItemHelper.h */,
 				BAA7E27D181DBD3C00EDF50D /* UIBarButtonItemHelper.m */,
 				BA452D7A181B6920007A2001 /* UIDatePickerHelper.h */,
@@ -294,6 +293,15 @@
 				BAD550EE18231E0300E3EA43 /* UIPickerViewHelper.m */,
 				BAD550F0182339C800E3EA43 /* UIPickerHelper.h */,
 				BAD550F1182339C900E3EA43 /* UIPickerHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		BAA7E28B181DDF6700EDF50D /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E27A181DBD3C00EDF50D /* SisUtil.h */,
+				BAA7E27B181DBD3C00EDF50D /* SisUtil.m */,
 			);
 			name = Libs;
 			sourceTree = "<group>";

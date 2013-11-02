@@ -14,5 +14,6 @@
 +(NSString *)dateToString:(NSDate *)date withMask:(NSString*) dateMask;
 +(NSDate *)stringToDate:(NSString*)date withMask:(NSString*) dateMask;
 +(NSNumber*)stringToInt:(NSString*)value;
++(BOOL)isGreaterThanZero:(NSNumber*)value;
 
 @end

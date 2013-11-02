@@ -25,6 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self setTitle:@"Novo produto"];
+        rowCategoria = -1;
     }
     return self;
 }
@@ -65,8 +66,11 @@
     NSString *descricao = self.textDescricao.text;
     NSNumber *quantidadeMinima = [SisUtil stringToInt:self.textQuantMinima.text];
     NSNumber *quantidadeMaxima = [SisUtil stringToInt:self.textQuantMaxima.text];
-    Categoria *categoria = [categorias objectAtIndex: rowCategoria];
-    NSNumber *idCategoria = categoria.id;
+    NSNumber *idCategoria = 0;
+    if(rowCategoria > -1){
+        Categoria *categoria = [categorias objectAtIndex: rowCategoria];
+        idCategoria = categoria.id;
+    }
     NSNumber *valorEntrada = [SisUtil stringToInt:self.textValorEntrada.text];
     NSNumber *valorSaida = [SisUtil stringToInt:self.textValorEntrada.text];
     int switchValue = (self.ativo.isOn?0:1);
@@ -81,9 +85,38 @@
     [newProduto setValorSaida:valorSaida];
     [newProduto setAtivo:produtoAtivo];
     
-    [GerenciadorBD inserir:newProduto];
+    NSString *mensagem = [self validaCampos:newProduto];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    if([SisUtil verificaTextoVazioOuNulo:mensagem]){
+        [GerenciadorBD inserir:newProduto];
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        [self exibeAlertaErro:mensagem];
+    }
+}
+
+-(NSString*)validaCampos:(Produto*)produto{
+    
+    NSString *mensagemErro = @"";
+    
+    if([SisUtil verificaTextoVazioOuNulo: produto.descricao])
+        return @"A descrição do produto não pode ser vazia.";
+    
+    if(![SisUtil isGreaterThanZero:produto.idCategoria])
+        return @"A categoria não pode ser vazia.";
+        
+    if(![SisUtil isGreaterThanZero:produto.qtdeMaxima])
+        return @"A quantidade máxima deve ser superior a 0.";
+    
+    if([produto.qtdeMinima integerValue] > [produto.qtdeMaxima integerValue])
+        return @"A quantidade mínima não pode ser superior à máxima.";
+    
+    return mensagemErro;
+}
+
+-(void)exibeAlertaErro:(NSString*)mensagemErro{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Campos Inválidos!" message:mensagemErro delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
