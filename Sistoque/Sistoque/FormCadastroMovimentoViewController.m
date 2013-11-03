@@ -21,7 +21,9 @@
 @end
 
 @implementation FormCadastroMovimentoViewController
-@synthesize movimento,produto,newMovimento;
+@synthesize movimento,produto,newMovimento,controllScrollView;
+
+id elementFocus;
 
 static NSMutableArray *listaCellMovimento;
 
@@ -45,6 +47,9 @@ static NSMutableArray *listaCellMovimento;
     [self adicionaBotaoOk];
     [self defineReconhecedorToque];    
     self.view.userInteractionEnabled = YES;
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+    self.tableDadosMovimentos.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     
 }
 
@@ -74,6 +79,9 @@ static NSMutableArray *listaCellMovimento;
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    controllScrollView = [[ControllScrollView alloc]init];
+    [controllScrollView setSvos:_scrollView];
     
     if(movimento != nil)
     {
@@ -124,14 +132,6 @@ static NSMutableArray *listaCellMovimento;
         return NO;
     }
     return YES;
-}
-
--(void) hideKeyBoard:(id) sender
-{
-    [_txtProduto resignFirstResponder];
-    [_txtDataMovimento resignFirstResponder];
-    [_txtQuantMovimento resignFirstResponder];
-    [_txtVlrMovimento resignFirstResponder];
 }
 
 - (IBAction)btnAddMovimento {
@@ -222,7 +222,7 @@ static NSMutableArray *listaCellMovimento;
 }
 
 -(void)defineReconhecedorToque{
-    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard:)];
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard)];
     gestureRecognizer.delegate = self;
     [_scrollView addGestureRecognizer:gestureRecognizer];
 }
@@ -251,6 +251,11 @@ static NSMutableArray *listaCellMovimento;
     return 44;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 -(void)generateListaCells
 {
     CALayer *layer = _cellNil.layer;
@@ -265,6 +270,25 @@ static NSMutableArray *listaCellMovimento;
     [listaCellMovimento addObject:_cellNil];
     [listaCellMovimento addObject:_cellNil];
     [listaCellMovimento addObject:_cellNil];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    elementFocus = textField;
+    
+    [controllScrollView sobeTela:textField scrollView:_scrollView fieldPosition:[textField convertPoint:textField.bounds.origin fromView:self.view] deviceSize:self.view.bounds.size];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    elementFocus = textView;
+    
+    [controllScrollView sobeTela:textView scrollView:_scrollView fieldPosition:[textView convertPoint:textView.bounds.origin fromView:self.view] deviceSize:self.view.bounds.size];
+}
+
+-(void)hideKeyBoard
+{
+    [controllScrollView hideKeyBoard:elementFocus scrollView:_scrollView navigationControllerHidden:NO];
 }
 
 @end

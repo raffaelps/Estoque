@@ -18,7 +18,9 @@
 
 @implementation FormCadastroProdutoViewController
 
-@synthesize cellAtivo,cellValores,cellQuantidades,cellDescricao,cellCategoria,textCategoria,textDescricao,textQuantMaxima,textQuantMinima,textValorEntrada,textValorSaida,ativo,tableView;
+@synthesize cellAtivo,cellValores,cellQuantidades,cellDescricao,cellCategoria,textCategoria,textDescricao,textQuantMaxima,textQuantMinima,textValorEntrada,textValorSaida,ativo,tableView,controllScrollView;
+
+id elementFocus;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,8 +37,19 @@
     [super viewDidLoad];
     [self adicionaBotaoOk];
     [self carregaCategorias];
-
+    [self defineReconhecedorToque];
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+    self.tableView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+}
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    controllScrollView = [[ControllScrollView alloc]init];
+    [controllScrollView setSvos:_scrollView];
 }
 
 - (void)carregarProduto
@@ -173,14 +186,14 @@
 	return YES;
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    UIEdgeInsets edge = UIEdgeInsetsMake(0, 0, 200, 0);
-    self.tableView.contentInset = edge;
-    UITableViewCell *cell = (UITableViewCell *)[[textField superview] superview];
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
+//- (void)textFieldDidBeginEditing:(UITextField *)textField
+//{
+//    UIEdgeInsets edge = UIEdgeInsetsMake(0, 0, 200, 0);
+//    self.tableView.contentInset = edge;
+//    UITableViewCell *cell = (UITableViewCell *)[[textField superview] superview];
+//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//}
 
 -(void)setNextProduto:(int)next
 {
@@ -249,6 +262,12 @@
     
 }
 
+-(void)defineReconhecedorToque{
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard)];
+    gestureRecognizer.delegate = self;
+    [_scrollView addGestureRecognizer:gestureRecognizer];
+}
+
 -(void)carregaCategorias{    
     categoriasDescricao = [[NSMutableArray alloc]init];
     
@@ -256,6 +275,25 @@
     for(Categoria *categoria in categorias){
         [categoriasDescricao addObject:categoria.descricao];
     }
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    elementFocus = textField;
+    
+    [controllScrollView sobeTela:textField scrollView:_scrollView fieldPosition:[textField convertPoint:textField.bounds.origin fromView:self.view] deviceSize:self.view.bounds.size];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    elementFocus = textView;
+    
+    [controllScrollView sobeTela:textView scrollView:_scrollView fieldPosition:[textView convertPoint:textView.bounds.origin fromView:self.view] deviceSize:self.view.bounds.size];
+}
+
+-(void)hideKeyBoard
+{
+    [controllScrollView hideKeyBoard:elementFocus scrollView:_scrollView navigationControllerHidden:NO];
 }
 
 @end

@@ -10,6 +10,7 @@
 #import "Produto.h"
 #import "Categoria.h"
 #import "UIPickerViewHelper.h"
+#import "ControllScrollView.h"
 
 @interface FormCadastroProdutoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerHelper>
 {
@@ -35,7 +36,11 @@
     int rowCategoria;
     
     int nextProduto;
+    ControllScrollView *controllScrollView;
 }
+
+@property (strong, nonatomic) ControllScrollView *controllScrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property(nonatomic,retain) IBOutlet UITableViewCell *cellCategoria;
 @property(nonatomic,retain) IBOutlet UITableViewCell *cellDescricao;

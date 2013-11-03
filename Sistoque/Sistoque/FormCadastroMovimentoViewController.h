@@ -10,6 +10,7 @@
 #import "Movimento.h"
 #import "Produto.h"
 #import "UIDatePickerHelper.h"
+#import "ControllScrollView.h"
 
 @interface FormCadastroMovimentoViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate, UIPickerHelper>
 {
@@ -19,7 +20,11 @@
     
     NSArray *categorias;
     UIDatePickerHelper *datePickerHelper;
+    
+     ControllScrollView *controllScrollView;
 }
+
+@property (strong, nonatomic) ControllScrollView *controllScrollView;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtNroProduto;
 
