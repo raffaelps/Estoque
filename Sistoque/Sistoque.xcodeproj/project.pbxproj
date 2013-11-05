@@ -14,6 +14,9 @@
 		4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F3E317F65FC6007DC4A9 /* ViewController.xib */; };
 		4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */; };
 		4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProdutos.xib */; };
+		4D880903182871D5002606F5 /* ControllScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D880902182871D5002606F5 /* ControllScrollView.m */; };
+		4D88090818287291002606F5 /* NQBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88090518287291002606F5 /* NQBarGraph.m */; };
+		4D88090918287291002606F5 /* NQData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88090718287291002606F5 /* NQData.m */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
 		9F1C9B4E181AD079004C20A3 /* icon-iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C9B4D181AD079004C20A3 /* icon-iPhone@2x.png */; };
 		9F458071181ACB0A00D7AB30 /* Background_.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F45806F181ACB0A00D7AB30 /* Background_.png */; };
@@ -67,6 +70,12 @@
 		4D37F3E317F65FC6007DC4A9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCadastroProdutoViewController.xib; sourceTree = "<group>"; };
 		4D63C3E117F6594400594E71 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
+		4D880901182871D5002606F5 /* ControllScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllScrollView.h; sourceTree = "<group>"; };
+		4D880902182871D5002606F5 /* ControllScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllScrollView.m; sourceTree = "<group>"; };
+		4D88090418287291002606F5 /* NQBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NQBarGraph.h; sourceTree = "<group>"; };
+		4D88090518287291002606F5 /* NQBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NQBarGraph.m; sourceTree = "<group>"; };
+		4D88090618287291002606F5 /* NQData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NQData.h; sourceTree = "<group>"; };
+		4D88090718287291002606F5 /* NQData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NQData.m; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
 		4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellProdutos.m; sourceTree = "<group>"; };
 		9F1C9B4D181AD079004C20A3 /* icon-iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iPhone@2x.png"; sourceTree = "<group>"; };
@@ -300,6 +309,12 @@
 		BAA7E28B181DDF6700EDF50D /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				4D88090418287291002606F5 /* NQBarGraph.h */,
+				4D88090518287291002606F5 /* NQBarGraph.m */,
+				4D88090618287291002606F5 /* NQData.h */,
+				4D88090718287291002606F5 /* NQData.m */,
+				4D880901182871D5002606F5 /* ControllScrollView.h */,
+				4D880902182871D5002606F5 /* ControllScrollView.m */,
 				BAA7E27A181DBD3C00EDF50D /* SisUtil.h */,
 				BAA7E27B181DBD3C00EDF50D /* SisUtil.m */,
 			);
@@ -413,15 +428,18 @@
 				A7B0505417EDDDDC00A458C0 /* ListaMovimentoViewController.m in Sources */,
 				A7B0505917EDDDED00A458C0 /* FormCadastroMovimentoViewController.m in Sources */,
 				C75DD2D717F86687009A0E75 /* GerenciadorBD.m in Sources */,
+				4D88090818287291002606F5 /* NQBarGraph.m in Sources */,
 				C75DD2D617F86687009A0E75 /* Categoria.m in Sources */,
 				9F5518D7181995990031C9D9 /* Principal.m in Sources */,
 				4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */,
 				A7B0505E17EDDDF800A458C0 /* ListaCategoriaViewController.m in Sources */,
 				C75DD2D817F86687009A0E75 /* Movimento.m in Sources */,
+				4D880903182871D5002606F5 /* ControllScrollView.m in Sources */,
 				A7B0506317EDDE0300A458C0 /* FormCadastroCategoriaViewController.m in Sources */,
 				A7B0506817EDDE0C00A458C0 /* ListaRelatorioViewController.m in Sources */,
 				4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */,
 				BA452D7C181B6920007A2001 /* UIDatePickerHelper.m in Sources */,
+				4D88090918287291002606F5 /* NQData.m in Sources */,
 				BAA7E27E181DBD3C00EDF50D /* SisUtil.m in Sources */,
 				BAA7E27F181DBD3C00EDF50D /* UIBarButtonItemHelper.m in Sources */,
 				BAA7E288181DC10900EDF50D /* CellMovimentos.m in Sources */,
