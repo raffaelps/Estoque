@@ -12,6 +12,12 @@
 		2188E753181F0B810095D142 /* icones-menu_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2188E750181F0B810095D142 /* icones-menu_3.png */; };
 		4D37F3E417F65FC6007DC4A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F3E217F65FC6007DC4A9 /* ViewController.m */; };
 		4D37F3E517F65FC6007DC4A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F3E317F65FC6007DC4A9 /* ViewController.xib */; };
+		4D3E15AC182C5F1B009E291F /* CellRelatorioProduto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E15AA182C5F1B009E291F /* CellRelatorioProduto.m */; };
+		4D3E15AD182C5F1B009E291F /* CellRelatorioProduto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3E15AB182C5F1B009E291F /* CellRelatorioProduto.xib */; };
+		4D3E15B1182C617C009E291F /* RelatorioEntradaSaidaMesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E15AF182C617C009E291F /* RelatorioEntradaSaidaMesViewController.m */; };
+		4D3E15B2182C617C009E291F /* RelatorioEntradaSaidaMesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3E15B0182C617C009E291F /* RelatorioEntradaSaidaMesViewController.xib */; };
+		4D3E15B5182C65C1009E291F /* ProdutoRelatorio.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E15B4182C65C1009E291F /* ProdutoRelatorio.m */; };
+		4D3E15B8182C69A3009E291F /* MesesRelatorio.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E15B7182C69A3009E291F /* MesesRelatorio.m */; };
 		4D5ED87817F667900036E43B /* FormCadastroProdutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */; };
 		4D63C3E217F6594400594E71 /* CellProdutos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D63C3E117F6594400594E71 /* CellProdutos.xib */; };
 		4D880903182871D5002606F5 /* ControllScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D880902182871D5002606F5 /* ControllScrollView.m */; };
@@ -68,6 +74,16 @@
 		4D37F3E117F65FC6007DC4A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4D37F3E217F65FC6007DC4A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4D37F3E317F65FC6007DC4A9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		4D3E15A9182C5F1B009E291F /* CellRelatorioProduto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellRelatorioProduto.h; sourceTree = "<group>"; };
+		4D3E15AA182C5F1B009E291F /* CellRelatorioProduto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellRelatorioProduto.m; sourceTree = "<group>"; };
+		4D3E15AB182C5F1B009E291F /* CellRelatorioProduto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellRelatorioProduto.xib; sourceTree = "<group>"; };
+		4D3E15AE182C617C009E291F /* RelatorioEntradaSaidaMesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatorioEntradaSaidaMesViewController.h; sourceTree = "<group>"; };
+		4D3E15AF182C617C009E291F /* RelatorioEntradaSaidaMesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatorioEntradaSaidaMesViewController.m; sourceTree = "<group>"; };
+		4D3E15B0182C617C009E291F /* RelatorioEntradaSaidaMesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelatorioEntradaSaidaMesViewController.xib; sourceTree = "<group>"; };
+		4D3E15B3182C65C1009E291F /* ProdutoRelatorio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProdutoRelatorio.h; sourceTree = "<group>"; };
+		4D3E15B4182C65C1009E291F /* ProdutoRelatorio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProdutoRelatorio.m; sourceTree = "<group>"; };
+		4D3E15B6182C69A3009E291F /* MesesRelatorio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MesesRelatorio.h; sourceTree = "<group>"; };
+		4D3E15B7182C69A3009E291F /* MesesRelatorio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MesesRelatorio.m; sourceTree = "<group>"; };
 		4D5ED87717F667900036E43B /* FormCadastroProdutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCadastroProdutoViewController.xib; sourceTree = "<group>"; };
 		4D63C3E117F6594400594E71 /* CellProdutos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProdutos.xib; sourceTree = "<group>"; };
 		4D880901182871D5002606F5 /* ControllScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllScrollView.h; sourceTree = "<group>"; };
@@ -167,6 +183,9 @@
 				4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */,
 				4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */,
 				4D63C3E117F6594400594E71 /* CellProdutos.xib */,
+				4D3E15A9182C5F1B009E291F /* CellRelatorioProduto.h */,
+				4D3E15AA182C5F1B009E291F /* CellRelatorioProduto.m */,
+				4D3E15AB182C5F1B009E291F /* CellRelatorioProduto.xib */,
 			);
 			name = Celulas;
 			sourceTree = "<group>";
@@ -263,6 +282,9 @@
 				4D37F3E117F65FC6007DC4A9 /* ViewController.h */,
 				4D37F3E217F65FC6007DC4A9 /* ViewController.m */,
 				4D37F3E317F65FC6007DC4A9 /* ViewController.xib */,
+				4D3E15AE182C617C009E291F /* RelatorioEntradaSaidaMesViewController.h */,
+				4D3E15AF182C617C009E291F /* RelatorioEntradaSaidaMesViewController.m */,
+				4D3E15B0182C617C009E291F /* RelatorioEntradaSaidaMesViewController.xib */,
 			);
 			path = Sistoque;
 			sourceTree = "<group>";
@@ -287,6 +309,10 @@
 				C75DD2D517F86687009A0E75 /* Produto.m */,
 				C75DD2CE17F86687009A0E75 /* Categoria.h */,
 				C75DD2CF17F86687009A0E75 /* Categoria.m */,
+				4D3E15B3182C65C1009E291F /* ProdutoRelatorio.h */,
+				4D3E15B4182C65C1009E291F /* ProdutoRelatorio.m */,
+				4D3E15B6182C69A3009E291F /* MesesRelatorio.h */,
+				4D3E15B7182C69A3009E291F /* MesesRelatorio.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -387,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3E15AD182C5F1B009E291F /* CellRelatorioProduto.xib in Resources */,
 				A7B0502F17EDDD9900A458C0 /* InfoPlist.strings in Resources */,
 				9F7AC8A21818A552006497C5 /* Default-568h@2x.png in Resources */,
 				9F7AC8A61818A819006497C5 /* Default@2x.png in Resources */,
@@ -395,6 +422,7 @@
 				A7B0505517EDDDDC00A458C0 /* ListaMovimentoViewController.xib in Resources */,
 				A7B0505A17EDDDED00A458C0 /* FormCadastroMovimentoViewController.xib in Resources */,
 				A7B0505F17EDDDF800A458C0 /* ListaCategoriaViewController.xib in Resources */,
+				4D3E15B2182C617C009E291F /* RelatorioEntradaSaidaMesViewController.xib in Resources */,
 				9F5518D4181992190031C9D9 /* principal.plist in Resources */,
 				A7B0506417EDDE0300A458C0 /* FormCadastroCategoriaViewController.xib in Resources */,
 				A7B0506917EDDE0C00A458C0 /* ListaRelatorioViewController.xib in Resources */,
@@ -420,6 +448,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B0503117EDDD9900A458C0 /* main.m in Sources */,
+				4D3E15B8182C69A3009E291F /* MesesRelatorio.m in Sources */,
+				4D3E15B1182C617C009E291F /* RelatorioEntradaSaidaMesViewController.m in Sources */,
 				C75DD2D917F86687009A0E75 /* Produto.m in Sources */,
 				A7B0503517EDDD9900A458C0 /* AppDelegate.m in Sources */,
 				A7B0504A17EDDDBC00A458C0 /* ListaProdutosViewController.m in Sources */,
@@ -433,6 +463,7 @@
 				9F5518D7181995990031C9D9 /* Principal.m in Sources */,
 				4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */,
 				A7B0505E17EDDDF800A458C0 /* ListaCategoriaViewController.m in Sources */,
+				4D3E15AC182C5F1B009E291F /* CellRelatorioProduto.m in Sources */,
 				C75DD2D817F86687009A0E75 /* Movimento.m in Sources */,
 				4D880903182871D5002606F5 /* ControllScrollView.m in Sources */,
 				A7B0506317EDDE0300A458C0 /* FormCadastroCategoriaViewController.m in Sources */,
@@ -444,6 +475,7 @@
 				BAA7E27F181DBD3C00EDF50D /* UIBarButtonItemHelper.m in Sources */,
 				BAA7E288181DC10900EDF50D /* CellMovimentos.m in Sources */,
 				BAD550EF18231E0300E3EA43 /* UIPickerViewHelper.m in Sources */,
+				4D3E15B5182C65C1009E291F /* ProdutoRelatorio.m in Sources */,
 				BAD550F2182339C900E3EA43 /* UIPickerHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
