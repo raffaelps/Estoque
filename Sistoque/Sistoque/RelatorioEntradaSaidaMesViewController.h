@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RelatorioEntradaSaidaMesViewController : UIViewController
+@interface RelatorioEntradaSaidaMesViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+{
+    NSArray *listaProdutos;
+    NSArray *listaMovimentacoes;
+    NSMutableArray *listaMeses;
+}
+
+@property (nonatomic,retain)IBOutlet UITableView *tabela;
+@property (nonatomic,retain)NSString *tipo;
 
 @end

@@ -10,4 +10,9 @@
 
 @interface MesesRelatorio : NSObject
 
+@property(nonatomic)NSInteger mes;
+@property(nonatomic)NSInteger ano;
+
+@property(nonatomic,retain)NSMutableArray *produtos;
+
 @end

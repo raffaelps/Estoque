@@ -10,4 +10,6 @@
 
 @implementation ProdutoRelatorio
 
+@synthesize id,nome,valor,qtde;
+
 @end

@@ -10,4 +10,6 @@
 
 @implementation MesesRelatorio
 
+@synthesize mes,ano,produtos;
+
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CellRelatorioProduto : UIViewController
+@interface CellRelatorioProduto : UITableViewCell
+
+@property(nonatomic,retain)IBOutlet UILabel *nomeProduto;
+@property(nonatomic,retain)IBOutlet UILabel *saidaProduto;
+@property(nonatomic,retain)IBOutlet UILabel *valorProduto;
 
 @end
