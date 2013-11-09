@@ -10,4 +10,7 @@
 
 @interface RelatorioGraficoViewController : UIViewController
 
+@property (nonatomic,retain)NSMutableArray *listaMeses;
+@property (nonatomic,retain)NSString *tipo;
+
 @end
