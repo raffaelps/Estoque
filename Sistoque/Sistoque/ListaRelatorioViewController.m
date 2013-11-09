@@ -38,7 +38,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,12 +53,9 @@
 	
     switch (indexPath.row) {
         case 0:
-            cell.textLabel.text = @"Lista de produtos";
-            break;
-        case 1:
             cell.textLabel.text = @"Saídas por mês";
             break;
-        case 2:
+        case 1:
             cell.textLabel.text = @"Entradas por mês";
             break;
         default:
@@ -73,13 +70,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 1)
+    if (indexPath.row == 0)
     {
         RelatorioEntradaSaidaMesViewController *relatorioView = [[RelatorioEntradaSaidaMesViewController alloc] init];
         relatorioView.tipo = @"Saida";
         [self.navigationController pushViewController:relatorioView animated:YES];
     }
-    else if (indexPath.row == 2)
+    else if (indexPath.row == 1)
     {
         RelatorioEntradaSaidaMesViewController *relatorioView = [[RelatorioEntradaSaidaMesViewController alloc] init];
         relatorioView.tipo = @"Entrada";
