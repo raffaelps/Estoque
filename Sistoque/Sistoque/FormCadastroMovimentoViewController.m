@@ -40,6 +40,8 @@ static NSMutableArray *listaCellMovimento;
 {
     [super viewDidLoad];
     
+    self.title = @"Movimentações";
+    
     listaCellMovimento = [[NSMutableArray alloc]init];
     [self generateListaCells];
     
