@@ -216,6 +216,7 @@ id elementFocus;
 //Verifica se o Field pode começar a editar.
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     if(textField == textCategoria){
+        
         [self hideKeyboard];
         [self showCategoria:textField];
         return NO;
@@ -225,16 +226,18 @@ id elementFocus;
 
 - (void)showCategoria:(id)sender {
     
-    //0, _view.bounds.size.height+44, 320, 216
-    //initWithFrame:CGRectMake(0, 200, 320, 216)
-    pickerCategorias = [[UIPickerViewHelper alloc] initWithView:self.view andArray:categoriasDescricao];
-    pickerCategorias.delegate = self;
-    
-    [pickerCategorias showPickerView];
-    //pickerCategorias.showsSelectionIndicator = YES;
-    //[self.view addSubview:pickerCategorias];
-    
-    
+    if (categorias.count > 0)
+    {
+        pickerCategorias = [[UIPickerViewHelper alloc] initWithView:self.view andArray:categoriasDescricao];
+        pickerCategorias.delegate = self;
+        
+        [pickerCategorias showPickerView];
+    }
+    else
+    {
+        UIAlertView *alerta = [[UIAlertView alloc] initWithTitle:@"Alerta" message:@"Favor cadastrar categorias." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alerta show];
+    }
 }
 
 -(void)hideKeyboard{
@@ -264,7 +267,6 @@ id elementFocus;
 
 -(void)defineReconhecedorToque{
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard)];
-    gestureRecognizer.delegate = self;
     [_scrollView addGestureRecognizer:gestureRecognizer];
 }
 
@@ -272,6 +274,7 @@ id elementFocus;
     categoriasDescricao = [[NSMutableArray alloc]init];
     
     categorias = [GerenciadorBD listarTodosAtivo: [Categoria class] ordenacao:@"descricao"];
+    
     for(Categoria *categoria in categorias){
         [categoriasDescricao addObject:categoria.descricao];
     }
