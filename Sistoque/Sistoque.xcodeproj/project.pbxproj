@@ -24,6 +24,8 @@
 		4D88090818287291002606F5 /* NQBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88090518287291002606F5 /* NQBarGraph.m */; };
 		4D88090918287291002606F5 /* NQData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88090718287291002606F5 /* NQData.m */; };
 		4DD3B55217EDE23700FCD4A5 /* CellProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */; };
+		4DEB8F03182DBE79003AF8F8 /* RelatorioGraficoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB8F01182DBE79003AF8F8 /* RelatorioGraficoViewController.m */; };
+		4DEB8F04182DBE79003AF8F8 /* RelatorioGraficoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DEB8F02182DBE79003AF8F8 /* RelatorioGraficoViewController.xib */; };
 		9F1C9B4E181AD079004C20A3 /* icon-iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C9B4D181AD079004C20A3 /* icon-iPhone@2x.png */; };
 		9F458071181ACB0A00D7AB30 /* Background_.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F45806F181ACB0A00D7AB30 /* Background_.png */; };
 		9F458072181ACB0A00D7AB30 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F458070181ACB0A00D7AB30 /* Background@2x.png */; };
@@ -94,6 +96,9 @@
 		4D88090718287291002606F5 /* NQData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NQData.m; sourceTree = "<group>"; };
 		4DD3B55017EDE23700FCD4A5 /* CellProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProdutos.h; sourceTree = "<group>"; };
 		4DD3B55117EDE23700FCD4A5 /* CellProdutos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellProdutos.m; sourceTree = "<group>"; };
+		4DEB8F00182DBE79003AF8F8 /* RelatorioGraficoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatorioGraficoViewController.h; sourceTree = "<group>"; };
+		4DEB8F01182DBE79003AF8F8 /* RelatorioGraficoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatorioGraficoViewController.m; sourceTree = "<group>"; };
+		4DEB8F02182DBE79003AF8F8 /* RelatorioGraficoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelatorioGraficoViewController.xib; sourceTree = "<group>"; };
 		9F1C9B4D181AD079004C20A3 /* icon-iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iPhone@2x.png"; sourceTree = "<group>"; };
 		9F45806F181ACB0A00D7AB30 /* Background_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background_.png; sourceTree = "<group>"; };
 		9F458070181ACB0A00D7AB30 /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
@@ -285,6 +290,9 @@
 				4D3E15AE182C617C009E291F /* RelatorioEntradaSaidaMesViewController.h */,
 				4D3E15AF182C617C009E291F /* RelatorioEntradaSaidaMesViewController.m */,
 				4D3E15B0182C617C009E291F /* RelatorioEntradaSaidaMesViewController.xib */,
+				4DEB8F00182DBE79003AF8F8 /* RelatorioGraficoViewController.h */,
+				4DEB8F01182DBE79003AF8F8 /* RelatorioGraficoViewController.m */,
+				4DEB8F02182DBE79003AF8F8 /* RelatorioGraficoViewController.xib */,
 			);
 			path = Sistoque;
 			sourceTree = "<group>";
@@ -417,6 +425,7 @@
 				A7B0502F17EDDD9900A458C0 /* InfoPlist.strings in Resources */,
 				9F7AC8A21818A552006497C5 /* Default-568h@2x.png in Resources */,
 				9F7AC8A61818A819006497C5 /* Default@2x.png in Resources */,
+				4DEB8F04182DBE79003AF8F8 /* RelatorioGraficoViewController.xib in Resources */,
 				9F7AC89E1818A4D6006497C5 /* icon-iPhone.png in Resources */,
 				A7B0504B17EDDDBC00A458C0 /* ListaProdutosViewController.xib in Resources */,
 				A7B0505517EDDDDC00A458C0 /* ListaMovimentoViewController.xib in Resources */,
@@ -472,6 +481,7 @@
 				BA452D7C181B6920007A2001 /* UIDatePickerHelper.m in Sources */,
 				4D88090918287291002606F5 /* NQData.m in Sources */,
 				BAA7E27E181DBD3C00EDF50D /* SisUtil.m in Sources */,
+				4DEB8F03182DBE79003AF8F8 /* RelatorioGraficoViewController.m in Sources */,
 				BAA7E27F181DBD3C00EDF50D /* UIBarButtonItemHelper.m in Sources */,
 				BAA7E288181DC10900EDF50D /* CellMovimentos.m in Sources */,
 				BAD550EF18231E0300E3EA43 /* UIPickerViewHelper.m in Sources */,
