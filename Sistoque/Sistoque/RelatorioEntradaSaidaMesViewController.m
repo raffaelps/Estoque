@@ -34,6 +34,9 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+    self.tabela.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     self.title = [self.tipo rangeOfString:@"Entrada"].location == NSNotFound ? @"Saídas por mês" : @"Entradas por mês";
     
     listaProdutos = [GerenciadorBD listarTodos:[Produto class] ordenacao:@"descricao"];
