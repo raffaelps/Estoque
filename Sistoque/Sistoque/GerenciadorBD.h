@@ -33,6 +33,7 @@
 + (NSArray *) listarTodos:(Class) classe ordenacao: (NSString *) ordenacao;
 + (NSArray *) listarTodosAtivo:(Class) classe ordenacao: (NSString *) ordenacao;
 + (NSArray *) listarPropriedades:(Class) classe comPropriedades:(NSArray*) propriedades eFiltro:(NSString*)filtro eOrdem: (NSString *) ordenacao;
++ (NSArray *) listarPropriedades:(Class) classe comPropriedades:(NSArray*) propriedades eFiltro:(NSString*)filtro eOrdem: (NSString *) ordenacao eAscending:(BOOL)ascending;
 
 + (void) remover:(NSManagedObject *) entidade;
 + (NSNumber *) getNextAutoIncrement:(NSString *) entityName fieldIdKey:(NSString *) idKey;
