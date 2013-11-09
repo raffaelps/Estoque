@@ -7,6 +7,7 @@
 //
 
 #import "RelatorioEntradaSaidaMesViewController.h"
+#import "RelatorioGraficoViewController.h"
 #import "CellRelatorioProduto.h"
 #import "GerenciadorBD.h"
 #import "Produto.h"
@@ -40,7 +41,6 @@
     
     listaMeses = [[NSMutableArray alloc]init];
     
-    //Criei mais tá péssimo isso kkkkkkkkkkk
     for (Movimento *item in listaMovimentacoes) {
         NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:item.data];
         
@@ -49,29 +49,21 @@
         novo.ano = [components year];
         novo.produtos = [[NSMutableArray alloc]init];
         
-        if ([listaMeses count] > 0)
-        {
-            BOOL existe = false;
-            
-            for (MesesRelatorio *item2 in listaMeses) {
-                if (item2.mes == novo.mes && item2.ano == novo.ano)
-                {
-                    existe = true;
-                }
-            }
-            
-            if (!existe)
-            {
-                [listaMeses addObject:novo];
-            }
-        }
-        else
+        
+        NSArray *mesUnico = [listaMeses filteredArrayUsingPredicate:[NSPredicate
+                                                                            predicateWithFormat:@"mes == %d && ano == %d", novo.mes,novo.ano]];
+        
+        if (mesUnico.count <= 0)
         {
             [listaMeses addObject:novo];
         }
     }
     
+    NSMutableArray *produtosMes = [[NSMutableArray alloc] init];
+    
     for (MesesRelatorio *item in listaMeses) {
+        
+        [produtosMes removeAllObjects];
     
         for (Movimento *movimento in listaMovimentacoes)
         {
@@ -84,53 +76,54 @@
             
             if (item.mes == novoMovimento.mes && item.ano == novoMovimento.ano)
             {
-                for (ProdutoRelatorio *produto in item.produtos)
+                ProdutoRelatorio *produto = [[ProdutoRelatorio alloc]init];
+                produto.id = movimento.idProduto;
+                produto.valor = movimento.valor;
+                produto.qtde = movimento.qtde;
+                
+                NSArray *produtoUnico = [listaProdutos filteredArrayUsingPredicate:[NSPredicate
+                                                                                    predicateWithFormat:@"id == %@", movimento.idProduto]];
+                
+                if (produtoUnico.count > 0)
                 {
-                    if (produto.id == movimento.idProduto)
-                    {
-                        produto.valor = [NSNumber numberWithFloat:([movimento.valor floatValue] + [produto.valor floatValue])];
-                        produto.qtde = [NSNumber numberWithFloat:([movimento.qtde floatValue] + [produto.qtde floatValue])];
-                    }
-                    else
-                    {
-                        ProdutoRelatorio *produto = [[ProdutoRelatorio alloc]init];
-                        produto.id = movimento.idProduto;
-                        produto.valor = movimento.valor;
-                        produto.qtde = movimento.qtde;
-                        
-                        NSArray *produtoUnico = [listaProdutos filteredArrayUsingPredicate:[NSPredicate
-                                                              predicateWithFormat:@"id == %@", movimento.idProduto]];
-                        
-                        if (produtoUnico.count > 0)
-                        {
-                            Produto *p = [produtoUnico objectAtIndex:0];
-                            produto.nome = p.descricao;
-                        }
-                        
-                        [item.produtos addObject:produto];
-                    }
+                    Produto *p = [produtoUnico objectAtIndex:0];
+                    produto.nome = p.descricao;
                 }
                 
-                if (item.produtos.count == 0) {
-                    ProdutoRelatorio *produto = [[ProdutoRelatorio alloc]init];
-                    produto.id = movimento.id;
-                    produto.valor = movimento.valor;
-                    produto.qtde = movimento.qtde;
-                    
-                    NSArray *produtoUnico = [listaProdutos filteredArrayUsingPredicate:[NSPredicate
-                                                                                        predicateWithFormat:@"id == %@", movimento.idProduto]];
-                    
-                    if (produtoUnico.count > 0)
-                    {
-                        Produto *p = [produtoUnico objectAtIndex:0];
-                        produto.nome = p.descricao;
-                    }
-                    
-                    [item.produtos addObject:produto];
+                NSArray *arrayProduto = [produtosMes filteredArrayUsingPredicate:[NSPredicate
+                                                                                    predicateWithFormat:@"id == %@", produto.id]];
+                
+                if (arrayProduto.count <= 0)
+                {
+                    [produtosMes addObject:produto];
+                }
+                else
+                {
+                    ProdutoRelatorio *produtoExistente = [arrayProduto objectAtIndex:0];
+                    produtoExistente.valor = [NSNumber numberWithFloat:([movimento.valor floatValue] + [produtoExistente.valor floatValue])];
+                    produtoExistente.qtde = [NSNumber numberWithFloat:([movimento.qtde floatValue] + [produtoExistente.qtde floatValue])];
                 }
             }
         }
+        
+        [item.produtos addObjectsFromArray:produtosMes];
     }
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
+                                  initWithTitle:@"Gráfico"
+                                  style:UIBarButtonItemStyleBordered
+                                  target:self
+                                  action:@selector(graficoRelatorio)];
+    self.navigationItem.rightBarButtonItem = addButton;
+}
+
+- (IBAction)graficoRelatorio
+{
+    RelatorioGraficoViewController *relatorioGrafico = [[RelatorioGraficoViewController alloc]init];
+    
+    relatorioGrafico.tipo = self.tipo;
+    
+    [self.navigationController pushViewController:relatorioGrafico animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
