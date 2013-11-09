@@ -35,11 +35,15 @@
     [self loadMenu];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
     
-    self.tabelaPrincipal.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.4];
+    self.tabelaPrincipal.backgroundColor = [UIColor whiteColor]; //[UIColor colorWithWhite:1.0 alpha:0.4];
     self.tabelaPrincipal.layer.borderColor = [UIColor whiteColor].CGColor;
     self.tabelaPrincipal.layer.borderWidth = 1;
     self.tabelaPrincipal.layer.cornerRadius = 10;
     self.tabelaPrincipal.layer.masksToBounds = YES;
+    
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 7){
+        self.tabelaPrincipal.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -139,6 +143,11 @@
     
     [self.navigationController pushViewController:tela animated:YES];
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 48;
 }
 
 @end
