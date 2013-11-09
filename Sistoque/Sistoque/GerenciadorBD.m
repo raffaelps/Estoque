@@ -66,6 +66,30 @@ static NSManagedObjectContext *managedObjectContext;
     }
 }
 
++ (NSArray *) listarPropriedades:(Class) classe comPropriedades:(NSArray*) propriedades eFiltro:(NSString*)filtro eOrdem: (NSString *) ordenacao eAscending:(BOOL)ascending
+{
+    NSString *nomeClasse = NSStringFromClass(classe);
+    NSPredicate *predicado = [NSPredicate predicateWithFormat:filtro];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    request.entity = [NSEntityDescription entityForName:nomeClasse inManagedObjectContext:self.managedObjectContext];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:ordenacao ascending:ascending]];
+    
+    if(propriedades!=nil)
+        [request setPropertiesToFetch:propriedades];
+    
+    if(predicado!=nil)
+        request.predicate = predicado;
+    
+    NSError *error = nil;
+    NSArray *arr = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (!error) {
+        return arr ;
+    } else {
+        NSLog(@"%@",[error description]);
+        return nil;
+    }
+}
+
 +(NSArray *)listarPropriedades:(Class) classe comPropriedades:(NSArray*) propriedades eFiltro:(NSString*)filtro eOrdem: (NSString *) ordenacao{
     NSString *nomeClasse = NSStringFromClass(classe);
     NSPredicate *predicado = [NSPredicate predicateWithFormat:filtro];
