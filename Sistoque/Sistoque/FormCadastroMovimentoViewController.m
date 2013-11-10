@@ -21,7 +21,8 @@
 @end
 
 @implementation FormCadastroMovimentoViewController
-@synthesize movimento,produto,newMovimento,controllScrollView;
+
+@synthesize movimento,produto,newMovimento,controllScrollView,cellStatus,cellDataMovimento,cellMovimento,cellProduto,cellQuantidadeMovimento,cellTipo,cellValor,tableView;
 
 id elementFocus;
 
@@ -47,11 +48,11 @@ static NSMutableArray *listaCellMovimento;
     
     [self delegaCampos];
     [self adicionaBotaoOk];
-    [self defineReconhecedorToque];    
-    self.view.userInteractionEnabled = YES;
+    [self defineReconhecedorToque];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
-    self.tableDadosMovimentos.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    self.view.backgroundColor = [UIColor colorWithRed:174/255.0 green:228/255.0 blue:240/255.0 alpha:1];
+    
+    self.tableView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     
 }
 
@@ -76,6 +77,11 @@ static NSMutableArray *listaCellMovimento;
        quantidadeValorVazio)
         return FALSE;
     return TRUE;
+}
+
+-(void)defineReconhecedorToque{
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard)];
+    [_scrollView addGestureRecognizer:gestureRecognizer];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -223,12 +229,6 @@ static NSMutableArray *listaCellMovimento;
     self.navigationItem.rightBarButtonItem = btnSalvar;
 }
 
--(void)defineReconhecedorToque{
-    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard)];
-    gestureRecognizer.delegate = self;
-    [_scrollView addGestureRecognizer:gestureRecognizer];
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -246,7 +246,7 @@ static NSMutableArray *listaCellMovimento;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if([[listaCellMovimento objectAtIndex:indexPath.row] isEqual:_cellProduto])
+    if([[listaCellMovimento objectAtIndex:indexPath.row] isEqual:cellProduto])
     {
         return 88;
     }
@@ -260,18 +260,13 @@ static NSMutableArray *listaCellMovimento;
 
 -(void)generateListaCells
 {
-    CALayer *layer = _cellNil.layer;
-    layer.borderWidth = 0;
-    
-    [listaCellMovimento addObject:_cellMovimento];
-    [listaCellMovimento addObject:_cellProduto];
-    [listaCellMovimento addObject:_cellDataMovimento];
-    [listaCellMovimento addObject:_cellQuantidadeMovimento];
-    [listaCellMovimento addObject:_cellValor];
-    [listaCellMovimento addObject:_cellStatus];
-    [listaCellMovimento addObject:_cellNil];
-    [listaCellMovimento addObject:_cellNil];
-    [listaCellMovimento addObject:_cellNil];
+    [listaCellMovimento addObject:cellTipo];
+    [listaCellMovimento addObject:cellMovimento];
+    [listaCellMovimento addObject:cellProduto];
+    [listaCellMovimento addObject:cellDataMovimento];
+    [listaCellMovimento addObject:cellQuantidadeMovimento];
+    [listaCellMovimento addObject:cellValor];
+    [listaCellMovimento addObject:cellStatus];
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField

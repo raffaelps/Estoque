@@ -40,6 +40,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.view.backgroundColor = [UIColor colorWithRed:174/255.0 green:228/255.0 blue:240/255.0 alpha:1];
+    
+    tabela.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     if(categoriaSelect.id > 0){
         //NSLog(@"Object do tipo categoria encontrado");
         [self setTitle:@"Edita categoria"];
@@ -72,6 +76,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (indexPath.row == 0)
+    {
+        return cellDescricao;
+    }
+    else
+    {
+        return cellStatus;
+    }
 }
 
 - (IBAction)salvaCategoria {

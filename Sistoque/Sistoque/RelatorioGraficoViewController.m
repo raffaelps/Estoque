@@ -35,6 +35,8 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithRed:174/255.0 green:228/255.0 blue:240/255.0 alpha:1];
+    
     self.title = [self.tipo rangeOfString:@"Entrada"].location == NSNotFound ? @"Saídas por mês" : @"Entradas por mês";
     
     NQBarGraph * barGraph=[[NQBarGraph alloc] initWithFrame:CGRectMake(10, 10, self.view.bounds.size.width-20, self.view.bounds.size.height-20)];

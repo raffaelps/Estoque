@@ -65,7 +65,7 @@
         self.layer.cornerRadius=20;
         self.layer.masksToBounds=YES;
         self.numberOfVerticalElements=100;
-        self.barColor=[UIColor blueColor];
+        self.barColor=[UIColor colorWithRed:119/255.0 green:165/255.0 blue:176/255.0 alpha:1];
         self.textColor=[UIColor blackColor];
         self.dottedLineColor=[UIColor grayColor];
         self.barOuterLine=[UIColor grayColor];

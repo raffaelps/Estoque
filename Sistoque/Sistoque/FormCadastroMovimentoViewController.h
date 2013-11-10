@@ -12,7 +12,7 @@
 #import "UIDatePickerHelper.h"
 #import "ControllScrollView.h"
 
-@interface FormCadastroMovimentoViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate, UIPickerHelper>
+@interface FormCadastroMovimentoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerHelper>
 {
     Movimento *movimento;
     Produto *produto;
@@ -21,10 +21,13 @@
     NSArray *categorias;
     UIDatePickerHelper *datePickerHelper;
     
-     ControllScrollView *controllScrollView;
+    ControllScrollView *controllScrollView;
+    
+    IBOutlet UITableView *tableView;
 }
 
 @property (strong, nonatomic) ControllScrollView *controllScrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtNroProduto;
 
@@ -34,11 +37,11 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellQuantidadeMovimento;
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellValor;
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellStatus;
-@property (strong, nonatomic) IBOutlet UITableViewCell *cellNil;
-@property (weak, nonatomic) IBOutlet UITableView *tableDadosMovimentos;
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellTipo;
+
+@property(nonatomic,retain) IBOutlet UITableView *tableView;
+
 @property (weak, nonatomic) IBOutlet UITextField *txtNroMovimento;
-
-
 
 @property (retain,nonatomic) Movimento *movimento;
 @property (retain,nonatomic) Produto *produto;
@@ -49,7 +52,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtVlrMovimento;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segementedTipoMovimento;
 @property (weak, nonatomic) IBOutlet UISwitch *switchStatus;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 -(void)setNextMovimento:(int)nextMovimento;
 -(void)setProduto:(Produto *)prod;

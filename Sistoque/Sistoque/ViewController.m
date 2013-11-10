@@ -33,7 +33,15 @@
 {
     [super viewDidLoad];
     [self loadMenu];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
+    
+    UIImage* img = [UIImage imageNamed:@"Default"];
+    UIImageView* imgView = [[UIImageView alloc]initWithImage: img];
+    [imgView setFrame:self.view.frame];
+    [self.view addSubview: imgView];
+    [self.view sendSubviewToBack:imgView];
+    imgView.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
+    
+    self.view.backgroundColor = [UIColor colorWithRed:119/255.0 green:165/255.0 blue:176/255.0 alpha:1];
     
     self.tabelaPrincipal.backgroundColor = [UIColor whiteColor]; //[UIColor colorWithWhite:1.0 alpha:0.4];
     self.tabelaPrincipal.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -42,7 +50,7 @@
     self.tabelaPrincipal.layer.masksToBounds = YES;
     
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 7){
-        self.tabelaPrincipal.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
+        //self.tabelaPrincipal.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
     }
 }
 

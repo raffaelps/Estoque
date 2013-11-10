@@ -33,7 +33,9 @@
 {
     [super viewDidLoad];
     self.title = @"Movimentações";
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+    
+    self.view.backgroundColor = [UIColor colorWithRed:174/255.0 green:228/255.0 blue:240/255.0 alpha:1];
+    
     self.tableMovimentos.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     [self gerarLista];
     // Do any additional setup after loading the view from its nib.
