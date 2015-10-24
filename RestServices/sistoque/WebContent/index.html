@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>REST - Sistoque</title>
+</head>
+<body>
+	<h2>Rest service para entidade de categoria do sistema SISTOQUE</h2>
+	<p>
+	<h3>Criar categoria</h3>
+	<b>URI:</b> &lt;servidor_contexto&gt;/rest/categoria<br />
+	<b>VERBO:</b> POST<br />
+	<b>CONSUMO:</b> Content-Type:application/json<br />
+	</p>
+	<hr />
+
+	<p>
+	<h3>Atualizar categoria</h3>
+	<b>URI:</b> &lt;servidor_contexto&gt;/rest/categoria<br />
+	<b>VERBO:</b> PUT<br />
+	<b>CONSUMO:</b> Content-Type:application/json<br />
+	</p>
+	<hr />
+
+	<p>
+	<h3>Apagar categoria</h3>
+	<b>URI:</b> &lt;servidor_contexto&gt;/rest/categoria<br />
+	<b>VERBO:</b> DELETE<br />
+	<b>CONSUMO:</b> Content-Type:application/json<br />
+	</p>
+	<hr />
+
+	<p>
+	<h3>Obter categoria</h3>
+	<b>URI:</b> &lt;servidor_contexto&gt;/rest/categoria/{codigo}<br />
+	<b>VERBO:</b> GET<br />
+	<b>PRODUZ:</b> Content-Type:application/json<br />
+	</p>
+
+	<p>
+	<h3>Obter todas as categorias</h3>
+	<b>URI:</b> &lt;servidor_contexto&gt;/rest/categoria/list<br />
+	<b>VERBO:</b> GET<br />
+	<b>PRODUZ:</b> Content-Type:application/json<br />
+	</p>
+	<hr />
+
+	<h2>Estrutura do JSON de categoria</h2>
+	<p>
+		<b> String: codigo<br /> String: nome<br />
+		</b>
+	</p>
+	<p>Exemplo: {"codigo":"CL","nome":"Cal&ccedil;ado"}</p>
+</body>
+</html>

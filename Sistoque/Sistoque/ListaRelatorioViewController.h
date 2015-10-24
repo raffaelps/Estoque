@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListaRelatorioViewController : UIViewController
+@interface ListaRelatorioViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    IBOutlet UITableView *tabela;
+}
 
 @end

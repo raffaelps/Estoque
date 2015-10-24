@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Produto.h"
 
-@interface ListaMovimentoViewController : UIViewController
+@interface ListaMovimentoViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+{
+    NSArray *listaAllMovimentos;
+    NSMutableArray *listaMovimentosProduto;
+    Produto *produto;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *tableMovimentos;
+@property (nonatomic,retain) Produto *produto;
+-(void)setProduto:(Produto *)prod;
 
 @end

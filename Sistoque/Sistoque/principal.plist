@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>menu</key>
+	<array>
+		<dict>
+			<key>nome</key>
+			<string>Produto</string>
+			<key>imagem</key>
+			<string>icones-menu_1.png</string>
+		</dict>
+		<dict>
+			<key>nome</key>
+			<string>Categoria</string>
+			<key>imagem</key>
+			<string>icones-menu_2.png</string>
+		</dict>
+		<dict>
+			<key>nome</key>
+			<string>Relatório</string>
+			<key>imagem</key>
+			<string>icones-menu_3.png</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate,UITableViewDataSource> {
+    NSMutableArray *menu;
+}
+@property (weak, nonatomic) IBOutlet UITableView *tabelaPrincipal;
 
 @end

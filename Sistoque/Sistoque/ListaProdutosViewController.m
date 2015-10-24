@@ -8,7 +8,10 @@
 
 #import "ListaProdutosViewController.h"
 #import "FormCadastroProdutoViewController.h"
+#import "ListaMovimentoViewController.h"
 #import "CellProdutos.h"
+#import "Produto.h"
+#import "GerenciadorBD.h"
 
 @interface ListaProdutosViewController ()
 
@@ -28,13 +31,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.view.backgroundColor = [UIColor colorWithRed:174/255.0 green:228/255.0 blue:240/255.0 alpha:1];
+    
+    self.tabela.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Novo"
+                                   initWithTitle:@"+"
                                    style:UIBarButtonItemStyleBordered
                                    target:self
                                    action:@selector(novoProduto)];
     self.navigationItem.rightBarButtonItem = addButton;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    listaProdutos = [GerenciadorBD listarTodos:[Produto class] ordenacao:@"descricao"];
+    [self.tabela reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +60,9 @@
 {
     FormCadastroProdutoViewController *cadastroProdutoViewController = [[FormCadastroProdutoViewController alloc] init];
     [self.navigationController pushViewController:cadastroProdutoViewController animated:YES];
+    
+    int next = listaProdutos.count + 1;
+    [cadastroProdutoViewController setNextProduto:next];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -57,7 +73,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return listaProdutos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,7 +94,14 @@
         }
     }
     
-    cellTopo.nomeProduto.text = @"Nome do produto de teste";
+    Produto *p = [listaProdutos objectAtIndex:indexPath.row];
+    
+    cellTopo.nomeProduto.text = p.descricao;
+    //cellTopo.nomeCategoria.text = p.idCategoria;
+    cellTopo.quantMaxima.text = [NSString stringWithFormat:@"%@",p.qtdeMaxima];
+    cellTopo.quantMin.text = [NSString stringWithFormat:@"%@",p.qtdeMinima];
+    //cellTopo.quantEstoque.text = p.quantEstoque;
+    cellTopo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cellTopo;
 }
@@ -90,6 +113,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    ListaMovimentoViewController *movimentos = [[ListaMovimentoViewController alloc]init];
+    movimentos.produto = [listaProdutos objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:movimentos animated:YES];
+    
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
 
